@@ -5,6 +5,9 @@ body {
 	text-align: center;
 }
 
+#knoxdevs-tagline { font-size: 50px;}
+@media(max-width:60em){ #knoxdevs-tagline{ font-size: 30px;}}
+
 /* Wrapper */
 .icon-button {
 	background-color: #ccc;
