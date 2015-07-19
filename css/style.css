@@ -81,6 +81,21 @@ body {
 	width: 3.6rem;
 	z-index: 10;
 }
+
+@media(max-width:60em){
+	.icon-button i {
+		height: 2.0rem;
+		width: 2.0rem;
+		line-height: 2.0rem;
+	}
+	.icon-button{
+		border-radius: 2.0rem;
+		height: 2.0rem;
+		width: 2.0rem;
+		font-size: 1.1rem;
+	}
+}
+
 .icon-button .icon-twitter {
 	color: #4099ff;
 }
