@@ -5,8 +5,15 @@ body {
 	text-align: center;
 }
 
-#knoxdevs-tagline { font-size: 50px;}
+#knoxdevs-tagline { 
+	font-size: 50px;
+}
+
 @media(max-width:60em){ #knoxdevs-tagline{ font-size: 30px;}}
+
+#github-call-to-action {
+	padding-top: 30px;
+}
 
 /* Wrapper */
 .icon-button {
