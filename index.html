@@ -38,26 +38,223 @@
   ga('send', 'pageview');
 
 </script>
-
 </head>
 
 <body>
-
+  <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="nav navbar-brand navbar-stuff" href="#about">KnoxDevs</a>
+            </div>
+            <!-- 
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-custom">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#slack">Slack</a>
+                    </li>
+                    <li>
+                        <a href="#blogs">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
   <!-- Full Width Image Header -->
   <header class="header-image">
-    <div class="container">
-      <img class="featurette-image img-responsive center-block" src="kd_logo.png" />
-      <h2 id="knoxdevs-tagline">Supporting the Knoxville Area Development Community</h2>
+      <div class="container">
+         <div class="featurette" id="about">
+        <img class="featurette-image img-responsive center-block" src="kd_logo.png" />
+        <h1 id="knoxdevs-tagline">KnoxDevs: supporting the Knoxville area development community</h1>
+        </div>
       </div>
     </header>
+
     <div class="container">
-      <h3><a href="http://knoxdevs.herokuapp.com">Join us on Slack</a></h3>
+       <hr class="featurette-divider">
       <div class="featurette" id="slack">
+        <h3><a href="http://knoxdevs.herokuapp.com">Join us on Slack!</a></h3>
         <p class="lead"><script async defer src="http://knoxdevs.herokuapp.com/slackin.js?large"></script></p>
-        <a class="twitter-timeline" href="https://twitter.com/knoxdevs" data-widget-id="622549003763187712" height="350">Tweets by @knoxdevs</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        <div id="github-call-to-action"><a href="https://github.com/KnoxDevs/knoxdevs-website">Please update me on <img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets.github.com/images/icons/emoji/octocat.png" height="40" width="40" align="absmiddle"></a></div>
       </div>
+
+        <hr class="featurette-divider">
+      <div class="featurette" id="twitter">
+              <a class="twitter-timeline" href="https://twitter.com/knoxdevs" data-widget-id="622549003763187712" height="350">Tweets by @knoxdevs</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  
+      </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette" id="blogs">
+          <h3>Local Dev Blogs</h3>
+          <div class="row">
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Adam Caudill</h4>
+                <p class="list-group-item-text">@adamcaudill <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="https://adamcaudill.com/"> adamcaudill.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Adrian Carr</h4>
+                <p class="list-group-item-text">
+<a href="http://adriancarr.com/"> adriancarr.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Alan Stevens</h4>
+                <p class="list-group-item-text">@alanstevens <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://halanstevens.com/"> halanstevens.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Avdi Grimm</h4>
+                <p class="list-group-item-text">@avdi <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://about.avdi.org/"> avdi.org</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Cameron Presley</h4>
+                <p class="list-group-item-text">@PhilipCPresley <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://thesoftwarementor.com/"> thesoftwarementor.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Colin Mollenhour</h4>
+                <p class="list-group-item-text">@colinmollenhour <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://colin.mollenhour.com/"> colin.mollenhour.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Chris Keathley</h4>
+                <p class="list-group-item-text">@ChrisKeathley <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://keathley.io/"> keathley.io</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Devon Campbell</h4>
+                <p class="list-group-item-text">@raddevon <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://raddevon.com"> raddevon.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Geoff Mazeroff</h4>
+                <p class="list-group-item-text">@geoffmazeroff <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://geoffmazeroff.com/"> geoffmazeroff.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Jakob Myers</h4>
+                <p class="list-group-item-text">@iamjakob23 <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://iamjakob.com/"> iamjakob.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">James Nakamura</h4>
+                <p class="list-group-item-text">@nakadude <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://nakadude.blogspot.com"> nakadude.blogspot.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Jeremy Fairbank</h4>
+                <p class="list-group-item-text">@elpapapollo <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://blog.jeremyfairbank.com"> blog.jeremyfairbank.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Josh Carroll</h4>
+                <p class="list-group-item-text">@jwcarroll <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://technofattie.com"> technofattie.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Phillip Andreason</h4>
+                <p class="list-group-item-text">@InfraredBaboon <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="https://codeukemi.wordpress.com/"> codeukemi.wordpress.com</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Reid Evans</h4>
+                <p class="list-group-item-text">@ReidNEvans <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://reidev275.azurewebsites.net/"> reidev275.azurewebsites.net</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card">
+                <h4 class="list-group-item-heading">Tyler Jennings</h4>
+                <p class="list-group-item-text">@JenningsTCJ <i class="fa icon-twitter"></i></p>
+                <p class="list-group-item-text">
+<a href="http://tylerscode.com/"> tylerscode.com</a></p>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
       <footer>
         <div class="row">
           <div class="col-lg-12">
@@ -67,9 +264,15 @@
             <a href="https://www.linkedin.com/grp/home?gid=8344834" class="icon-button linkedin"><i class="icon-linkedin"></i><span></span></a>
           </div>
         </div>
+        <div class="row">
+          <div class="col-lg-12">
+        <div id="github-call-to-action"><a href="https://github.com/KnoxDevs/knoxdevs-website">Please update me on <img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets.github.com/images/icons/emoji/octocat.png" height="40" width="40" align="absmiddle"></a></div>
+          </div>
+        </div>
       </footer>
 
     </div>
+
     <!-- /.container -->
 
     <!-- jQuery -->
