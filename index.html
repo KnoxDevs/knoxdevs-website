@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <title>KnoxDevs</title>
+  <title>KnoxDevs</title>   
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,8 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <![endif]--><br/>
+  <script src="js/jquery.js"></script>  
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -38,6 +39,51 @@
   ga('send', 'pageview');
 
 </script>
+
+<script>
+var bloggers = {
+		'Adam Caudill': {		'klout': 0, 	'twitter':'adamcaudill', 		'websiteurl':'https://adamcaudill.com/', 			'websitename':'adamcaudill.com'},
+		'Adrian Carr': 	{		'klout': 0, 	'twitter':'', 					'websiteurl':'http://adriancarr.com/', 				'websitename':'adriancarr.com'},
+		'Alan Stevens': {		'klout': 50, 	'twitter':'alanstevens', 		'websiteurl':'http://halanstevens.com/', 			'websitename':'halanstevens.com'},
+		'Alex Klibisz': {		'klout': 0, 	'twitter':'alexklibisz', 		'websiteurl':'http://alexklibisz.github.io/', 		'websitename':'alexklibisz.github.io'},
+		'Avdi Grimm': 	{		'klout': 0, 	'twitter':'avdi', 				'websiteurl':'http://about.avdi.org/', 				'websitename':'avdi.org'},
+		'Cameron Presley': {	'klout': 40, 	'twitter':'PhilipCPresley', 	'websiteurl':'http://thesoftwarementor.com/', 		'websitename':'thesoftwarementor.com'},
+		'Christopher Lamm': {	'klout': 0, 	'twitter':'the_anti_chris', 	'websiteurl':'http://theantichris.com/', 			'websitename':'theantichris.com'},
+		'Colin Mollenhour': {	'klout': 0, 	'twitter':'colinmollenhour', 	'websiteurl':'http://colin.mollenhour.com/', 		'websitename':'colin.mollenhour.com'},
+		'Chris Keathley': {		'klout': 0, 	'twitter':'ChrisKeathley', 		'websiteurl':'http://keathley.io/', 				'websitename':'keathley.io'},
+		'Devon Campbell': {		'klout': 0, 	'twitter':'raddevon', 			'websiteurl':'http://raddevon.com', 				'websitename':'raddevon.com'},
+		'Geoff Mazeroff': {		'klout': 41, 	'twitter':'geoffmazeroff', 		'websiteurl':'http://geoffmazeroff.com/', 			'websitename':'geoffmazeroff.com'},
+		'Jakob Myers': {		'klout': 0, 	'twitter':'iamjakob23', 		'websiteurl':'http://iamjakob.com/', 				'websitename':'iamjakob.com'},
+		'James Nakamura': {		'klout': 0, 	'twitter':'nakadude', 			'websiteurl':'http://nakadude.blogspot.com', 		'websitename':'nakadude.blogspot.com'},
+		'Jeremy Fairbank': {	'klout': 0, 	'twitter':'elpapapollo', 		'websiteurl':'http://blog.jeremyfairbank.com', 		'websitename':'blog.jeremyfairbank.com'},
+		'Josh Carroll': {		'klout': 0, 	'twitter':'jwcarroll', 			'websiteurl':'http://technofattie.com', 			'websitename':'technofattie.com'},
+		'Phillip Andreason': {	'klout': 0, 	'twitter':'InfraredBaboon', 	'websiteurl':'https://codeukemi.wordpress.com/', 	'websitename':'codeukemi.wordpress.com'},
+		'Reid Evans': {			'klout': 45, 	'twitter':'ReidNEvans', 		'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net'},
+		'Travis Graham': {		'klout': 0, 	'twitter':'grahamt1', 			'websiteurl':'http://blog.tgraham.us/', 			'websitename':'blog.tgraham.us'},
+		'Tyler Jennings': {		'klout': 0, 	'twitter':'JenningsTCJ', 		'websiteurl':'http://tylerscode.com/', 				'websitename':'tylerscode.com'}
+	};
+$(document).ready(function(){
+    
+	jQuery.each(bloggers, function(index, itemData) {
+	
+	var html = "<div class='col-sm-4'>";
+	html += "              <div class='card'>";
+	html += "                <h4 class='list-group-item-heading'>";
+	html += index;
+	if (itemData.klout > 99)
+		html += " <i class='fa icon-star'></i>";
+	html += "                </h4>";
+	html += "                <p class='list-group-item-text'><a href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+	html += "                <p class='list-group-item-text'>";
+	html += "<a href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+	html += "              </div>";
+	html += "            </div>";
+	
+	
+		$("#bloglist").append(html);
+	});	
+});
+</script>
 </head>
 
 <body>
@@ -48,7 +94,7 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>					
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -91,185 +137,10 @@
 
         <hr class="featurette-divider">
         <div class="featurette" id="blogs">
-          <div class="row">
+          <div class="row" id="bloglist">
           <h3>Local Dev Blogs</h3>
 
 
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Adam Caudill</h4>
-                <p class="list-group-item-text">@adamcaudill <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="https://adamcaudill.com/"> adamcaudill.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Adrian Carr</h4>
-                <p class="list-group-item-text">
-<a href="http://adriancarr.com/"> adriancarr.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Alan Stevens</h4>
-                <p class="list-group-item-text">@alanstevens <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://halanstevens.com/"> halanstevens.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Alex Klibisz</h4>
-                <p class="list-group-item-text">@alexklibisz <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://alexklibisz.github.io/"> alexklibisz.github.io</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Avdi Grimm</h4>
-                <p class="list-group-item-text">@avdi <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://about.avdi.org/"> avdi.org</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Cameron Presley</h4>
-                <p class="list-group-item-text">@PhilipCPresley <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://thesoftwarementor.com/"> thesoftwarementor.com</a></p>
-              </div>
-            </div>
-
-
-
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Christopher Lamm</h4>
-                <p class="list-group-item-text">@the_anti_chris <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://theantichris.com/"> theantichris.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Colin Mollenhour</h4>
-                <p class="list-group-item-text">@colinmollenhour <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://colin.mollenhour.com/"> colin.mollenhour.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Chris Keathley</h4>
-                <p class="list-group-item-text">@ChrisKeathley <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://keathley.io/"> keathley.io</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Devon Campbell</h4>
-                <p class="list-group-item-text">@raddevon <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://raddevon.com"> raddevon.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Geoff Mazeroff</h4>
-                <p class="list-group-item-text">@geoffmazeroff <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://geoffmazeroff.com/"> geoffmazeroff.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Jakob Myers</h4>
-                <p class="list-group-item-text">@iamjakob23 <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://iamjakob.com/"> iamjakob.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">James Nakamura</h4>
-                <p class="list-group-item-text">@nakadude <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://nakadude.blogspot.com"> nakadude.blogspot.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Jeremy Fairbank</h4>
-                <p class="list-group-item-text">@elpapapollo <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://blog.jeremyfairbank.com"> blog.jeremyfairbank.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Josh Carroll</h4>
-                <p class="list-group-item-text">@jwcarroll <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://technofattie.com"> technofattie.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Phillip Andreason</h4>
-                <p class="list-group-item-text">@InfraredBaboon <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="https://codeukemi.wordpress.com/"> codeukemi.wordpress.com</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Reid Evans</h4>
-                <p class="list-group-item-text">@ReidNEvans <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://reidev275.azurewebsites.net/"> reidev275.azurewebsites.net</a></p>
-              </div>
-            </div>
-
-
-
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Travis Graham</h4>
-                <p class="list-group-item-text">@grahamt1 <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://blog.tgraham.us/"> blog.tgraham.us</a></p>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card">
-                <h4 class="list-group-item-heading">Tyler Jennings</h4>
-                <p class="list-group-item-text">@JenningsTCJ <i class="fa icon-twitter"></i></p>
-                <p class="list-group-item-text">
-<a href="http://tylerscode.com/"> tylerscode.com</a></p>
-              </div>
-            </div>
 
           </div>
         </div>
