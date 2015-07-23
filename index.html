@@ -42,26 +42,37 @@
 
 <script>
 var bloggers = {
-		'Adam Caudill': {		'klout': 0, 	'twitter':'adamcaudill', 		'websiteurl':'https://adamcaudill.com/', 			'websitename':'adamcaudill.com'},
-		'Adrian Carr': 	{		'klout': 0, 	'twitter':'', 					'websiteurl':'http://adriancarr.com/', 				'websitename':'adriancarr.com'},
-		'Alan Stevens': {		'klout': 50, 	'twitter':'alanstevens', 		'websiteurl':'http://halanstevens.com/', 			'websitename':'halanstevens.com'},
-		'Alex Klibisz': {		'klout': 0, 	'twitter':'alexklibisz', 		'websiteurl':'http://alexklibisz.github.io/', 		'websitename':'alexklibisz.github.io'},
-		'Avdi Grimm': 	{		'klout': 0, 	'twitter':'avdi', 				'websiteurl':'http://about.avdi.org/', 				'websitename':'avdi.org'},
-		'Cameron Presley': {	'klout': 40, 	'twitter':'PhilipCPresley', 	'websiteurl':'http://thesoftwarementor.com/', 		'websitename':'thesoftwarementor.com'},
-		'Christopher Lamm': {	'klout': 0, 	'twitter':'the_anti_chris', 	'websiteurl':'http://theantichris.com/', 			'websitename':'theantichris.com'},
-		'Colin Mollenhour': {	'klout': 0, 	'twitter':'colinmollenhour', 	'websiteurl':'http://colin.mollenhour.com/', 		'websitename':'colin.mollenhour.com'},
-		'Chris Keathley': {		'klout': 0, 	'twitter':'ChrisKeathley', 		'websiteurl':'http://keathley.io/', 				'websitename':'keathley.io'},
-		'Devon Campbell': {		'klout': 0, 	'twitter':'raddevon', 			'websiteurl':'http://raddevon.com', 				'websitename':'raddevon.com'},
-		'Geoff Mazeroff': {		'klout': 41, 	'twitter':'geoffmazeroff', 		'websiteurl':'http://geoffmazeroff.com/', 			'websitename':'geoffmazeroff.com'},
-		'Jakob Myers': {		'klout': 0, 	'twitter':'iamjakob23', 		'websiteurl':'http://iamjakob.com/', 				'websitename':'iamjakob.com'},
-		'James Nakamura': {		'klout': 0, 	'twitter':'nakadude', 			'websiteurl':'http://nakadude.blogspot.com', 		'websitename':'nakadude.blogspot.com'},
-		'Jeremy Fairbank': {	'klout': 0, 	'twitter':'elpapapollo', 		'websiteurl':'http://blog.jeremyfairbank.com', 		'websitename':'blog.jeremyfairbank.com'},
-		'Josh Carroll': {		'klout': 0, 	'twitter':'jwcarroll', 			'websiteurl':'http://technofattie.com', 			'websitename':'technofattie.com'},
-		'Phillip Andreason': {	'klout': 0, 	'twitter':'InfraredBaboon', 	'websiteurl':'https://codeukemi.wordpress.com/', 	'websitename':'codeukemi.wordpress.com'},
-		'Reid Evans': {			'klout': 45, 	'twitter':'ReidNEvans', 		'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net'},
-		'Travis Graham': {		'klout': 0, 	'twitter':'grahamt1', 			'websiteurl':'http://blog.tgraham.us/', 			'websitename':'blog.tgraham.us'},
-		'Tyler Jennings': {		'klout': 0, 	'twitter':'JenningsTCJ', 		'websiteurl':'http://tylerscode.com/', 				'websitename':'tylerscode.com'}
-	};
+    'Adam Caudill': {   'klout': 0,   'twitter':'adamcaudill',    'websiteurl':'https://adamcaudill.com/',      'websitename':'adamcaudill.com'},
+    'Adrian Carr':  {   'klout': 0,   'twitter':'',           'websiteurl':'http://adriancarr.com/',        'websitename':'adriancarr.com'},
+    'Alan Stevens': {   'klout': 50,  'twitter':'alanstevens',    'websiteurl':'http://halanstevens.com/',      'websitename':'halanstevens.com'},
+    'Alex Klibisz': {   'klout': 0,   'twitter':'alexklibisz',    'websiteurl':'http://alexklibisz.github.io/',     'websitename':'alexklibisz.github.io'},
+    'Avdi Grimm':   {   'klout': 0,   'twitter':'avdi',         'websiteurl':'http://about.avdi.org/',        'websitename':'avdi.org'},
+    'Cameron Presley': {  'klout': 40,  'twitter':'PhilipCPresley',   'websiteurl':'http://thesoftwarementor.com/',     'websitename':'thesoftwarementor.com'},
+    'Christopher Lamm': { 'klout': 0,   'twitter':'the_anti_chris',   'websiteurl':'http://theantichris.com/',      'websitename':'theantichris.com'},
+    'Colin Mollenhour': { 'klout': 0,   'twitter':'colinmollenhour',  'websiteurl':'http://colin.mollenhour.com/',    'websitename':'colin.mollenhour.com'},
+    'Chris Keathley': {   'klout': 0,   'twitter':'ChrisKeathley',    'websiteurl':'http://keathley.io/',         'websitename':'keathley.io'},
+    'Devon Campbell': {   'klout': 0,   'twitter':'raddevon',       'websiteurl':'http://raddevon.com',         'websitename':'raddevon.com'},
+    'Geoff Mazeroff': {   'klout': 41,  'twitter':'geoffmazeroff',    'websiteurl':'http://geoffmazeroff.com/',       'websitename':'geoffmazeroff.com'},
+    'Jakob Myers': {    'klout': 0,   'twitter':'iamjakob23',     'websiteurl':'http://iamjakob.com/',        'websitename':'iamjakob.com'},
+    'James Nakamura': {   'klout': 0,   'twitter':'nakadude',       'websiteurl':'http://nakadude.blogspot.com',    'websitename':'nakadude.blogspot.com'},
+    'Jeremy Fairbank': {  'klout': 0,   'twitter':'elpapapollo',    'websiteurl':'http://blog.jeremyfairbank.com',    'websitename':'blog.jeremyfairbank.com'},
+    'Josh Carroll': {   'klout': 0,   'twitter':'jwcarroll',      'websiteurl':'http://technofattie.com',       'websitename':'technofattie.com'},
+    'Phillip Andreason': {  'klout': 0,   'twitter':'InfraredBaboon',   'websiteurl':'https://codeukemi.wordpress.com/',  'websitename':'codeukemi.wordpress.com'},
+    'Reid Evans': {     'klout': 45,  'twitter':'ReidNEvans',     'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net'},
+    'Travis Graham': {    'klout': 0,   'twitter':'grahamt1',       'websiteurl':'http://blog.tgraham.us/',       'websitename':'blog.tgraham.us'},
+    'Tyler Jennings': {   'klout': 0,   'twitter':'JenningsTCJ',    'websiteurl':'http://tylerscode.com/',        'websitename':'tylerscode.com'}
+  };
+
+var meetups = {
+    'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
+    'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
+    'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs'},
+    'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org'},
+    'Knoxville Coding Dojo': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Coding-Dojo/',      'websitename':'meetup.com/Knoxville-Coding-Dojo'},
+    'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org'},
+    'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
+
+  };
 $(document).ready(function(){
     
 	jQuery.each(bloggers, function(index, itemData) {
@@ -73,15 +84,30 @@ $(document).ready(function(){
 	if (itemData.klout > 99)
 		html += " <i class='fa icon-star'></i>";
 	html += "                </h4>";
-	html += "                <p class='list-group-item-text'><a href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+  if(itemData.twitter.length>0)
+	 html += "                <p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
 	html += "                <p class='list-group-item-text'>";
-	html += "<a href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+	html += "<a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
 	html += "              </div>";
 	html += "            </div>";
 	
 	
 		$("#bloglist").append(html);
 	});	
+
+  jQuery.each(meetups, function(index, itemData) {
+  
+  var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+  if(itemData.websiteurl.length>0)
+    html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+  if(itemData.twitter.length>0)
+   html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+  html += "</li>";
+  
+
+    $("#meetupslist").append(html);
+  }); 
+
 });
 </script>
 </head>
@@ -104,6 +130,9 @@ $(document).ready(function(){
                 <ul class="nav navbar-nav navbar-custom">
                     <li>
                         <a href="#blogs">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="#meetups">Meetups</a>
                     </li>
                 </ul>
             </div>
@@ -138,10 +167,18 @@ $(document).ready(function(){
         <hr class="featurette-divider">
         <div class="featurette" id="blogs">
           <div class="row" id="bloglist">
-          <h3>Local Dev Blogs</h3>
+          <h3>Local Developer Blogs</h3>
+          </div>
+        </div>
 
-
-
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="row" id="meetups">
+          <h3>Local Developer Meetups</h3>
+          <div class='col-sm-6 col-md-offset-3'>
+            <ul class="list-group" id="meetupslist">
+            </ul>
+          </div>
           </div>
         </div>
       </div>
