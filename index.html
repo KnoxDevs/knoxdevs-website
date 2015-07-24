@@ -76,6 +76,7 @@ var bloggers = {
 
 var meetups = {
     'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
+    'DevBeers': {   'twitter':'',    'websiteurl':'',      'websitename':''},
     'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
     'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs'},
     'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org'},
@@ -98,6 +99,7 @@ $(document).ready(function(){
   if(itemData.twitter.length>0)
 	 html += "                <p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
 	html += "                <p class='list-group-item-text'>";
+  if(itemData.websiteurl.length>0)
 	html += "<a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
 	html += "              </div>";
 	html += "            </div>";
