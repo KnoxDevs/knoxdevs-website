@@ -86,6 +86,12 @@ var meetups = {
     'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
     'PyKnoxville': {   'twitter':'',    'websiteurl':'http://www.meetup.com/PyKnoxville/',      'websitename':'meetup.com/PyKnoxville'}
   };
+
+var resources = {
+    'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
+    'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com'},
+  };
+
 $(document).ready(function(){
     
 	jQuery.each(bloggers, function(index, itemData) {
@@ -122,6 +128,18 @@ $(document).ready(function(){
     $("#meetupslist").append(html);
   }); 
 
+  jQuery.each(resources, function(index, itemData) {
+  
+  var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+  if(itemData.websiteurl.length>0)
+    html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+  if(itemData.twitter.length>0)
+   html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+  html += "</li>";
+  
+
+    $("#resourceslist").append(html);
+  }); 
 });
 </script>
 </head>
@@ -147,6 +165,9 @@ $(document).ready(function(){
                     </li>
                     <li>
                         <a href="#meetups">Meetups</a>
+                    </li>
+                    <li>
+                        <a href="#resources">Resources</a>
                     </li>
                 </ul>
             </div>
@@ -197,6 +218,17 @@ $(document).ready(function(){
         </div>
       </div>
 
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="row" id="resources">
+          <h3>Local Developer Resources</h3>
+          <div class='col-sm-6 col-md-offset-3'>
+            <ul class="list-group" id="resourceslist">
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
       <footer>
         <div class="row">
           <div class="col-lg-12">
