@@ -79,17 +79,18 @@ var meetups = {
     'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
     'DevBeers': {   'twitter':'',    'websiteurl':'',      'websitename':''},
     'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
-    'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs'},
-    'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org'},
+    'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs', 'description':'JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome.'},
+    'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org', 'description':'Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize.'},
     'Knoxville Coding Dojo': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Coding-Dojo/',      'websitename':'meetup.com/Knoxville-Coding-Dojo'},
-    'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org'},
+    'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org','description':'CocoaHeads is a group devoted to discussion of Apple\'s Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). '},
     'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
     'PyKnoxville': {   'twitter':'',    'websiteurl':'http://www.meetup.com/PyKnoxville/',      'websitename':'meetup.com/PyKnoxville'}
   };
 
 var resources = {
+    'Codestock Developer Conference': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.'},
     'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
-    'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com'},
+    'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
   };
 
 $(document).ready(function(){
@@ -103,11 +104,12 @@ $(document).ready(function(){
 	if (itemData.klout > 99)
 		html += " <i class='fa icon-star'></i>";
 	html += "                </h4>";
+  if(itemData.description)
+    html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
   if(itemData.twitter.length>0)
-	 html += "                <p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
-	html += "                <p class='list-group-item-text'>";
+    html += "                <p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
   if(itemData.websiteurl.length>0)
-	html += "<a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+    html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
 	html += "              </div>";
 	html += "            </div>";
 	
@@ -118,6 +120,8 @@ $(document).ready(function(){
   jQuery.each(meetups, function(index, itemData) {
   
   var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+  if(itemData.description)
+   html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
   if(itemData.websiteurl.length>0)
     html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
   if(itemData.twitter.length>0)
@@ -131,6 +135,8 @@ $(document).ready(function(){
   jQuery.each(resources, function(index, itemData) {
   
   var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+  if(itemData.description)
+   html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
   if(itemData.websiteurl.length>0)
     html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
   if(itemData.twitter.length>0)

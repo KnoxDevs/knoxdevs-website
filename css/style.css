@@ -23,7 +23,12 @@ body {
   margin-bottom: 10px;
   border: solid 1px #dde6e9;
   background-color: white;
-  /*margin: 10px;*/
+}
+
+.card-description
+{
+  margin: 0px 30px 0px 30px;
+font-style: italic;
 }
 
 /* Wrapper */
