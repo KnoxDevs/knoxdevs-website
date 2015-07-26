@@ -92,66 +92,66 @@ var meetups = {
   };
 
 var resources = {
-    'Codestock Developer Conference': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.'},
     'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
     'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
+  };
+
+var conferences = {
+    'Codestock Developer Conference': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.'},
     'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.'},
     'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.'},
   };
 
-$(document).ready(function(){
-    
-	jQuery.each(bloggers, function(index, itemData) {
-	
-	var html = "<div class='col-sm-4'>";
-	html += "              <div class='card'>";
-	html += "                <h4 class='list-group-item-heading'>";
-	html += index;
-	if (itemData.klout > 99)
-		html += " <i class='fa icon-star'></i>";
-	html += "                </h4>";
+  function create_cards(list_json, column_css, dest_div)
+  {
+
+  jQuery.each(list_json, function(index, itemData) {
+  
+  var html = "<div class='"+column_css+"'>";
+  html += "<div class='card'>";
+  html += "<h4 class='list-group-item-heading'>";
+  html += index;
+  if (itemData.klout > 99)
+    html += " <i class='fa icon-star'></i>";
+  html += "</h4>";
   if(itemData.description)
     html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
   if(itemData.twitter.length>0)
-    html += "                <p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+    html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
   if(itemData.websiteurl.length>0)
     html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
-	html += "              </div>";
-	html += "            </div>";
-	
-	
-		$("#bloglist").append(html);
-	});	
-
-  jQuery.each(meetups, function(index, itemData) {
-  
-  var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
-  if(itemData.description)
-   html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
-  if(itemData.websiteurl.length>0)
-    html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
-  if(itemData.twitter.length>0)
-   html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
-  html += "</li>";
-  
-
-    $("#meetupslist").append(html);
+  html += "</div>";
+  html += "</div>";
+  $(dest_div).append(html);
   }); 
 
-  jQuery.each(resources, function(index, itemData) {
-  
-  var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
-  if(itemData.description)
-   html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
-  if(itemData.websiteurl.length>0)
-    html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
-  if(itemData.twitter.length>0)
-   html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
-  html += "</li>";
-  
+}
 
-    $("#resourceslist").append(html);
-  }); 
+  function create_list(list_json, dest_div)
+  {
+    jQuery.each(list_json, function(index, itemData) {
+      var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+      if(itemData.description)
+       html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
+      if(itemData.websiteurl.length>0)
+        html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+      if(itemData.twitter.length>0)
+       html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
+      html += "</li>";
+  
+      $(dest_div).append(html);
+  });
+
+}
+
+
+$(document).ready(function(){
+    
+  create_cards(bloggers, 'col-sm-4', "#bloglist");
+  create_list(meetups, "#meetupslist");
+  create_list(resources, "#resourceslist");
+  create_list(conferences, "#conferenceslist");
+
 });
 </script>
 </head>
@@ -180,6 +180,9 @@ $(document).ready(function(){
                     </li>
                     <li>
                         <a href="#resources">Resources</a>
+                    </li>
+                    <li>
+                        <a href="#conferences">Conferences</a>
                     </li>
                 </ul>
             </div>
@@ -240,6 +243,18 @@ $(document).ready(function(){
           </div>
           </div>
         </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="row" id="conferences">
+          <h3>Local Developer Conferences</h3>
+          <div class='col-sm-6 col-md-offset-3'>
+            <ul class="list-group" id="conferenceslist">
+            </ul>
+          </div>
+          </div>
+        </div>
+
       </div>
       <footer>
         <div class="row">
