@@ -31,6 +31,10 @@ body {
 font-style: italic;
 }
 
+.label-as-badge {
+    border-radius: 1em;
+}
+
 /* Wrapper */
 .icon-button {
 	background-color: #ccc;

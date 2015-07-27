@@ -94,12 +94,33 @@ var meetups = {
 var resources = {
     'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
     'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
+    'MediaWorks': {   'twitter':'',    'websiteurl':'https://knoxec.com/what-we-do/programs/mediaworks/',      'websitename':'knoxec.com/what-we-do/programs/mediaworks', 'description':'MediaWorks is a selective, highly immersive instructional and mentorship driven program for startups in the digital media sector, which includes digital video, augmented reality, digital signage, digital audio, or digital art.'}
   };
 
 var conferences = {
     'Codestock Developer Conference': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.'},
     'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.'},
     'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.'},
+  };
+
+var companies = {
+    'Aldis': {'twitter':'aldiscorp', 'websiteurl':'https://gridsmart.com/', 'websitename':'gridsmart.com', 'description':'"Aldis is a CleanTech company specializing in vision-based technologies for intelligent traffic system management and advanced infrastructure solutions."', 'tags':['startup']},
+    'Cadre5': {'twitter':'Cadre5', 'websiteurl':'http://cadre5.com', 'websitename':'cadre5.com', 'description':'"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent"'},
+    'Clayton Homes': {'twitter':'', 'websiteurl':'http://www.claytonhomes.com/', 'websitename':'claytonhomes.com'},
+    'DeRoyal': {'twitter':'deroyal', 'websiteurl':'http://www.deroyal.com/', 'websitename':'deroyal.com', 'description':'"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services."'},
+    'InVizion': {'twitter':'invizionllc', 'websiteurl':'http://invizionllc.com', 'websitename':'invizionllc.com', 'description':'"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries"', 'tags':['startup']},
+    'Oak Ridge Associated Universities (ORAU)': {'twitter':'orau', 'websiteurl':'https://www.orau.org/', 'websitename':'orau.org', 'description':'"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE."'},
+    'Oak Ridge National Laboratory (ORNL)': {'twitter':'ORNL', 'websiteurl':'http://www.ornl.gov/', 'websitename':'ornl.gov', 'description':'"largest energy research lab in the US"'},
+    'PerfectServe': {'twitter':'PerfectServe', 'websiteurl':'http://www.perfectserve.com/', 'websitename':'perfectserve.com', 'description':'"Healthcare\'s only comprehensive and secure communications and collaboration platform."'},
+    'Pilot Corp': {'twitter':'', 'websiteurl':'http://pilotflyingj.com/', 'websitename':'pilotflyingj.com'},
+    'Pro2Serve': {'twitter':'pro2serve', 'websiteurl':'http://www.pro2serve.com', 'websitename':'pro2serve.com', 'description':'"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation\'s security."'},
+    'Radio Systems Corp': {'twitter':'RadioSystemsCor', 'websiteurl':'http://www.petsafe.net/', 'websitename':'petsafe.net', 'description':'"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™"'},
+    'RESQUE': {'twitter':'resqueapp', 'websiteurl':'http://www.resqueapp.com/', 'websitename':'http://resqueapp.com', 'description':'"Smarter Automated Social Media for Real Estate Agents"', 'tags':['startup']},
+    'Scripps': {'twitter':'EWScrippsCo', 'websiteurl':'http://www.scripps.com/', 'websitename':'scripps.com', 'description':'"One of America\'s most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism."'},
+    'Tombras Group': {'twitter':'thetombrasgroup', 'websiteurl':'http://tombras.com/', 'websitename':'tombras.com', 'description':'"a full service advertising agency with a digital mindset"'},
+    'University of Tennessee (UT)': {'twitter':'UTKnoxville', 'websiteurl':'http://www.utk.edu/', 'websitename':'utk.edu'},
+    'VortexT': {'twitter':'vortextllc', 'websiteurl':'http://vortextllc.com', 'websitename':'vortextllc.com', 'description':'"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business"', 'tags':['startup']},
+    'White Stone Group (TWSG)': {'twitter':'', 'websiteurl':'http://www.twsg.com/', 'websitename':'twsg.com', 'description':''}
   };
 
   function create_cards(list_json, column_css, dest_div)
@@ -130,12 +151,19 @@ var conferences = {
   function create_list(list_json, dest_div)
   {
     jQuery.each(list_json, function(index, itemData) {
-      var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index+"</h4>";
+      var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index;
+      if(itemData.tags)
+      {
+        $.each(itemData.tags, function( index, value ) {
+       html += " <span class='label label-default label-as-badge'>"+value+"</span>";
+        });
+      }
+      html += "</h4>";
       if(itemData.description)
        html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
-      if(itemData.websiteurl.length>0)
+      if(itemData.websiteurl && itemData.websiteurl.length>0)
         html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
-      if(itemData.twitter.length>0)
+      if(itemData.twitter && itemData.twitter.length>0)
        html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa icon-twitter'></i></a></p>";
       html += "</li>";
   
@@ -151,6 +179,7 @@ $(document).ready(function(){
   create_list(meetups, "#meetupslist");
   create_list(resources, "#resourceslist");
   create_list(conferences, "#conferenceslist");
+  create_list(companies, "#companieslist");
 
 });
 </script>
@@ -164,7 +193,6 @@ $(document).ready(function(){
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>					
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
@@ -183,6 +211,9 @@ $(document).ready(function(){
                     </li>
                     <li>
                         <a href="#conferences">Conferences</a>
+                    </li>
+                    <li>
+                        <a href="#companies">Companies</a>
                     </li>
                 </ul>
             </div>
@@ -250,6 +281,18 @@ $(document).ready(function(){
           <h3>Local Developer Conferences</h3>
           <div class='col-sm-6 col-md-offset-3'>
             <ul class="list-group" id="conferenceslist">
+            </ul>
+          </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="row" id="companies">
+          <h3>Notable Companies<br /><small>Local tech startups and companies that employ local developers</small></h3>
+
+          <div class='col-sm-6 col-md-offset-3'>
+            <ul class="list-group" id="companieslist">
             </ul>
           </div>
           </div>
