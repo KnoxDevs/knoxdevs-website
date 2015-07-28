@@ -62,6 +62,7 @@ var bloggers = {
     'Devon Campbell': {   'klout': 0,   'twitter':'raddevon',       'websiteurl':'http://raddevon.com',         'websitename':'raddevon.com'},
     'Geoff Mazeroff': {   'klout': 41,  'twitter':'geoffmazeroff',    'websiteurl':'http://geoffmazeroff.com/',       'websitename':'geoffmazeroff.com'},
     'Jakob Myers': {    'klout': 0,   'twitter':'iamjakob23',     'websiteurl':'http://iamjakob.com/',        'websitename':'iamjakob.com'},
+    'James Kolpack': {   'klout': 0,   'twitter':'poprhythm',       'websiteurl':'http://popcyclical.com/',    'websitename':'popcyclical.com'},
     'James Nakamura': {   'klout': 0,   'twitter':'nakadude',       'websiteurl':'http://nakadude.blogspot.com',    'websitename':'nakadude.blogspot.com'},
     'Jamie Phillips': {   'klout': 0,   'twitter':'phillipsj73',       'websiteurl':'http://www.phillipsj.net/blog/html/index.html',    'websitename':'phillipsj.net'},
     'Jeremy Fairbank': {  'klout': 0,   'twitter':'elpapapollo',    'websiteurl':'http://blog.jeremyfairbank.com',    'websitename':'blog.jeremyfairbank.com'},
@@ -98,9 +99,22 @@ var resources = {
   };
 
 var conferences = {
-    'Codestock Developer Conference': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.'},
-    'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.'},
-    'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.'},
+    'All Things Open': {'twitter':'AllThingsOpen', 'websiteurl':'http://allthingsopen.org/', 'websitename':'allthingsopen.org', 'description':'Exploring Open Source, Open Tech, and the Open Web in the Enterprise', 'tags':['raleigh', 'oct 19 \'15']},
+    'Blend Conf': {'twitter':'blendconf', 'websiteurl':'http://blendconf.com', 'websitename':'blendconf.com', 'description':'generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development.', 'tags':['charlotte','sep 2 \'15']},
+    'Code PaLOUsa': {'twitter':'CodePaLOUsa', 'websiteurl':'http://www.codepalousa.com/', 'websitename':'codepalousa.com', 'description':'It\'s software development madness', 'tags':['louisville', 'apr 27 \'15']},
+    'Code on the Beach': {'twitter':'CodeOnTheBeach', 'websiteurl':'https://www.codeonthebeach.com/', 'websitename':'codeonthebeach.com', 'description':'HTML5, JavaScript, .NET, Data, Mobile, Design and much more', 'tags':['atlantic beach, fl', 'apr 7 \'15']},
+    'CodeMash': {'twitter':'codemash', 'websiteurl':'http://www.codemash.org/', 'websitename':'codemash.org', 'description':'CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP', 'tags':['ohio', 'jan 5 \'16']},
+    'Codestock': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.', 'tags':['knoxville']},
+    'DEVSPACE': {'twitter':'devspaceconf', 'websiteurl':'https://www.devspaceconf.com/', 'websitename':'devspaceconf.com', 'description':'North Alabama\'s Premier Polyglot Technology Conference', 'tags':['huntsville', 'oct \'15']},
+    'DevNexus': {'twitter':'devnexus', 'websiteurl':'https://devnexus.com', 'websitename':'devnexus.com', 'description':'Professional Developers Conference', 'tags':['atlanta', 'feb 15 \'16']},
+    'FrontEnd Design Conference': {'twitter':'frontendconf', 'websiteurl':'http://frontenddesignconference.com/', 'websitename':'frontenddesignconference.com', 'description':'a Conference for Web Professionals who love their community, the Web, and learning', 'tags':['st. petersburg']},
+    'Kansas City Developer Conference': {'twitter':'kc_dc', 'websiteurl':'http://www.kcdc.info', 'websitename':'kcdc.info', 'description':' a two-day, multi-track event that covers all aspects of software development, design and project management', 'tags':['kansas city']},
+    'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.', 'tags':['nashville']},
+    'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.', 'tags':['nashville']},
+    'Spark Conference': {'twitter':'SparkConfOrg', 'websiteurl':'http://sparkconf.org/', 'websitename':'sparkconf.org', 'description':'Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had', 'tags':['charlotte']},
+    'St. Louis Days of .NET ': {'twitter':'stldodn', 'websiteurl':'http://stldodn.com', 'websitename':'http://stldodn.com', 'description':'3-day event filled with knowledge and networking opportunities', 'tags':['st. louis', 'nov 12 \'15']},
+    'Strangeloop': {'twitter':'strangeloop_stl', 'websiteurl':'https://thestrangeloop.com/', 'websitename':'thestrangeloop.com', 'description':'to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry', 'tags':['st. louis', 'sep 24 \'15']},
+    'Thunder Plains': {'twitter':'ThunderPlains', 'websiteurl':'http://thunderplainsconf.com', 'websitename':'thunderplainsconf.com', 'description':'web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting.', 'tags':['oklahoma city', 'nov 3 \'15']},
   };
 
 var companies = {
@@ -108,6 +122,9 @@ var companies = {
     'Cadre5': {'twitter':'Cadre5', 'websiteurl':'http://cadre5.com', 'websitename':'cadre5.com', 'description':'"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent"'},
     'Clayton Homes': {'twitter':'', 'websiteurl':'http://www.claytonhomes.com/', 'websitename':'claytonhomes.com'},
     'DeRoyal': {'twitter':'deroyal', 'websiteurl':'http://www.deroyal.com/', 'websitename':'deroyal.com', 'description':'"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services."'},
+    'Edfinancial Services': {'twitter':'edfinancial', 'websiteurl':'https://www.edfinancial.com/', 'websitename':'edfinancial.com', 'description':'"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA"'},
+    'EventBooking': {'twitter':'eventbooking', 'websiteurl':'http://www.eventbooking.com/', 'websitename':'www.eventbooking.com', 'description':'"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service."'},
+    'Evolvr': {'twitter':'evolvrmedia', 'websiteurl':'http://evolvr.media/', 'websitename':'evolvr.media', 'description':'"Evolving the world of #virtualreality, one story at a time. The southeast\'s premier virtual reality agency."', 'tags':['startup']},
     'InVizion': {'twitter':'invizionllc', 'websiteurl':'http://invizionllc.com', 'websitename':'invizionllc.com', 'description':'"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries"', 'tags':['startup']},
     'Oak Ridge Associated Universities (ORAU)': {'twitter':'orau', 'websiteurl':'https://www.orau.org/', 'websitename':'orau.org', 'description':'"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE."'},
     'Oak Ridge National Laboratory (ORNL)': {'twitter':'ORNL', 'websiteurl':'http://www.ornl.gov/', 'websitename':'ornl.gov', 'description':'"largest energy research lab in the US"'},
@@ -120,8 +137,9 @@ var companies = {
     'Tombras Group': {'twitter':'thetombrasgroup', 'websiteurl':'http://tombras.com/', 'websitename':'tombras.com', 'description':'"a full service advertising agency with a digital mindset"'},
     'University of Tennessee (UT)': {'twitter':'UTKnoxville', 'websiteurl':'http://www.utk.edu/', 'websitename':'utk.edu'},
     'VortexT': {'twitter':'vortextllc', 'websiteurl':'http://vortextllc.com', 'websitename':'vortextllc.com', 'description':'"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business"', 'tags':['startup']},
-    'White Stone Group (TWSG)': {'twitter':'', 'websiteurl':'http://www.twsg.com/', 'websitename':'twsg.com', 'description':''}
-  };
+    'White Stone Group (TWSG)': {'twitter':'', 'websiteurl':'http://www.twsg.com/', 'websitename':'twsg.com', 'description':''},
+'Wintellect': {'twitter':'Wintellectuals', 'websiteurl':'http://www.wintellect.com/', 'websitename':'wintellect.com', 'description':'"We help you build better software faster through our unique combination of collaborative consulting and multi-format training."'}
+      };
 
   function create_cards(list_json, column_css, dest_div)
   {
