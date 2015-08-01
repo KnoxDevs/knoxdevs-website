@@ -42,9 +42,10 @@
 
 <script>
 var bloggers = {
-    'Adam Byram': {   'klout': 0,   'twitter':'adambyram',    'websiteurl':'http://www.adambyram.com/',      'websitename':'adambyram.com'},
+    'Adam Byram': {   'klout': 0,   'twitter':'adambyram',    'websiteurl':'http://www.adambyram.com/',      'websitename':'adambyram.com', 'rss':'http://www.adambyram.com/feed/'},
     'Adam Caudill': {   'klout': 0,   'twitter':'adamcaudill',    'websiteurl':'https://adamcaudill.com/',      'websitename':'adamcaudill.com'},
     'Adrian Carr':  {   'klout': 0,   'twitter':'',           'websiteurl':'http://adriancarr.com/',        'websitename':'adriancarr.com'},
+    'Al Zaudtke': {   'klout': 0,  'twitter':'AlZaudtke',    'websiteurl':'http://zaudtke.com/',      'websitename':'zaudtke.com'},
     'Alan Stevens': {   'klout': 50,  'twitter':'alanstevens',    'websiteurl':'http://halanstevens.com/',      'websitename':'halanstevens.com'},
     'Alex Klibisz': {   'klout': 0,   'twitter':'alexklibisz',    'websiteurl':'http://alexklibisz.github.io/',     'websitename':'alexklibisz.github.io'},
     'Avdi Grimm':   {   'klout': 0,   'twitter':'avdi',         'websiteurl':'http://about.avdi.org/',        'websitename':'avdi.org'},
@@ -74,6 +75,7 @@ var bloggers = {
     'Reid Evans': {     'klout': 45,  'twitter':'ReidNEvans',     'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net'},
     'Rob Gillen': {     'klout': 0,  'twitter':'argodev',     'websiteurl':'http://www.gillenfamily.net/', 'websitename':'gillenfamily.net'},
     'Steve Barbour': {    'klout': 0,   'twitter':'steverb',       'websiteurl':'http://www.steverb.com/',       'websitename':'steverb.com'},
+    'Thilina Gunarathne': {    'klout': 0,   'twitter':'thilina',       'websiteurl':'http://thilina.gunarathne.org/',       'websitename':'thilina.gunarathne.org'},
     'Travis Graham': {    'klout': 0,   'twitter':'grahamt1',       'websiteurl':'http://blog.tgraham.us/',       'websitename':'blog.tgraham.us'},
     'Tyler Jennings': {   'klout': 0,   'twitter':'JenningsTCJ',    'websiteurl':'http://tylerscode.com/',        'websitename':'tylerscode.com'},
     'William McKeehan': {   'klout': 0,   'twitter':'mckeehan',    'websiteurl':'http://www.mckeehan.info/',        'websitename':'mckeehan.info'}
@@ -81,6 +83,7 @@ var bloggers = {
 
 var meetups = {
     'Agile Knoxville': {   'twitter':'',    'websiteurl':'http://www.agileknoxville.com/',      'websitename':'agileknoxville.com'},
+    'Animoid Knoxville': {   'twitter':'egomachines',    'websiteurl':'http://egomachines.com/animoid/',      'websitename':'egomachines.com/animoid', 'description':'Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines'},
     'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
     'DevBeers': {   'twitter':'',    'websiteurl':'',      'websitename':''},
     'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
@@ -89,9 +92,17 @@ var meetups = {
     'Knoxville Coding Dojo': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Coding-Dojo/',      'websitename':'meetup.com/Knoxville-Coding-Dojo'},
     'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org','description':'CocoaHeads is a group devoted to discussion of Apple\'s Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). '},
     'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
+
+    'Knoxville R Users Group (KRUG)': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-R-Users-Group/',      'websitename':'meetup.com/Knoxville-R-Users-Group','description':'For people interested in learning how to use the free and open-source R software (r-project.org)'},
     'PyKnoxville': {   'twitter':'',    'websiteurl':'http://www.meetup.com/PyKnoxville/',      'websitename':'meetup.com/PyKnoxville'}
   };
 
+var coworking = {
+    'Regus': {'twitter':'RegusUSA', 'websiteurl':'http://www.regus.com/', 'websitename':'regus.com', 'description':'Downtown and Cedar Bluff', 'tags':['Knoxville']},
+    'Society of Work': {'twitter':'SocietyofWork', 'websiteurl':'http://societyofwork.com/', 'websitename':'societyofwork.com', 'tags':['Chattanooga']},
+    'Spark Plaza': {'twitter':'', 'websiteurl':'http://sparkplaza.com', 'websitename':'sparkplaza.com', 'description':'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.', 'tags':['Tri-Cities']},
+    'Technology Cooperative': {'twitter':'TechCoop', 'websiteurl':'http://techco.org/co-working-space/', 'websitename':'techco.org/co-working-space', 'tags':['Knoxville']},
+}
 var resources = {
     'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
     'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
@@ -101,6 +112,7 @@ var resources = {
 var conferences = {
     'All Things Open': {'twitter':'AllThingsOpen', 'websiteurl':'http://allthingsopen.org/', 'websitename':'allthingsopen.org', 'description':'Exploring Open Source, Open Tech, and the Open Web in the Enterprise', 'tags':['raleigh', 'oct 19 \'15']},
     'Blend Conf': {'twitter':'blendconf', 'websiteurl':'http://blendconf.com', 'websitename':'blendconf.com', 'description':'generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development.', 'tags':['charlotte','sep 2 \'15']},
+    'Business Analytics Forum: UT’s Haslam College of Business': {'twitter':'', 'websiteurl':'http://baforum.utk.edu/', 'websitename':'baforum.utk.edu', 'description':'meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members'},
     'Code PaLOUsa': {'twitter':'CodePaLOUsa', 'websiteurl':'http://www.codepalousa.com/', 'websitename':'codepalousa.com', 'description':'It\'s software development madness', 'tags':['louisville', 'apr 27 \'15']},
     'Code on the Beach': {'twitter':'CodeOnTheBeach', 'websiteurl':'https://www.codeonthebeach.com/', 'websitename':'codeonthebeach.com', 'description':'HTML5, JavaScript, .NET, Data, Mobile, Design and much more', 'tags':['atlantic beach, fl', 'apr 7 \'15']},
     'CodeMash': {'twitter':'codemash', 'websiteurl':'http://www.codemash.org/', 'websitename':'codemash.org', 'description':'CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP', 'tags':['ohio', 'jan 5 \'16']},
@@ -135,7 +147,6 @@ var companies = {
     'Radio Systems Corp': {'twitter':'RadioSystemsCor', 'websiteurl':'http://www.petsafe.net/', 'websitename':'petsafe.net', 'description':'"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™"'},
     'RESQUE': {'twitter':'resqueapp', 'websiteurl':'http://www.resqueapp.com/', 'websitename':'http://resqueapp.com', 'description':'"Smarter Automated Social Media for Real Estate Agents"', 'tags':['startup']},
     'Scripps': {'twitter':'EWScrippsCo', 'websiteurl':'http://www.scripps.com/', 'websitename':'scripps.com', 'description':'"One of America\'s most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism."'},
-    'Spark Plaza': {'twitter':'', 'websiteurl':'http://sparkplaza.com', 'websitename':'sparkplaza.com', 'description':'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.', 'tags':['co-work']},
     'Tombras Group': {'twitter':'thetombrasgroup', 'websiteurl':'http://tombras.com/', 'websitename':'tombras.com', 'description':'"a full service advertising agency with a digital mindset"'},
     'University of Tennessee (UT)': {'twitter':'UTKnoxville', 'websiteurl':'http://www.utk.edu/', 'websitename':'utk.edu'},
     'VortexT': {'twitter':'vortextllc', 'websiteurl':'http://vortextllc.com', 'websitename':'vortextllc.com', 'description':'"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business"', 'tags':['startup']},
@@ -154,6 +165,8 @@ var companies = {
   html += index;
   if (itemData.klout > 99)
     html += " <i class='fa icon-star'></i>";
+  if (itemData.rss)
+    html += " <a target='_blank' href='"+itemData.rss+"'><i class='fa icon-rss'></i></a>";
   html += "</h4>";
   if(itemData.description)
     html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
@@ -200,6 +213,8 @@ $(document).ready(function(){
   create_list(resources, "#resourceslist");
   create_list(conferences, "#conferenceslist");
   create_list(companies, "#companieslist");
+  create_list(coworking, "#coworkinglist");
+
 
 });
 </script>
@@ -224,16 +239,19 @@ $(document).ready(function(){
                         <a href="#blogs">Blogs</a>
                     </li>
                     <li>
-                        <a href="#meetups">Meetups</a>
-                    </li>
-                    <li>
-                        <a href="#resources">Resources</a>
+                        <a href="#companies">Companies</a>
                     </li>
                     <li>
                         <a href="#conferences">Conferences</a>
                     </li>
                     <li>
-                        <a href="#companies">Companies</a>
+                        <a href="#coworking">Coworking</a>
+                    </li>
+                    <li>
+                        <a href="#meetups">Meetups</a>
+                    </li>
+                    <li>
+                        <a href="#resources">Resources</a>
                     </li>
                 </ul>
             </div>
@@ -301,6 +319,17 @@ $(document).ready(function(){
           <h3>Local Developer Conferences</h3>
           <div class='col-sm-6 col-md-offset-3'>
             <ul class="list-group" id="conferenceslist">
+            </ul>
+          </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="featurette">
+          <div class="row" id="coworking">
+          <h3>Local Coworking Space</h3>
+          <div class='col-sm-6 col-md-offset-3'>
+            <ul class="list-group" id="coworkinglist">
             </ul>
           </div>
           </div>
