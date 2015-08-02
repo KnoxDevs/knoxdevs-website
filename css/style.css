@@ -31,6 +31,26 @@ body {
 font-style: italic;
 }
 
+.rss-entry
+{
+  	padding-left: 50px;
+	text-align: left;
+}
+
+.rss-title
+{
+  	color: black;
+}
+
+.rss-link
+{
+ 	text-decoration: underline;
+}
+
+.rss-content
+{
+}
+
 .label-as-badge {
     border-radius: 1em;
 }
