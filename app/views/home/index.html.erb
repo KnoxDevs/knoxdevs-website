@@ -1,0 +1,204 @@
+﻿<!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="fa-bar"></span>
+                  <span class="fa-bar"></span>
+              </button>
+              <a class="nav navbar-brand navbar-stuff" href="#about">KnoxDevs</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-custom">
+                  <li>
+                      <a href="#blog">Blog Feed</a>
+                  </li>
+                  <li>
+                      <a href="#blogs">Bloggers</a>
+                  </li>
+                  <li>
+                      <a href="#companies">Companies</a>
+                  </li>
+                  <li>
+                      <a href="#conferences">Conferences</a>
+                  </li>
+                  <li>
+                      <a href="#coworking">Coworking</a>
+                  </li>
+                  <li>
+                      <a href="#meetups">Meetups</a>
+                  </li>
+                  <li>
+                      <a href="#resources">Resources</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+<!-- Full Width Image Header -->
+<header class="header-image">
+    <div class="container">
+       <div class="featurette" id="about">
+      <img class="featurette-image img-responsive center-block" alt="KnoxDevs Log" src="kd_logo.png" />
+      <h1 id="knoxdevs-tagline">KnoxDevs: supporting the Knoxville area software development community</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+     <hr class="featurette-divider">
+    <div class="featurette" id="slack">
+      <h3><a href="http://knoxdevs.herokuapp.com">Join us on Slack!</a></h3>
+      <p class="lead"><script async defer src="http://knoxdevs.herokuapp.com/slackin.js?large"></script></p>
+    </div>
+
+      <hr class="featurette-divider">
+    <div class="featurette" id="twitter">
+        <div class="row">
+          <div class='col-sm-6 col-md-offset-3'>
+            <a class="twitter-timeline" href="https://twitter.com/knoxdevs" data-widget-id="622549003763187712">Tweets by @knoxdevs</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+         </div>
+        </div>
+    </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette" id="blog">
+        <div class="row">
+        <h3>Latest Feed from Local Developer Blogs</h3>
+        <div id="feeddiv"></div>
+
+        <script type="text/javascript">
+
+          var feedcontainer=document.getElementById("feeddiv")
+          var feedurl="http://www.rssmix.com/u/8148526/rss.xml"
+          var feedlimit=20
+          var rssoutput="<ul>"
+
+          function rssfeedsetup()
+          {
+            var feedpointer=new google.feeds.Feed(feedurl) //Google Feed API method
+            feedpointer.setNumEntries(feedlimit) //Google Feed API method
+            feedpointer.load(displayfeed) //Google Feed API method
+          }
+
+          function displayfeed(result)
+          {
+            if (!result.error)
+            {
+              var thefeeds=result.feed.entries
+              for (var i=0; i<thefeeds.length; i++)
+              {
+                var publishedDate = new Date(thefeeds[i].publishedDate);
+                var publishedDateString = (publishedDate.getMonth()+1) +"/"+ publishedDate.getDate();
+                rssoutput+="<li class='list-group-item rss-entry'><p class='list-group-item-text'><a href='" + thefeeds[i].link + "'>";
+                rssoutput+= "<h4 class='rss-title list-group-item-heading'><span class='label label-default label-as-badge'>" + publishedDateString + "</span> " + thefeeds[i].title + "</h4>";
+                rssoutput+= "<p class='rss-content'><i>" + thefeeds[i].contentSnippet + "</i></p>"; 
+                rssoutput+= "<p class='rss-link'>" + thefeeds[i].link + "</p>"; 
+                rssoutput+= "</a></p></li>";
+              }
+              rssoutput+="</ul>"
+              feedcontainer.innerHTML=rssoutput
+            }
+            else
+            {
+              rssoutput+="<li>Uh oh.  Having trouble reading the RSS feed.</li></ul>";
+              feedcontainer.innerHTML=rssoutput
+            }
+          }
+
+          window.onload=function()
+          {
+            rssfeedsetup()
+          }
+
+        </script>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette" id="blogs">
+        <div class="row" id="bloglist">
+        <h3>Local Developer Blogs</h3>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <div class="row" id="meetups">
+        <h3>Local Developer Meetups</h3>
+        <div class='col-sm-6 col-md-offset-3'>
+          <ul class="list-group" id="meetupslist">
+          </ul>
+        </div>
+        </div>
+      </div>
+ 
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <div class="row" id="conferences">
+        <h3>Local Developer Conferences</h3>
+        <div class='col-sm-6 col-md-offset-3'>
+          <ul class="list-group" id="conferenceslist">
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <div class="row" id="coworking">
+        <h3>Local Coworking Space</h3>
+        <div class='col-sm-6 col-md-offset-3'>
+          <ul class="list-group" id="coworkinglist">
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <div class="row" id="companies">
+        <h3>Notable Companies<br /><small>Local tech startups and companies that employ local developers</small></h3>
+
+        <div class='col-sm-6 col-md-offset-3'>
+          <ul class="list-group" id="companieslist">
+          </ul>
+        </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette">
+        <div class="row" id="resources">
+        <h3>Local Developer Resources</h3>
+        <div class='col-sm-6 col-md-offset-3'>
+          <ul class="list-group" id="resourceslist">
+          </ul>
+        </div>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="list-inline" style="font-size: 0;"><li>
+            <li><a href="https://twitter.com/knoxdevs" class="fa-button twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/knoxdevs" class="fa-button facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://plus.google.com/u/1/113510068597761749491" class="fa-button google-plus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.linkedin.com/grp/home?gid=8344834" class="fa-button linkedin"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+      <div id="github-call-to-action"><a href="https://github.com/KnoxDevs/knoxdevs-website">Please update me on <img class="emoji" title=":octocat:" alt=":octocat:" src="https://assets.github.com/images/icons/emoji/octocat.png" height="40" width="40"></a></div>
+        </div>
+      </div>
+    </footer>
