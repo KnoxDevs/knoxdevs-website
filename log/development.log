@@ -3598,3 +3598,45 @@ Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-08-27 20:42:45 -0400
 
 
 Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-08-27 20:42:45 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 216ms (Views: 205.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-08-27 22:48:27 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-08-27 22:48:28 -0400
