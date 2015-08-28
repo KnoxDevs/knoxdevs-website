@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knoxdevs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Supporting Knoxville area software development and developers">
+  <meta name="keywords" content="Knoxville,Software,TN,Developer,Development,Programming">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65254753-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <script type="text/javascript" src="http://www.google.com/jsapi">
+  </script>
+
+  <script type="text/javascript">
+    google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+  </script>
+
+  <script>
+    var bloggers = {
+        'Aaron Hayman': {   'klout': 0,   'twitter':'aaronhayman',    'websiteurl':'http://www.functionalgibberish.com/ ',      'websitename':'functionalgibberish.com', 'rss':'http://www.functionalgibberish.com/blog?format=rss', 'dateadded':'2015-08-01'},
+        'Adam Byram': {   'klout': 0,   'twitter':'adambyram',    'websiteurl':'http://www.adambyram.com/',      'websitename':'adambyram.com', 'rss':'http://www.adambyram.com/feed/'},
+        'Adam Caudill': {   'klout': 0,   'twitter':'adamcaudill',    'websiteurl':'https://adamcaudill.com/',      'websitename':'adamcaudill.com', 'rss':'https://adamcaudill.com/atom.xml'},
+        'Adrian Carr':  {   'klout': 0,   'twitter':'',           'websiteurl':'http://adriancarr.com/',        'websitename':'adriancarr.com', 'rss':'http://adriancarr.com/feed/'},
+        'Al Zaudtke': {   'klout': 0,  'twitter':'AlZaudtke',    'websiteurl':'http://zaudtke.com/',      'websitename':'zaudtke.com'},
+        'Alan Stevens': {   'klout': 50,  'twitter':'alanstevens',    'websiteurl':'http://halanstevens.com/',      'websitename':'halanstevens.com', 'rss':'http://halanstevens.com/blog/feed/'},
+        'Alex Klibisz': {   'klout': 0,   'twitter':'alexklibisz',    'websiteurl':'http://alexklibisz.github.io/',     'websitename':'alexklibisz.github.io', 'rss':'http://alexklibisz.github.io/feed.xml'},
+        'Avdi Grimm':   {   'klout': 0,   'twitter':'avdi',         'websiteurl':'http://about.avdi.org/',        'websitename':'avdi.org', 'rss':'http://devblog.avdi.org/feed/'},
+        'Bill Morefield':   {   'klout': 0,   'twitter':'bmorefield ',         'websiteurl':'http://www.billmorefield.com/',        'websitename':'billmorefield.com', 'rss':'http://feedpress.me/bmorefield'},
+        'Bob Muenchen':   {   'klout': 0,   'twitter':'BobMuenchen',         'websiteurl':'http://r4stats.com/',        'websitename':'r4stats.com', 'rss':'http://r4stats.com/feed/'},
+        'Bob Yexley':   {   'klout': 0,   'twitter':'ryexley',         'websiteurl':'http://bob.yexley.net/',        'websitename':'bob.yexley.net', 'rss':'http://bob.yexley.net/rss/'},
+        'Brandon Ballentine': {   'klout': 0, 'twitter':'', 'websiteurl':'http://www.brandonballentine.com/', 'websitename':'brandonballentine.com', 'rss':'', 'dateadded':'2015-08-02'},
+        'Brice Wilson':   {   'klout': 0,   'twitter':'brice_wilson',         'websiteurl':'https://www.bricewilson.net/',        'websitename':'www.bricewilson.net', 'rss':'https://www.bricewilson.net/rss/'},
+        'Bryan Headrick': {   'klout': 0,   'twitter':'BryanHeadrick',    'websiteurl':'http://bryanheadrick.com/',      'websitename':'bryanheadrick.com', 'rss':'', 'dateadded':'2015-08-01'},
+        'Cameron Presley': {  'klout': 40,  'twitter':'PhilipCPresley',   'websiteurl':'http://thesoftwarementor.com/',     'websitename':'thesoftwarementor.com', 'rss':'http://blog.thesoftwarementor.com/feed/'},
+        'Chris Brakebill': { 'klout': 0,   'twitter':'braker1nine',   'websiteurl':'http://chrisbrakebill.com/',      'websitename':'chrisbrakebill.com', 'rss':'http://chrisbrakebill.com/atom.xml'},
+        'ChristinaHarlow': {   'klout': 0,   'twitter':'cm_harlow',    'websiteurl':'http://christinaharlow.com/',      'websitename':'christinaharlow.com', 'rss':'http://christinaharlow.com/atom.xml', 'dateadded':'2015-08-01'},
+        'Christopher Lamm': { 'klout': 0,   'twitter':'the_anti_chris',   'websiteurl':'http://theantichris.com/',      'websitename':'theantichris.com', 'rss':'http://theantichris.com/feed/'},
+        'Chris Keathley': {   'klout': 0,   'twitter':'ChrisKeathley',    'websiteurl':'http://keathley.io/',         'websitename':'keathley.io', 'rss':'http://keathley.io/feed.xml'},
+        'Colin Mollenhour': { 'klout': 0,   'twitter':'colinmollenhour',  'websiteurl':'http://colin.mollenhour.com/',    'websitename':'colin.mollenhour.com', 'rss':'http://colin.mollenhour.com/feed/'},
+        'Dave Moore': { 'klout': 0,   'twitter':'davemoore_io',  'websiteurl':'http://davemoore.io',    'websitename':'davemoore.io/category', 'rss':'http://davemoore.io/feed/'},
+        'David Angel': { 'klout': 0,   'twitter':'Davidius',  'websiteurl':'http://davidangel.net/',    'websitename':'davidangel.net', 'rss':'http://davidangel.net/blog/feed/'},
+        'Devon Campbell': {   'klout': 0,   'twitter':'raddevon',       'websiteurl':'http://raddevon.com',         'websitename':'raddevon.com', 'rss':'http://raddevon.com/articles/feed'},
+        'Doc Isaac': { 'klout': 0, 'twitter':'johannhat','websiteurl':'http://superdocisaac.tumblr.com/','websitename':'superdocisaac.tumblr.com', 'rss':'http://superdocisaac.tumblr.com/rss', 'dateadded':'2015-08-13'},
+        'Dylan Wolf': {'klout': 0,'twitter':'dylanwolf', 'websiteurl':'http://www.dylanwolf.com/', 'websitename':'dylanwolf.com', 'rss':'http://www.dylanwolf.com/feed/', 'dateadded':'2015-08-04'},
+        'Emily Schleiner': {   'klout': 0,   'twitter':'cordial_emily',    'websiteurl':'https://knownhabits.wordpress.com/ ',      'websitename':'knownhabits.wordpress.com', 'rss':'https://knownhabits.wordpress.com/feed/', 'dateadded':'2015-08-01'},
+        'Geoff Mazeroff': {   'klout': 41,  'twitter':'geoffmazeroff',    'websiteurl':'http://geoffmazeroff.com/',       'websitename':'geoffmazeroff.com','rss':'http://www.geoffmazeroff.com/feed/'},
+        'Jakob Myers': {    'klout': 0,   'twitter':'iamjakob23',     'websiteurl':'http://iamjakob.com/',        'websitename':'iamjakob.com'},
+        'James Kolpack': {   'klout': 0,   'twitter':'poprhythm',       'websiteurl':'http://popcyclical.com/',    'websitename':'popcyclical.com', 'rss':'http://feeds.feedburner.com/popcyclical'},
+        'James Nakamura': {   'klout': 0,   'twitter':'nakadude',       'websiteurl':'http://nakadude.blogspot.com',    'websitename':'nakadude.blogspot.com', 'rss':'http://nakadude.blogspot.com/feeds/posts/default'},
+        'Jamie Phillips': {   'klout': 0,   'twitter':'phillipsj73',       'websiteurl':'http://www.phillipsj.net/blog/html/index.html',    'websitename':'phillipsj.net', 'rss':'http://www.phillipsj.net/blog/html/rss.html'},
+        'Jared Smith': {   'klout': 0, 'twitter':'jaredthecoder', 'websiteurl':'https://jaredmichaelsmith.com', 'websitename':'jaredmichaelsmith.com', 'rss':'https://jaredmichaelsmith.com/rss/', 'dateadded':'2015-08-05'},
+        'Jeff Thurston': {   'klout': 0,   'twitter':'jeffyt',    'websiteurl':'http://www.jeffthurston.com/',      'websitename':'jeffthurston.com', 'rss':'http://www.jeffthurston.com/feed/', 'dateadded':'2015-08-01'},
+        'Jeremy Fairbank': {  'klout': 0,   'twitter':'elpapapollo',    'websiteurl':'http://blog.jeremyfairbank.com',    'websitename':'blog.jeremyfairbank.com', 'rss':'http://blog.jeremyfairbank.com/feed'},
+        'Jonathan Kemp': {   'klout': 0,   'twitter':'jonkemp',      'websiteurl':'http://jonkemp.com/',       'websitename':'jonkemp.com', 'rss':'http://jonkemp.com/feed'},
+        'Joseph Agreda': {   'klout': 0, 'twitter':'jagreda', 'websiteurl':'http://probabilitytree.com/', 'websitename':'probabilitytree.com', 'rss':'', 'dateadded':'2015-08-02'},    
+        'Josh Carroll': {   'klout': 0,   'twitter':'jwcarroll',      'websiteurl':'http://technofattie.com',       'websitename':'technofattie.com', 'rss':'http://www.technofattie.com/rss.xml'},
+        'Joshua Miller': {'klout': 0,'twitter':'_jshmllr', 'websiteurl':'https://medium.com/@_jshmllr/', 'websitename':'medium.com/@jshmllr', 'rss':'http://medium.com/feed/@jshmllr', 'dateadded':'2015-08-04'},
+        'Levi Smith': {   'klout': 0,   'twitter':'GaTechGrad',      'websiteurl':'http://levidsmith.com/',       'websitename':'levidsmith.com', 'rss':'http://levidsmith.com/feed'},
+        'Michael C. Neel': {   'klout': 0,   'twitter':'ViNull',      'websiteurl':'http://www.vinull.com/',       'websitename':'vinull.com', 'rss':'http://www.vinull.com/feed/'},
+        'Michael Wender': {   'klout': 0,   'twitter':'mwender',    'websiteurl':'http://mwender.com/',      'websitename':'mwender.com', 'rss':'http://feed.mwender.com/', 'dateadded':'2015-08-01'},
+        'Neville Scheevel': { 'klout': 0, 'twitter':'_Neville','websiteurl':'http://scheevel.blogspot.com/','websitename':'scheevel.blogspot.com', 'rss':'http://scheevel.blogspot.com/feeds/posts/default', 'dateadded':'2015-08-13'},
+        'Nick Bradbury': {   'klout': 0, 'twitter':'nbradbury', 'websiteurl':'http://nickbradbury.com/', 'websitename':'nickbradbury.com', 'rss':'http://nickbradbury.com/feed/', 'dateadded':'2015-08-02'},
+        'Phillip Andreason': {  'klout': 0,   'twitter':'InfraredBaboon',   'websiteurl':'https://codeukemi.wordpress.com/',  'websitename':'codeukemi.wordpress.com', 'rss':'https://codeukemi.wordpress.com/feed/'},
+        'Preston Garland': { 'klout': 0, 'twitter':'wpgarland','websiteurl':'http://prestongarland.com/','websitename':'prestongarland.com', 'rss':'', 'dateadded':'2015-08-13'},
+        'Reid Evans': {     'klout': 45,  'twitter':'ReidNEvans',     'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net', 'rss':'http://reidev275.azurewebsites.net/rss/'},
+        'Rob Gillen': {     'klout': 0,  'twitter':'argodev',     'websiteurl':'http://www.gillenfamily.net/', 'websitename':'gillenfamily.net', 'rss':'http://www.gillenfamily.net/blog?format=rss'},
+        'Ronnie Goodrich': {   'klout': 0,   'twitter':'kahootbird',    'websiteurl':'http://www.kahootbird.com/',      'websitename':'kahootbird.com', 'rss':'http://www.kahootbird.com/?feed=rss2', 'dateadded':'2015-08-01'},
+        'SDE Science Lover': {   'klout': 0, 'twitter':'sdesciencelover', 'websiteurl':'http://sdesciencelover.typepad.com/', 'websitename':'sdesciencelover.typepad.com', 'rss':'http://sdesciencelover.typepad.com/blog/atom.xml', 'dateadded':'2015-08-02'},    
+        'Stephen Long': {'klout': 0,'twitter':'long2know', 'websiteurl':'https://long2know.com/', 'websitename':'long2know.com', 'rss':'', 'dateadded':'2015-08-04'},
+        'Steve Barbour': {    'klout': 0,   'twitter':'steverb',       'websiteurl':'http://www.steverb.com/',       'websitename':'steverb.com', 'rss':'http://www.steverb.com/syndication.axd'},
+        'Thilina Gunarathne': {    'klout': 0,   'twitter':'thilina',       'websiteurl':'http://thilina.gunarathne.org/',       'websitename':'thilina.gunarathne.org', 'dateadded':'2015-07-31'},
+        'Thomas Daugherty': {   'klout': 0,   'twitter':'Z33Studios',    'websiteurl':'http://thomasdaugherty.com',      'websitename':'thomasdaugherty.com', 'rss':'http://thomasdaugherty.com/blog/feed/', 'dateadded':'2015-08-01'},
+        'Travis Graham': {    'klout': 0,   'twitter':'grahamt1',       'websiteurl':'http://blog.tgraham.us/',       'websitename':'blog.tgraham.us', 'rss':'http://blog.tgraham.us/rss'},
+        'Tyler Jennings': {   'klout': 0,   'twitter':'JenningsTCJ',    'websiteurl':'http://tylerscode.com/',        'websitename':'tylerscode.com', 'rss':'http://tylerscode.com/feed/', 'dateadded':'2015-07-15'},
+        'Wade Chandler': {   'klout': 0,   'twitter':'wadechandler',    'websiteurl':'http://wadechandler.blogspot.com/',      'websitename':'wadechandler.blogspot.com', 'rss':'http://wadechandler.blogspot.com/feeds/posts/default', 'dateadded':'2015-08-01'},
+        'Wally McClure': {'klout': 0,'twitter':'wbm', 'websiteurl':'http://scalabledevelopment.com/', 'websitename':'scalabledevelopment.com', 'rss':'', 'dateadded':'2015-08-04'},
+        'William McKeehan': {   'klout': 0,   'twitter':'mckeehan',    'websiteurl':'http://www.mckeehan.info/',        'websitename':'mckeehan.info'},
+        'W. Anthony Ellison': {   'klout': 0, 'twitter':'tnwae', 'websiteurl':'http://rt38.net/', 'websitename':'rt38.net', 'rss':'', 'dateadded':'2015-08-02'},
+        };
+
+
+
+    var meetups = {
+        'Agile Knoxville': {   'twitter':'',    'websiteurl':'http://www.agileknoxville.com/',      'websitename':'agileknoxville.com'},
+        'Animoid Knoxville': {   'twitter':'egomachines',    'websiteurl':'http://egomachines.com/animoid/',      'websitename':'egomachines.com/animoid', 'description':'Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines'},
+        'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
+        'DevBeers': {   'twitter':'',    'websiteurl':'',      'websitename':''},
+        'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
+        'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs', 'description':'JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome.'},
+        'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org', 'description':'Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize.'},
+        'Knoxville Coding Dojo': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Coding-Dojo/',      'websitename':'meetup.com/Knoxville-Coding-Dojo'},
+        'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org','description':'CocoaHeads is a group devoted to discussion of Apple\'s Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). '},
+        'Knoxville Game Design': {   'twitter':'',    'websiteurl':'http://www.knoxgamedesign.org/', 'websitename':'knoxgamedesign.org', 'dateadded':'2015-08-01'},
+        'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
+        'Knoxville R Users Group (KRUG)': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-R-Users-Group/',      'websitename':'meetup.com/Knoxville-R-Users-Group','description':'For people interested in learning how to use the free and open-source R software (r-project.org)'},
+        'PyKnoxville': {   'twitter':'',    'websiteurl':'http://www.meetup.com/PyKnoxville/',      'websitename':'meetup.com/PyKnoxville', 'dateadded':'2015-07-01'}
+      };
+
+    var coworking = {
+        'Regus': {'twitter':'RegusUSA', 'websiteurl':'http://www.regus.com/', 'websitename':'regus.com', 'description':'Downtown and Cedar Bluff', 'tags':['Knoxville']},
+        'Society of Work': {'twitter':'SocietyofWork', 'websiteurl':'http://societyofwork.com/', 'websitename':'societyofwork.com', 'tags':['Chattanooga']},
+        'Spark Plaza': {'twitter':'', 'websiteurl':'http://sparkplaza.com', 'websitename':'sparkplaza.com', 'description':'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.', 'tags':['Tri-Cities']},
+        'Technology Cooperative': {'twitter':'TechCoop', 'websiteurl':'http://techco.org/co-working-space/', 'websitename':'techco.org/co-working-space', 'tags':['Knoxville']},
+    }
+    var resources = {
+        'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
+        'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
+        'MediaWorks': {   'twitter':'',    'websiteurl':'https://knoxec.com/what-we-do/programs/mediaworks/',      'websitename':'knoxec.com/what-we-do/programs/mediaworks', 'description':'MediaWorks is a selective, highly immersive instructional and mentorship driven program for startups in the digital media sector, which includes digital video, augmented reality, digital signage, digital audio, or digital art.'}
+      };
+
+    var conferences = {
+        'All Things Open': {'twitter':'AllThingsOpen', 'websiteurl':'http://allthingsopen.org/', 'websitename':'allthingsopen.org', 'description':'Exploring Open Source, Open Tech, and the Open Web in the Enterprise', 'tags':['raleigh', 'oct 19 \'15']},
+        'Blend Conf': {'twitter':'blendconf', 'websiteurl':'http://blendconf.com', 'websitename':'blendconf.com', 'description':'generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development.', 'tags':['charlotte','sep 2 \'15']},
+        'Business Analytics Forum: UT’s Haslam College of Business': {'twitter':'', 'websiteurl':'http://baforum.utk.edu/', 'websitename':'baforum.utk.edu', 'description':'meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members'},
+        'Code PaLOUsa': {'twitter':'CodePaLOUsa', 'websiteurl':'http://www.codepalousa.com/', 'websitename':'codepalousa.com', 'description':'It\'s software development madness', 'tags':['louisville', 'apr 27 \'15']},
+        'Code on the Beach': {'twitter':'CodeOnTheBeach', 'websiteurl':'https://www.codeonthebeach.com/', 'websitename':'codeonthebeach.com', 'description':'HTML5, JavaScript, .NET, Data, Mobile, Design and much more', 'tags':['atlantic beach, fl', 'apr 7 \'15']},
+        'CodeConf': {'twitter':'codeconf', 'websiteurl':'http://www.codeconf.com/', 'websitename':'codeconf.com', 'description':'CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration.', 'tags':['Nashville']},
+        'CodeMash': {'twitter':'codemash', 'websiteurl':'http://www.codemash.org/', 'websitename':'codemash.org', 'description':'CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP', 'tags':['ohio', 'jan 5 \'16']},
+        'Codestock': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.', 'tags':['knoxville']},
+        'Connect.js': {'twitter':'connect_js', 'websiteurl':'http://connect-js.com/', 'websitename':'connect-js.com', 'description':'Over 100 sessions in 9 concurrent tracks!', 'tags':['atlanta', 'oct 16 \'15']},
+        'DEVSPACE': {'twitter':'devspaceconf', 'websiteurl':'https://www.devspaceconf.com/', 'websitename':'devspaceconf.com', 'description':'North Alabama\'s Premier Polyglot Technology Conference', 'tags':['huntsville', 'oct \'15']},
+        'DevNexus': {'twitter':'devnexus', 'websiteurl':'https://devnexus.com', 'websitename':'devnexus.com', 'description':'Professional Developers Conference', 'tags':['atlanta', 'feb 15 \'16']},
+        'FrontEnd Design Conference': {'twitter':'frontendconf', 'websiteurl':'http://frontenddesignconference.com/', 'websitename':'frontenddesignconference.com', 'description':'a Conference for Web Professionals who love their community, the Web, and learning', 'tags':['st. petersburg']},
+        'Kansas City Developer Conference': {'twitter':'kc_dc', 'websiteurl':'http://www.kcdc.info', 'websitename':'kcdc.info', 'description':' a two-day, multi-track event that covers all aspects of software development, design and project management', 'tags':['kansas city']},
+        'LoneStarRuby': {'twitter':'LoneStarRuby', 'websiteurl':'http://www.lonestarruby.org/', 'websitename':'lonestarruby.org', 'description':'LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you.', 'tags':['Austin', 'aug 15 \'15']},
+        'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.', 'tags':['nashville']},
+        'Nodevember': {'twitter':'nodevember', 'websiteurl':'http://nodevember.org/', 'websitename':'nodevember.org', 'description':'two-day conference touching on all aspects of Node and JavaScript', 'dateadded':'2015-08-06', 'tags':['nashville', 'nov 14 \'15']},
+        'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.', 'tags':['nashville']},
+        'Release Notes': {'twitter':'release_notes', 'websiteurl':'http://releasenotes.tv', 'websitename':'releasenotes.tv', 'description':'Talk about the business of iOS and Mac development in Indianapolis, IN.', 'tags':['iOS', 'Mac', 'indianapolis']},
+        'Spark Conference': {'twitter':'SparkConfOrg', 'websiteurl':'http://sparkconf.org/', 'websitename':'sparkconf.org', 'description':'Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had', 'tags':['charlotte']},
+        'St. Louis Days of .NET ': {'twitter':'stldodn', 'websiteurl':'http://stldodn.com', 'websitename':'http://stldodn.com', 'description':'3-day event filled with knowledge and networking opportunities', 'tags':['st. louis', 'nov 12 \'15']},
+        'Strangeloop': {'twitter':'strangeloop_stl', 'websiteurl':'https://thestrangeloop.com/', 'websitename':'thestrangeloop.com', 'description':'to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry', 'tags':['st. louis', 'sep 24 \'15']},
+        'ThatConference': {'twitter':'ThatConference', 'websiteurl':'https://www.thatconference.com/', 'websitename':'thatconference.com', 'description':'Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family.', 'tags':['Wisconsin Dells, WI', 'aug 10 \'15']},
+        'Thunder Plains': {'twitter':'ThunderPlains', 'websiteurl':'http://thunderplainsconf.com', 'websitename':'thunderplainsconf.com', 'description':'web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting.', 'tags':['oklahoma city', 'nov 3 \'15']},
+      };
+
+
+ 
+
+
+    var companies = {
+        'Aldis': {'twitter':'aldiscorp', 'websiteurl':'https://gridsmart.com/', 'websitename':'gridsmart.com', 'description':'"Aldis is a CleanTech company specializing in vision-based technologies for intelligent traffic system management and advanced infrastructure solutions."', 'tags':['startup']},
+        'AMS Corporation': {'twitter':'', 'websiteurl':'http://www.ams-corp.com/', 'websitename':'ams-corp.com', 'description':'"Headquartered in Knoxville, Tennessee, with representatives throughout the United States, Europe, and Asia, Analysis and Measurement Services Corporation (AMS) is a market leader in providing the worldwide power industry with equipment, training, and services to verify the performance of process instrumentation systems"'},
+        'Cadre5': {'twitter':'Cadre5', 'websiteurl':'http://cadre5.com', 'websitename':'cadre5.com', 'description':'"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent"', 'tags':['20+ devs']},
+        'Cisco Systems': {'twitter':'Cisco', 'websiteurl':'http://www.cisco.com/', 'websitename':'cisco.com', 'description':'Cisco\'s Advanced Security Initiatives Group (ASIG) is headquartered in Knoxville', 'tags':['20+ devs']},
+        'Clayton Homes': {'twitter':'ClaytonHomes', 'websiteurl':'http://www.claytonhomes.com/', 'websitename':'claytonhomes.com'},
+        'DeRoyal': {'twitter':'deroyal', 'websiteurl':'http://www.deroyal.com/', 'websitename':'deroyal.com', 'description':'"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services."'},
+        'Designsensory': {'twitter':'designsensory ', 'websiteurl':'http://designsensory.com/', 'websitename':'designsensory.com', 'description':'"As a full-service branding, advertising and digital agency, we develop marketing campaigns, web platforms and rich content that help brands differentiate and connect with audiences."', 'dateadded':'2015-08-13'},
+        'Edfinancial Services': {'twitter':'edfinancial', 'websiteurl':'https://www.edfinancial.com/', 'websitename':'edfinancial.com', 'description':'"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA"'},
+        'EventBooking': {'twitter':'eventbooking', 'websiteurl':'http://www.eventbooking.com/', 'websitename':'www.eventbooking.com', 'description':'"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service."', 'tags':['6-10 devs']},
+        'Evolvr': {'twitter':'evolvrmedia', 'websiteurl':'http://evolvr.media/', 'websitename':'evolvr.media', 'description':'"Evolving the world of #virtualreality, one story at a time. The southeast\'s premier virtual reality agency."', 'tags':['startup', '1-5 devs']},
+        'InVizion': {'twitter':'invizionllc', 'websiteurl':'http://invizionllc.com', 'websitename':'invizionllc.com', 'description':'"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries"', 'tags':['startup','1-5 devs']},
+        'Knoxville Utilities Board (KUB)': {'twitter':'KnoxKUB', 'websiteurl':'http://www.kub.org/', 'websitename':'kub.org', 'description':'"For more than 75 years, Knoxville Utilities Board (KUB) has delivered energy and water to our customers on a daily basis. Employees take pride in knowing that the company holds strong roots in the past while actively planning for the future"'},
+        'Oak Ridge Associated Universities (ORAU)': {'twitter':'orau', 'websiteurl':'https://www.orau.org/', 'websitename':'orau.org', 'description':'"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE."'},
+        'Oak Ridge National Laboratory (ORNL)': {'twitter':'ORNL', 'websiteurl':'http://www.ornl.gov/', 'websitename':'ornl.gov', 'description':'"largest energy research lab in the US"', 'tags':['20+ devs'] },
+        'Paradym': {'twitter':'ParadymEdge', 'websiteurl':'https://www.paradym.com/', 'websitename':'paradym.com', 'description':'"An integrated solution for marketing your real estate business"'},
+        'PerfectServe': {'twitter':'PerfectServe', 'websiteurl':'http://www.perfectserve.com/', 'websitename':'perfectserve.com', 'description':'"Healthcare\'s only comprehensive and secure communications and collaboration platform."'},
+        'Pilot Corp': {'twitter':'pilottravel', 'websiteurl':'http://pilotflyingj.com/', 'websitename':'pilotflyingj.com'},
+        'Pro2Serve': {'twitter':'pro2serve', 'websiteurl':'http://www.pro2serve.com', 'websitename':'pro2serve.com', 'description':'"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation\'s security."', 'tags':['6-10 devs']},
+        'Radio Systems Corp': {'twitter':'RadioSystemsCor', 'websiteurl':'http://www.petsafe.net/', 'websitename':'petsafe.net', 'description':'"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™"'},
+        'Regal Entertainment Group': {'twitter':'RegalMovies', 'websiteurl':'http://www.regmovies.com/', 'websitename':'regmovies.com', 'description':'"an American movie theater chain headquartered in Knoxville, Tennessee"'},
+        'RESQUE': {'twitter':'resqueapp', 'websiteurl':'http://www.resqueapp.com/', 'websitename':'http://resqueapp.com', 'description':'"Smarter Automated Social Media for Real Estate Agents"', 'tags':['startup']},
+        'Scripps': {'twitter':'EWScrippsCo', 'websiteurl':'http://www.scripps.com/', 'websitename':'scripps.com', 'description':'"One of America\'s most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism."', 'tags':['20+ devs']},
+        'Tombras Group': {'twitter':'thetombrasgroup', 'websiteurl':'http://tombras.com/', 'websitename':'tombras.com', 'description':'"a full service advertising agency with a digital mindset"'},
+        'University of Tennessee (UT)': {'twitter':'UTKnoxville', 'websiteurl':'http://www.utk.edu/', 'websitename':'utk.edu', 'tags':['20+ devs']},
+        'VortexT': {'twitter':'vortextllc', 'websiteurl':'http://vortextllc.com', 'websitename':'vortextllc.com', 'description':'"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business"', 'tags':['startup', '1-5 devs']},
+        'White Stone Group (TWSG)': {'twitter':'', 'websiteurl':'http://www.twsg.com/', 'websitename':'twsg.com', 'description':'', 'tags':['6-10 devs']},
+        'Wintellect': {'twitter':'Wintellectuals', 'websiteurl':'http://www.wintellect.com/', 'websitename':'wintellect.com', 'description':'"We help you build better software faster through our unique combination of collaborative consulting and multi-format training."'}
+          };
+
+      function recently_aded(string_date_added)
+      {
+        var dateAdded = new Date(string_date_added);
+        var dateNow = new Date();
+        var timeDiff = Math.abs(dateNow.getTime() - dateAdded.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        if(diffDays <= 3)
+         return true;
+        return false;
+
+      }
+      function create_cards(list_json, column_css, dest_div)
+      {
+
+      jQuery.each(list_json, function(index, itemData) {
+      
+      var html = "<div class='"+column_css+"'>";
+      html += "<div class='card'>";
+      html += "<h4 class='list-group-item-heading'>";
+      html += index;
+      if (itemData.klout > 99)
+        html += " <i class='fa fa-star'></i>";
+      if (itemData.rss)
+        html += " <a target='_blank' href='"+itemData.rss+"'><i style='color: #FA9B39' class='fa fa-rss'></i></a>";
+      if(itemData.dateadded && recently_aded(itemData.dateadded))
+          html += " <span class='label label-default label-as-badge'>Newly Added</span>";
+      html += "</h4>";
+      if(itemData.description)
+        html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
+      if(itemData.twitter.length>0)
+        html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa fa-twitter'></i></a></p>";
+      if(itemData.websiteurl.length>0)
+        html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+      html += "</div>";
+      html += "</div>";
+      $(dest_div).append(html);
+      }); 
+
+    }
+
+      function create_list(list_json, dest_div)
+      {
+        jQuery.each(list_json, function(index, itemData) {
+          var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index;
+          if(itemData.tags)
+          {
+            $.each(itemData.tags, function( index, value ) {
+           html += " <span class='label label-default label-as-badge'>"+value+"</span>";
+            });
+          }
+          if(itemData.dateadded && recently_aded(itemData.dateadded))
+              html += " <span class='label label-default label-as-badge'>Newly Added</span>";
+          html += "</h4>";
+          if(itemData.description)
+           html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
+          if(itemData.websiteurl && itemData.websiteurl.length>0)
+            html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+          if(itemData.twitter && itemData.twitter.length>0)
+           html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa fa-twitter'></i></a></p>";
+          html += "</li>";
+      
+          $(dest_div).append(html);
+      });
+
+    }
+
+
+    $(document).ready(function()
+    {
+      create_cards(bloggers, 'col-sm-4', "#bloglist");
+      create_list(meetups, "#meetupslist");
+      create_list(resources, "#resourceslist");
+      create_list(conferences, "#conferenceslist");
+      create_list(companies, "#companieslist");
+      create_list(coworking, "#coworkinglist");
+    });
+  </script>
+</head>
+<body>
+<%= yield %>
+
+</body>
+</html>
