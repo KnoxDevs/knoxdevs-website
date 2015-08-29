@@ -39,6 +39,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 gem "font-awesome-rails"
 
+gem 'devise'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'spring'
