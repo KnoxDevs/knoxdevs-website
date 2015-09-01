@@ -81,6 +81,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.8.0)
     multi_json (1.11.2)
+    newrelic_rpm (3.13.0.299)
     orm_adapter (0.5.0)
     pg (0.18.2)
     polyglot (0.3.5)
@@ -162,6 +163,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
+  newrelic_rpm
   pg
   rails (= 4.1.4)
   rails_12factor (= 0.0.2)
