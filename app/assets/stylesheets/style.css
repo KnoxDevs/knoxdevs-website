@@ -16,6 +16,15 @@ body {
 	padding-top: 30px;
 }
 
+.menu
+{
+	color: #00CCFF;
+}
+.logo 
+{
+	color: #00CCFF;
+}
+
 .card
 {
   height: 100px;
@@ -148,7 +157,11 @@ font-style: italic;
 .fa-button .fa-linkedin {
 	color: #007bb6;
 }
+.fa-button .fa-youtube-play {
+	color: #e52d27;
+}
 .fa-button:hover .fa-twitter,
+.fa-button:hover .fa-youtube-play,
 .fa-button:hover .fa-facebook,
 .fa-button:hover .fa-linkedin,
 .fa-button:hover .fa-google-plus {

@@ -5120,3 +5120,3669 @@ Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-08-28 23:31:22 -0400
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-08-28 23:31:22 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-01 21:28:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (16.3ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 452ms (Views: 437.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-09-01 21:28:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResources (20150902013237)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150902013237"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-01 21:36:25 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 475ms (Views: 471.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:26 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 138ms (Views: 134.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:36:33 -0400
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2015-09-01 21:36:38 -0400
+Processing by ResourcesController#new as HTML
+  Rendered resources/_form.html.erb (42.8ms)
+  Rendered resources/new.html.erb within layouts/application (46.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 167ms (Views: 164.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/resources/favicon.ico" for 127.0.0.1 at 2015-09-01 21:36:38 -0400
+Processing by ResourcesController#show as 
+  Parameters: {"id"=>"favicon"}
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Resource with 'id'=favicon):
+  app/controllers/resources_controller.rb:41:in `set_resource'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started POST "/resources" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "resource"=>{"name"=>"Resource Name", "twitter"=>"Twitter", "websiteurl"=>"http:test.com", "websitename"=>"Test.com", "description"=>"This is my description"}, "commit"=>"Create Resource"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-02 01:37:06.052332"], ["description", "This is my description"], ["name", "Resource Name"], ["twitter", "Twitter"], ["updated_at", "2015-09-02 01:37:06.052332"], ["websitename", "Test.com"], ["websiteurl", "http:test.com"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/resources/1
+Completed 302 Found in 18ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResource Load (0.1ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered resources/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:37:06 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-01 21:38:46 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 126ms (Views: 123.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-01 21:39:12 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 235ms (Views: 232.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:39:13 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-01 21:44:26 -0400
+Processing by ResourcesController#index as HTML
+  Rendered resources/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:33: syntax error, unexpected '<'
+...reeze;@output_buffer.append=( <%= if user_signed_in? then li...
+...                               ^
+/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/index.html.erb:33: syntax error, unexpected '<'
+  app/views/resources/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.7ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.7ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 161ms (Views: 158.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:37 -0400
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-09-01 21:44:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 193ms (Views: 176.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "user"=>{"email"=>"cody@eonstreams.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'cody@eonstreams.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 11ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "user"=>{"email"=>"cody@eonstreams.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 240ms (Views: 126.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 21:44:47 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-01 22:12:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 199ms (Views: 188.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-01 22:12:34 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 325ms (Views: 312.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:40 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-09-02 22:39:41 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (1.5ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 213ms (Views: 207.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:40:58 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 288ms (Views: 276.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:48:16 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.7ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 193ms (Views: 188.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:51:44 -0400
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-09-02 22:51:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "user"=>{"email"=>"cody@eonstreams.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'cody@eonstreams.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "user"=>{"email"=>"cody@eonstreams.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 223ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:00 -0400
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-09-02 22:52:11 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIfcca64M+SuJ5vaV11p8iWeeS0uQt3urUSVmBSfWp8=", "user"=>{"email"=>"knoxdevs@codylambert.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'knoxdevs@codylambert.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2015-09-03 02:52:11.884468"], ["last_sign_in_at", "2015-08-29 03:29:05.409527"], ["sign_in_count", 4], ["updated_at", "2015-09-03 02:52:11.891397"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-02 22:52:11 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 123ms (Views: 122.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:12 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 96ms (Views: 94.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:19 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:19 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:19 -0400
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2015-09-02 22:52:22 -0400
+Processing by ResourcesController#new as HTML
+  Rendered resources/_form.html.erb (10.1ms)
+  Rendered resources/new.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 141.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/resources" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UOaE60oy+92NM7iMWza/qm9ftEmAuJpt7BAkSnpRCv8=", "resource"=>{"name"=>"Cody", "twitter"=>"codeasice", "websiteurl"=>"http://codylambert.com", "websitename"=>"CodyLambert.com", "description"=>"Cody is a guy around town"}, "commit"=>"Create Resource"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-03 02:52:43.416109"], ["description", "Cody is a guy around town"], ["name", "Cody"], ["twitter", "codeasice"], ["updated_at", "2015-09-03 02:52:43.416109"], ["websitename", "CodyLambert.com"], ["websiteurl", "http://codylambert.com"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/resources/2
+Completed 302 Found in 10ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/resources/2" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered resources/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 168ms (Views: 165.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:52:43 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:52:46 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 153ms (Views: 151.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-02 22:53:12 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 256ms (Views: 242.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:27 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-09-03 21:21:28 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 184ms (Views: 180.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:30 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:30 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:21:30 -0400
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for 127.0.0.1 at 2015-09-03 21:21:30 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.6ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 206ms (Views: 203.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:10 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.6ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 147ms (Views: 145.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:24:25 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (1.1ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (42.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 339ms (Views: 325.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:40:53 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.8ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 204ms (Views: 200.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:18 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 156ms (Views: 154.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:42:58 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.7ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 159ms (Views: 156.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:16 -0400
+
+
+Started GET "/resources/1/edit" for 127.0.0.1 at 2015-09-03 21:43:21 -0400
+Processing by ResourcesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResource Load (0.6ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered resources/_form.html.erb (10.2ms)
+  Rendered resources/edit.html.erb within layouts/application (14.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 168ms (Views: 164.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/resources/1/favicon.ico" for 127.0.0.1 at 2015-09-03 21:43:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/resources/1/favicon.ico"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  newrelic_rpm (3.13.0.299) lib/new_relic/agent/instrumentation/middleware_tracing.rb:67:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/cody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/cody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/cody/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (35.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.1ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:43:49 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.6ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:50 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 160ms (Views: 157.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:43:57 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 161ms (Views: 158.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:44:03 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:49:46 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (2.2ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/index.html.erb within layouts/application (26.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 428ms (Views: 415.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:46 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:46 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:49:47 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 223ms (Views: 220.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:50:49 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (27.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 364ms (Views: 349.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:52:43 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:44 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:52:44 -0400
+
+
+Started GET "/resources/1/edit" for 127.0.0.1 at 2015-09-03 21:55:34 -0400
+Processing by ResourcesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResource Load (0.7ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered resources/_form.html.erb (6.3ms)
+  Rendered resources/edit.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 209ms (Views: 204.3ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/resources/1" for 127.0.0.1 at 2015-09-03 21:56:10 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UOaE60oy+92NM7iMWza/qm9ftEmAuJpt7BAkSnpRCv8=", "resource"=>{"name"=>"Entrepreneurs of Knoxville (EOK)", "twitter"=>"Twitter", "websiteurl"=>"http://eokhq.com", "websitename"=>"eokhq.com", "description"=>""}, "commit"=>"Update Resource", "id"=>"1"}
+  [1m[35mResource Load (0.5ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "resources" SET "description" = ?, "name" = ?, "updated_at" = ?, "websitename" = ?, "websiteurl" = ? WHERE "resources"."id" = 1  [["description", ""], ["name", "Entrepreneurs of Knoxville (EOK)"], ["updated_at", "2015-09-04 01:56:10.923661"], ["websitename", "eokhq.com"], ["websiteurl", "http://eokhq.com"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/resources/1
+Completed 302 Found in 20ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2015-09-03 21:56:10 -0400
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResource Load (0.2ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered resources/show.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 199ms (Views: 195.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:56:11 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:56:14 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 144.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 21:59:02 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 168ms (Views: 165.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:02 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:02 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 21:59:03 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:01:25 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `Now' for DateTime:Class):
+     6:       <li class='list-group-item'><h4 class='list-group-item-heading'>
+     7:         <%= resource.name %>
+     8:         <span class='label label-default label-as-badge'>Newly Added</span>
+     9:         <%= DateTime.Now() - resource.created_at %>
+    10:         <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_resource_path(resource) end %>
+    11:         <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), resource, method: :delete, data: { confirm: 'Are you sure?' } end %>
+    12:       </h4>
+  app/views/resources/index.html.erb:9:in `block in _app_views_resources_index_html_erb__2601663408321169618_70281925463000'
+  app/views/resources/index.html.erb:5:in `_app_views_resources_index_html_erb__2601663408321169618_70281925463000'
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (54.8ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.4ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:01:37 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (expected numeric):
+     6:       <li class='list-group-item'><h4 class='list-group-item-heading'>
+     7:         <%= resource.name %>
+     8:         <span class='label label-default label-as-badge'>Newly Added</span>
+     9:         <%= DateTime.now() - resource.created_at %>
+    10:         <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_resource_path(resource) end %>
+    11:         <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), resource, method: :delete, data: { confirm: 'Are you sure?' } end %>
+    12:       </h4>
+  app/views/resources/index.html.erb:9:in `block in _app_views_resources_index_html_erb__2601663408321169618_70281928563180'
+  app/views/resources/index.html.erb:5:in `_app_views_resources_index_html_erb__2601663408321169618_70281928563180'
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.1ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 184ms (Views: 181.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:03:07 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:04:07 -0400
+Processing by ResourcesController#index as HTML
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 8ms
+
+SyntaxError (/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:8: syntax error, unexpected ')'
+...ys > resource.created_at then );@output_buffer.safe_append='
+...                               ^
+/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/cody/rails_projects/knoxdevs-website/app/views/resources/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/resources/index.html.erb:8: syntax error, unexpected ')'
+  app/views/resources/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+  app/views/resources/index.html.erb:24: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/resources/index.html.erb:26: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 204ms (Views: 202.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:07:38 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:17:43 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (32.8ms)
+  Rendered layouts/_header.html.erb (92.8ms)
+Completed 500 Internal Server Error in 437ms
+
+ActionView::Template::Error (undefined local variable or method `resources' for #<#<Class:0x007fd79782db58>:0x007fd79ad486f8>):
+    31:                     <a href="#meetups">Meetups</a>
+    32:                 </li>
+    33:                 <li>
+    34:                     <%= link_to "Resources", resources %>
+    35:                 </li>
+    36:             </ul>
+    37:             <ul class="nav navbar-nav navbar-right">
+  app/views/layouts/_header.html.erb:34:in `_app_views_layouts__header_html_erb__1789445871792038255_70281989894860'
+  app/views/layouts/application.html.erb:270:in `_app_views_layouts_application_html_erb___3933013067936567752_70281925608880'
+  app/controllers/resources_controller.rb:8:in `index'
+
+
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/cody/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 259ms (Views: 256.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:17:51 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:17:54 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.1ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 118ms (Views: 116.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:18:02 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:18:03 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.1ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:20:44 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 186ms (Views: 181.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:22:35 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (32.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 493ms (Views: 480.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:22:36 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (43.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 395ms (Views: 365.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:27:27 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 182ms (Views: 178.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:29:11 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:32:13 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.7ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 501ms (Views: 490.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:32:14 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+Completed 200 OK in 286ms (Views: 283.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:06 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 294ms (Views: 292.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:44 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:44 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:33:44 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 226ms (Views: 223.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:38:44 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:39:33 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 204ms (Views: 201.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:39:34 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 143ms (Views: 141.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:40:08 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 184ms (Views: 181.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:33 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 133.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:41:37 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 418ms (Views: 412.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:46:21 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:47:24 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 179ms (Views: 177.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:24 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:25 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.1ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 145ms (Views: 143.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:43 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:47:51 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 147ms (Views: 144.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:47:52 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:55:07 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (54.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 428ms (Views: 413.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:08 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (58.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 220ms (Views: 215.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:55:10 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 387ms (Views: 384.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 22:56:29 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:19 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:00:20 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 383ms (Views: 369.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:11 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 266ms (Views: 264.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:01:28 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:03:22 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 250ms (Views: 247.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:23 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:03:48 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 219ms (Views: 215.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:03:49 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 232ms (Views: 230.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:53 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:53 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:05:53 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 172ms (Views: 169.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:39 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 231ms (Views: 227.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:07:58 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.1ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 202ms (Views: 198.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-03 23:08:55 -0400

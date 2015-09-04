@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resource.name %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @resource.twitter %>
+</p>
+
+<p>
+  <strong>Websiteurl:</strong>
+  <%= @resource.websiteurl %>
+</p>
+
+<p>
+  <strong>Websitename:</strong>
+  <%= @resource.websitename %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @resource.description %>
+</p>
+
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>
