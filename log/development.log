@@ -13263,3 +13263,242 @@ Processing by HomeController#index as HTML
   Rendered layouts/_header.html.erb (3.0ms)
   Rendered layouts/_footer.html.erb (0.4ms)
 Completed 200 OK in 145ms (Views: 143.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-09-05 01:10:45 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 157ms (Views: 155.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 325ms (Views: 324.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-05 01:10:52 -0400
+
+
+Started GET "/home" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 256ms (Views: 254.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/font-awesome.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/one-page-wonder.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/resources.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-05 01:14:21 -0400
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-05 01:14:30 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"   ORDER BY "resources"."name" ASC
+  Rendered resources/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 204ms (Views: 201.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-09-05 01:14:33 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 155ms (Views: 153.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2015-09-05 01:14:39 -0400
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"   ORDER BY "resources"."name" ASC[0m
+  Rendered resources/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 178ms (Views: 176.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-09-05 01:14:41 -0400
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 223ms (Views: 222.2ms | ActiveRecord: 0.2ms)
