@@ -4,11 +4,11 @@
 <div class="container">
     <% @resources.each do |resource| %>
       <div class="row">
-        <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
           <li class='list-group-item'>
             <h4 class='list-group-item-heading'>
               <%= resource.name %>
-              <%= if DateTime.now.utc - 2.days > resource.created_at then 
+              <%= if DateTime.now.utc - 2.days < resource.created_at then 
               raw("<span class='label label-default label-as-badge'>Newly Added</span>")
                end %>
               <div class="pull-right">
@@ -22,9 +22,11 @@
             <p class='list-group-item-text'>
               <a target='_blank' href='<%= resource.websiteurl %>'><%= resource.websitename %></a>
             </p>
-            <p class='list-group-item-text'>
-              <a target='_blank' href='http://twitter.com/<%= resource.twitter %>'>@<%= resource.twitter %> <i class='fa fa-twitter'></i></a>
-            </p>
+            <% if !resource.twitter.empty? then %>
+              <p class='list-group-item-text'>
+                <a target='_blank' href='http://twitter.com/<%= resource.twitter %>'>@<%= resource.twitter %> <i class='fa fa-twitter'></i></a>
+              </p>
+            <% end %>
           </li>
         </div>
       </div>

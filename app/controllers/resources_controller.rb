@@ -4,7 +4,7 @@ class ResourcesController < ApplicationController
   respond_to :html
 
   def index
-    @resources = Resource.all
+    @resources = Resource.all.order(:name)
     respond_with(@resources)
   end
 

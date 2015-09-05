@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap.min.css
+ *= require bootstrap_and_overrides
  *= require one-page-wonder.css
  *= require font-awesome
  *= require style.css

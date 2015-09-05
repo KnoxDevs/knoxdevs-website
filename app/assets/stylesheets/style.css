@@ -20,10 +20,12 @@ body {
 {
 	color: #00CCFF;
 }
-.logo 
+
+.navbar-inverse .navbar-brand 
 {
 	color: #00CCFF;
 }
+
 
 .card
 {

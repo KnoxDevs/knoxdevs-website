@@ -118,11 +118,7 @@
         'Spark Plaza': {'twitter':'', 'websiteurl':'http://sparkplaza.com', 'websitename':'sparkplaza.com', 'description':'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.', 'tags':['Tri-Cities']},
         'Technology Cooperative': {'twitter':'TechCoop', 'websiteurl':'http://techco.org/co-working-space/', 'websitename':'techco.org/co-working-space', 'tags':['Knoxville']},
     }
-    var resources = {
-        'Entrepreneurs of Knoxville (EOK)': {   'twitter':'EoKtown',    'websiteurl':'http://www.eokhq.com/',      'websitename':'eokhq.com'},
-        'Knoxville Entrepreneur Center (KEC)': {   'twitter':'Knoxstartshere',    'websiteurl':'https://knoxec.com/',      'websitename':'knoxec.com', 'description':'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here. '},
-        'MediaWorks': {   'twitter':'',    'websiteurl':'https://knoxec.com/what-we-do/programs/mediaworks/',      'websitename':'knoxec.com/what-we-do/programs/mediaworks', 'description':'MediaWorks is a selective, highly immersive instructional and mentorship driven program for startups in the digital media sector, which includes digital video, augmented reality, digital signage, digital audio, or digital art.'}
-      };
+    
 
     var conferences = {
         'All Things Open': {'twitter':'AllThingsOpen', 'websiteurl':'http://allthingsopen.org/', 'websitename':'allthingsopen.org', 'description':'Exploring Open Source, Open Tech, and the Open Web in the Enterprise', 'tags':['raleigh', 'oct 19 \'15']},
@@ -255,11 +251,10 @@
     }
 
 
-    $(document).ready(function()
+    $(document).on('page:change', function()
     {
       create_cards(bloggers, 'col-sm-4', "#bloglist");
       create_list(meetups, "#meetupslist");
-      create_list(resources, "#resourceslist");
       create_list(conferences, "#conferenceslist");
       create_list(companies, "#companieslist");
       create_list(coworking, "#coworkinglist");
@@ -267,8 +262,8 @@
   </script>
 </head>
 <body>
-    <%= render 'layouts/header' %>
     <div class="container">
+    <%= render 'layouts/header' %>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
