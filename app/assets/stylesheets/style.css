@@ -26,6 +26,11 @@ body {
 	color: #00CCFF;
 }
 
+.navbar-inverse .navbar-toggle .icon-bar 
+{
+	background-color: #00CCFF;
+}
+
 
 .card
 {
@@ -69,20 +74,20 @@ font-style: italic;
 /* Wrapper */
 .fa-button {
 	background-color: #ccc;
-	border-radius: 3.6rem;
+	border-radius: 3.0rem;
+	height: 3.0rem;
+	line-height: 3.0rem;
+	width: 3.0rem;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 2.0rem;
-	height: 3.6rem;
-	line-height: 3.6rem;
-	margin: 0 5px;
+	font-size: 1.8rem;
+	margin: 0 2px;
 	position: relative;
 	text-align: center;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
 	        user-select: none;
-	width: 3.6rem;
 }
 
 /* Circle */
@@ -101,10 +106,10 @@ font-style: italic;
 	width: 0;
 }
 .fa-button:hover span {
-	width: 3.6rem;
-	height: 3.6rem;
-	border-radius: 3.6rem;
-	margin: -1.8rem;
+	width: 3.0rem;
+	height: 3.0rem;
+	border-radius: 3.0rem;
+	margin: -1.5rem;
 }
 .twitter span {
 	background-color: #4099ff;
@@ -120,16 +125,16 @@ font-style: italic;
 .fa-button i {
 	background: none;
 	color: white;
-	height: 3.6rem;
+	height: 3.0rem;
 	left: 0;
-	line-height: 3.6rem;
+	line-height: 3.0rem;
 	position: absolute;
 	top: 0;
 	-webkit-transition: all 0.3s;
 	   -moz-transition: all 0.3s;
 	     -o-transition: all 0.3s;
 	        transition: all 0.3s;
-	width: 3.6rem;
+	width: 3.0rem;
 	z-index: 10;
 }
 

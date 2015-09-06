@@ -13502,3 +13502,450 @@ Processing by HomeController#index as HTML
   Rendered layouts/_header.html.erb (2.6ms)
   Rendered layouts/_footer.html.erb (0.5ms)
 Completed 200 OK in 223ms (Views: 222.2ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCompanies (20150905212625)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150905212625"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (2.8ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.7ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (2.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.5ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.7ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.0ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (9.4ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.312397"], ["description", ""], ["name", "Entrepreneurs of Knoxville (EOK)"], ["twitter", "EoKtown"], ["updated_at", "2015-09-06 01:22:39.312397"], ["websitename", "eokhq.com"], ["websiteurl", "http://www.eokhq.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.315421"], ["description", ""], ["name", "KnoxFounders"], ["twitter", ""], ["updated_at", "2015-09-06 01:22:39.315421"], ["websitename", "KnoxFounders.com"], ["websiteurl", "http://KnoxFounders.com"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.318221"], ["description", "Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here."], ["name", "Knoxville Entrepreneur Center (KEC)"], ["twitter", "Knoxstartshere"], ["updated_at", "2015-09-06 01:22:39.318221"], ["websitename", "knoxec.com"], ["websiteurl", "https://knoxec.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.330087"], ["description", "\"Aldis is a CleanTech company specializing in vision-based technologies for intelligent traffic system management and advanced infrastructure solutions.\""], ["name", "Aldis"], ["startup", "t"], ["twitter", "aldiscorp"], ["updated_at", "2015-09-06 01:22:39.330087"], ["websitename", "gridsmart.com"], ["websiteurl", "https://gridsmart.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.333796"], ["description", "\"Headquartered in Knoxville, Tennessee, with representatives throughout the United States, Europe, and Asia, Analysis and Measurement Services Corporation (AMS) is a market leader in providing the worldwide power industry with equipment, training, and services to verify the performance of process instrumentation systems\""], ["name", "AMS Corporation"], ["updated_at", "2015-09-06 01:22:39.333796"], ["websitename", "ams-corp.com"], ["websiteurl", "http://www.ams-corp.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.336577"], ["description", "\"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent\""], ["name", "Cadre5"], ["num_devs", "20+ devs"], ["twitter", "Cadre5"], ["updated_at", "2015-09-06 01:22:39.336577"], ["websitename", "cadre5.com"], ["websiteurl", "http://cadre5.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.339671"], ["description", "Cisco's Advanced Security Initiatives Group (ASIG) is headquartered in Knoxville"], ["name", "Cisco Systems"], ["num_devs", "20+ devs"], ["twitter", "Cisco"], ["updated_at", "2015-09-06 01:22:39.339671"], ["websitename", "cisco.com"], ["websiteurl", "http://www.cisco.com/"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.343461"], ["name", "Clayton Homes"], ["twitter", "ClaytonHomes"], ["updated_at", "2015-09-06 01:22:39.343461"], ["websitename", "claytonhomes.com"], ["websiteurl", "http://www.claytonhomes.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.346898"], ["description", "\"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services.\""], ["name", "DeRoyal"], ["twitter", "deroyal"], ["updated_at", "2015-09-06 01:22:39.346898"], ["websitename", "deroyal.com"], ["websiteurl", "http://www.deroyal.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.350182"], ["description", "\"As a full-service branding, advertising and digital agency, we develop marketing campaigns, web platforms and rich content that help brands differentiate and connect with audiences.\""], ["name", "Designsensory"], ["twitter", "designsensory "], ["updated_at", "2015-09-06 01:22:39.350182"], ["websitename", "designsensory.com"], ["websiteurl", "http://designsensory.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.352878"], ["description", "\"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA\""], ["name", "Edfinancial Services"], ["twitter", "edfinancial"], ["updated_at", "2015-09-06 01:22:39.352878"], ["websitename", "edfinancial.com"], ["websiteurl", "https://www.edfinancial.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.357212"], ["description", "\"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service.\""], ["name", "EventBooking"], ["num_devs", "6-10 devs"], ["twitter", "eventbooking"], ["updated_at", "2015-09-06 01:22:39.357212"], ["websitename", "www.eventbooking.com"], ["websiteurl", "http://www.eventbooking.com/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.360327"], ["description", "\"Evolving the world of #virtualreality, one story at a time. The southeast's premier virtual reality agency.\""], ["name", "Evolvr"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "evolvrmedia"], ["updated_at", "2015-09-06 01:22:39.360327"], ["websitename", "evolvr.media"], ["websiteurl", "http://evolvr.media/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.362651"], ["description", "\"Helping Americans become more energy efficient\""], ["name", "Fiveworx"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "fiveworx"], ["updated_at", "2015-09-06 01:22:39.362651"], ["websitename", "fiveworx.com"], ["websiteurl", "http://fiveworx.com/"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.364641"], ["description", "\"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries\""], ["name", "InVizion"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "invizionllc"], ["updated_at", "2015-09-06 01:22:39.364641"], ["websitename", "invizionllc.com"], ["websiteurl", "http://invizionllc.com"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.367043"], ["description", "\"For more than 75 years, Knoxville Utilities Board (KUB) has delivered energy and water to our customers on a daily basis. Employees take pride in knowing that the company holds strong roots in the past while actively planning for the future\""], ["name", "Knoxville Utilities Board (KUB)"], ["twitter", "KnoxKUB"], ["updated_at", "2015-09-06 01:22:39.367043"], ["websitename", "kub.org"], ["websiteurl", "http://www.kub.org/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.369418"], ["description", "\"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE.\""], ["name", "Oak Ridge Associated Universities (ORAU)"], ["twitter", "orau"], ["updated_at", "2015-09-06 01:22:39.369418"], ["websitename", "orau.org"], ["websiteurl", "https://www.orau.org/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.371599"], ["description", "\"largest energy research lab in the US\""], ["name", "Oak Ridge National Laboratory (ORNL)"], ["num_devs", "20+ devs"], ["twitter", "ORNL"], ["updated_at", "2015-09-06 01:22:39.371599"], ["websitename", "ornl.gov"], ["websiteurl", "http://www.ornl.gov/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.373658"], ["description", "\"An integrated solution for marketing your real estate business\""], ["name", "Paradym"], ["twitter", "ParadymEdge"], ["updated_at", "2015-09-06 01:22:39.373658"], ["websitename", "paradym.com"], ["websiteurl", "https://www.paradym.com/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.376208"], ["description", "\"Healthcare's only comprehensive and secure communications and collaboration platform.\""], ["name", "PerfectServe"], ["twitter", "PerfectServe"], ["updated_at", "2015-09-06 01:22:39.376208"], ["websitename", "perfectserve.com"], ["websiteurl", "http://www.perfectserve.com/"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.379390"], ["name", "Pilot Corp"], ["twitter", "pilottravel"], ["updated_at", "2015-09-06 01:22:39.379390"], ["websitename", "pilotflyingj.com"], ["websiteurl", "http://pilotflyingj.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.381774"], ["description", "\"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation's security.\""], ["name", "Pro2Serve"], ["num_devs", "6-10 devs"], ["twitter", "pro2serve"], ["updated_at", "2015-09-06 01:22:39.381774"], ["websitename", "pro2serve.com"], ["websiteurl", "http://www.pro2serve.com"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.385055"], ["description", "\"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™\""], ["name", "Radio Systems Corp"], ["twitter", "RadioSystemsCor"], ["updated_at", "2015-09-06 01:22:39.385055"], ["websitename", "petsafe.net"], ["websiteurl", "http://www.petsafe.net/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.388428"], ["description", "\"an American movie theater chain headquartered in Knoxville, Tennessee\""], ["name", "Regal Entertainment Group"], ["twitter", "RegalMovies"], ["updated_at", "2015-09-06 01:22:39.388428"], ["websitename", "regmovies.com"], ["websiteurl", "http://www.regmovies.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.392152"], ["description", "\"Smarter Automated Social Media for Real Estate Agents\""], ["name", "RESQUE"], ["num_devs", "startup"], ["twitter", "resqueapp"], ["updated_at", "2015-09-06 01:22:39.392152"], ["websitename", "http://resqueapp.com"], ["websiteurl", "http://www.resqueapp.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.394985"], ["description", "\"One of America's most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism.\""], ["name", "Scripps"], ["num_devs", "20+ devs"], ["twitter", "EWScrippsCo"], ["updated_at", "2015-09-06 01:22:39.394985"], ["websitename", "scripps.com"], ["websiteurl", "http://www.scripps.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.397518"], ["description", "\"a full service advertising agency with a digital mindset\""], ["name", "Tombras Group"], ["twitter", "thetombrasgroup"], ["updated_at", "2015-09-06 01:22:39.397518"], ["websitename", "tombras.com"], ["websiteurl", "http://tombras.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.399516"], ["name", "University of Tennessee (UT)"], ["num_devs", "20+ devs"], ["twitter", "UTKnoxville"], ["updated_at", "2015-09-06 01:22:39.399516"], ["websitename", "utk.edu"], ["websiteurl", "http://www.utk.edu/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.401909"], ["description", "\"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business\""], ["name", "VortexT"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "vortextllc"], ["updated_at", "2015-09-06 01:22:39.401909"], ["websitename", "vortextllc.com"], ["websiteurl", "http://vortextllc.com"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 01:22:39.404103"], ["name", "White Stone Group (TWSG)"], ["num_devs", "6-10 devs"], ["updated_at", "2015-09-06 01:22:39.404103"], ["websitename", "twsg.com"], ["websiteurl", "http://www.twsg.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 01:22:39.406326"], ["description", "\"We help you build better software faster through our unique combination of collaborative consulting and multi-format training.\""], ["name", "Wintellect"], ["twitter", "Wintellectuals"], ["updated_at", "2015-09-06 01:22:39.406326"], ["websitename", "wintellect.com"], ["websiteurl", "http://www.wintellect.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[36m (3.2ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.798664"], ["description", ""], ["name", "Entrepreneurs of Knoxville (EOK)"], ["twitter", "EoKtown"], ["updated_at", "2015-09-06 03:13:16.798664"], ["websitename", "eokhq.com"], ["websiteurl", "http://www.eokhq.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.801538"], ["description", ""], ["name", "KnoxFounders"], ["twitter", ""], ["updated_at", "2015-09-06 03:13:16.801538"], ["websitename", "KnoxFounders.com"], ["websiteurl", "http://KnoxFounders.com"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.803359"], ["description", "Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here."], ["name", "Knoxville Entrepreneur Center (KEC)"], ["twitter", "Knoxstartshere"], ["updated_at", "2015-09-06 03:13:16.803359"], ["websitename", "knoxec.com"], ["websiteurl", "https://knoxec.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.812433"], ["description", "\"Aldis is a CleanTech company specializing in vision-based technologies for intelligent traffic system management and advanced infrastructure solutions.\""], ["name", "Aldis"], ["startup", "t"], ["twitter", "aldiscorp"], ["updated_at", "2015-09-06 03:13:16.812433"], ["websitename", "gridsmart.com"], ["websiteurl", "https://gridsmart.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.814837"], ["description", "\"Headquartered in Knoxville, Tennessee, with representatives throughout the United States, Europe, and Asia, Analysis and Measurement Services Corporation (AMS) is a market leader in providing the worldwide power industry with equipment, training, and services to verify the performance of process instrumentation systems\""], ["name", "AMS Corporation"], ["updated_at", "2015-09-06 03:13:16.814837"], ["websitename", "ams-corp.com"], ["websiteurl", "http://www.ams-corp.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.816799"], ["description", "\"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent\""], ["name", "Cadre5"], ["num_devs", "20+ devs"], ["twitter", "Cadre5"], ["updated_at", "2015-09-06 03:13:16.816799"], ["websitename", "cadre5.com"], ["websiteurl", "http://cadre5.com"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.818891"], ["description", "Cisco's Advanced Security Initiatives Group (ASIG) is headquartered in Knoxville"], ["name", "Cisco Systems"], ["num_devs", "20+ devs"], ["twitter", "Cisco"], ["updated_at", "2015-09-06 03:13:16.818891"], ["websitename", "cisco.com"], ["websiteurl", "http://www.cisco.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.820806"], ["name", "Clayton Homes"], ["twitter", "ClaytonHomes"], ["updated_at", "2015-09-06 03:13:16.820806"], ["websitename", "claytonhomes.com"], ["websiteurl", "http://www.claytonhomes.com/"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.823375"], ["description", "\"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services.\""], ["name", "DeRoyal"], ["twitter", "deroyal"], ["updated_at", "2015-09-06 03:13:16.823375"], ["websitename", "deroyal.com"], ["websiteurl", "http://www.deroyal.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.825662"], ["description", "\"As a full-service branding, advertising and digital agency, we develop marketing campaigns, web platforms and rich content that help brands differentiate and connect with audiences.\""], ["name", "Designsensory"], ["twitter", "designsensory "], ["updated_at", "2015-09-06 03:13:16.825662"], ["websitename", "designsensory.com"], ["websiteurl", "http://designsensory.com/"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.827816"], ["description", "\"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA\""], ["name", "Edfinancial Services"], ["twitter", "edfinancial"], ["updated_at", "2015-09-06 03:13:16.827816"], ["websitename", "edfinancial.com"], ["websiteurl", "https://www.edfinancial.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.830741"], ["description", "\"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service.\""], ["name", "EventBooking"], ["num_devs", "6-10 devs"], ["twitter", "eventbooking"], ["updated_at", "2015-09-06 03:13:16.830741"], ["websitename", "www.eventbooking.com"], ["websiteurl", "http://www.eventbooking.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.833754"], ["description", "\"Evolving the world of #virtualreality, one story at a time. The southeast's premier virtual reality agency.\""], ["name", "Evolvr"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "evolvrmedia"], ["updated_at", "2015-09-06 03:13:16.833754"], ["websitename", "evolvr.media"], ["websiteurl", "http://evolvr.media/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.836885"], ["description", "\"Helping Americans become more energy efficient\""], ["name", "Fiveworx"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "fiveworx"], ["updated_at", "2015-09-06 03:13:16.836885"], ["websitename", "fiveworx.com"], ["websiteurl", "http://fiveworx.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.839994"], ["description", "\"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries\""], ["name", "InVizion"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "invizionllc"], ["updated_at", "2015-09-06 03:13:16.839994"], ["websitename", "invizionllc.com"], ["websiteurl", "http://invizionllc.com"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.842901"], ["description", "\"For more than 75 years, Knoxville Utilities Board (KUB) has delivered energy and water to our customers on a daily basis. Employees take pride in knowing that the company holds strong roots in the past while actively planning for the future\""], ["name", "Knoxville Utilities Board (KUB)"], ["num_devs", "6-10 devs"], ["twitter", "KnoxKUB"], ["updated_at", "2015-09-06 03:13:16.842901"], ["websitename", "kub.org"], ["websiteurl", "http://www.kub.org/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.845779"], ["description", "\"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE.\""], ["name", "Oak Ridge Associated Universities (ORAU)"], ["twitter", "orau"], ["updated_at", "2015-09-06 03:13:16.845779"], ["websitename", "orau.org"], ["websiteurl", "https://www.orau.org/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.848207"], ["description", "\"largest energy research lab in the US\""], ["name", "Oak Ridge National Laboratory (ORNL)"], ["num_devs", "20+ devs"], ["twitter", "ORNL"], ["updated_at", "2015-09-06 03:13:16.848207"], ["websitename", "ornl.gov"], ["websiteurl", "http://www.ornl.gov/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.851246"], ["description", "\"An integrated solution for marketing your real estate business\""], ["name", "Paradym"], ["num_devs", "6-10 devs"], ["twitter", "ParadymEdge"], ["updated_at", "2015-09-06 03:13:16.851246"], ["websitename", "paradym.com"], ["websiteurl", "https://www.paradym.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.853819"], ["description", "\"Healthcare's only comprehensive and secure communications and collaboration platform.\""], ["name", "PerfectServe"], ["twitter", "PerfectServe"], ["updated_at", "2015-09-06 03:13:16.853819"], ["websitename", "perfectserve.com"], ["websiteurl", "http://www.perfectserve.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.857617"], ["name", "Pilot Corp"], ["twitter", "pilottravel"], ["updated_at", "2015-09-06 03:13:16.857617"], ["websitename", "pilotflyingj.com"], ["websiteurl", "http://pilotflyingj.com/"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.861146"], ["description", "\"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation's security.\""], ["name", "Pro2Serve"], ["num_devs", "6-10 devs"], ["twitter", "pro2serve"], ["updated_at", "2015-09-06 03:13:16.861146"], ["websitename", "pro2serve.com"], ["websiteurl", "http://www.pro2serve.com"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.864684"], ["description", "\"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™\""], ["name", "Radio Systems Corp"], ["twitter", "RadioSystemsCor"], ["updated_at", "2015-09-06 03:13:16.864684"], ["websitename", "petsafe.net"], ["websiteurl", "http://www.petsafe.net/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.867461"], ["description", "\"an American movie theater chain headquartered in Knoxville, Tennessee\""], ["name", "Regal Entertainment Group"], ["twitter", "RegalMovies"], ["updated_at", "2015-09-06 03:13:16.867461"], ["websitename", "regmovies.com"], ["websiteurl", "http://www.regmovies.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.869948"], ["description", "\"Smarter Automated Social Media for Real Estate Agents\""], ["name", "RESQUE"], ["num_devs", "startup"], ["twitter", "resqueapp"], ["updated_at", "2015-09-06 03:13:16.869948"], ["websitename", "http://resqueapp.com"], ["websiteurl", "http://www.resqueapp.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.872956"], ["description", "\"Action Bracelet is a state-of-the-art photo system that delivers guests photos instantly to their mobile device or email\""], ["name", "Action Bracelet"], ["num_devs", "startup"], ["twitter", "ActionBracelet"], ["updated_at", "2015-09-06 03:13:16.872956"], ["websitename", "actionbracelet.co"], ["websiteurl", "http://actionbracelet.co"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.875330"], ["description", "\"One of America's most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism.\""], ["name", "Scripps"], ["num_devs", "20+ devs"], ["twitter", "EWScrippsCo"], ["updated_at", "2015-09-06 03:13:16.875330"], ["websitename", "scripps.com"], ["websiteurl", "http://www.scripps.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.877224"], ["description", "\"Television network with an estimated reach of more than 80 million U.S. households, through cable and satellite providers, online streaming and limited over-the-air broadcasters.\""], ["name", "Jewelry Television"], ["num_devs", "20+ devs"], ["twitter", "jewelry"], ["updated_at", "2015-09-06 03:13:16.877224"], ["websitename", "jtv.com"], ["websiteurl", "http://jtv.com"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.879026"], ["description", "\"a full service advertising agency with a digital mindset\""], ["name", "Tombras Group"], ["twitter", "thetombrasgroup"], ["updated_at", "2015-09-06 03:13:16.879026"], ["websitename", "tombras.com"], ["websiteurl", "http://tombras.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.881634"], ["name", "University of Tennessee (UT)"], ["num_devs", "20+ devs"], ["twitter", "UTKnoxville"], ["updated_at", "2015-09-06 03:13:16.881634"], ["websitename", "utk.edu"], ["websiteurl", "http://www.utk.edu/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.883853"], ["description", "\"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business\""], ["name", "VortexT"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "vortextllc"], ["updated_at", "2015-09-06 03:13:16.883853"], ["websitename", "vortextllc.com"], ["websiteurl", "http://vortextllc.com"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:13:16.885863"], ["name", "White Stone Group (TWSG)"], ["num_devs", "6-10 devs"], ["updated_at", "2015-09-06 03:13:16.885863"], ["websitename", "twsg.com"], ["websiteurl", "http://www.twsg.com/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:13:16.888145"], ["description", "\"We help you build better software faster through our unique combination of collaborative consulting and multi-format training.\""], ["name", "Wintellect"], ["twitter", "Wintellectuals"], ["updated_at", "2015-09-06 03:13:16.888145"], ["websitename", "wintellect.com"], ["websiteurl", "http://www.wintellect.com/"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[36m (1.0ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.236639"], ["description", ""], ["name", "Entrepreneurs of Knoxville (EOK)"], ["twitter", "EoKtown"], ["updated_at", "2015-09-06 03:18:25.236639"], ["websitename", "eokhq.com"], ["websiteurl", "http://www.eokhq.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.239559"], ["description", ""], ["name", "KnoxFounders"], ["twitter", ""], ["updated_at", "2015-09-06 03:18:25.239559"], ["websitename", "KnoxFounders.com"], ["websiteurl", "http://KnoxFounders.com"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "resources" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.243535"], ["description", "Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here."], ["name", "Knoxville Entrepreneur Center (KEC)"], ["twitter", "Knoxstartshere"], ["updated_at", "2015-09-06 03:18:25.243535"], ["websitename", "knoxec.com"], ["websiteurl", "https://knoxec.com/"]]
+  [1m[36m (16.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.277411"], ["description", "\"The world's only single-camera, tracking-based vision solution for actuation & data collection at intersections and on highways. See more. Spend less\""], ["name", "GRIDSMART"], ["startup", "t"], ["twitter", "GRIDSMARTTech"], ["updated_at", "2015-09-06 03:18:25.277411"], ["websitename", "gridsmart.com"], ["websiteurl", "https://gridsmart.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.280138"], ["description", "\"Headquartered in Knoxville, Tennessee, with representatives throughout the United States, Europe, and Asia, Analysis and Measurement Services Corporation (AMS) is a market leader in providing the worldwide power industry with equipment, training, and services to verify the performance of process instrumentation systems\""], ["name", "AMS Corporation"], ["updated_at", "2015-09-06 03:18:25.280138"], ["websitename", "ams-corp.com"], ["websiteurl", "http://www.ams-corp.com/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.282131"], ["description", "\"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent\""], ["name", "Cadre5"], ["num_devs", "20+ devs"], ["twitter", "Cadre5"], ["updated_at", "2015-09-06 03:18:25.282131"], ["websitename", "cadre5.com"], ["websiteurl", "http://cadre5.com"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.284090"], ["description", "Cisco's Advanced Security Initiatives Group (ASIG) is headquartered in Knoxville"], ["name", "Cisco Systems"], ["num_devs", "20+ devs"], ["twitter", "Cisco"], ["updated_at", "2015-09-06 03:18:25.284090"], ["websitename", "cisco.com"], ["websiteurl", "http://www.cisco.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.285998"], ["name", "Clayton Homes"], ["twitter", "ClaytonHomes"], ["updated_at", "2015-09-06 03:18:25.285998"], ["websitename", "claytonhomes.com"], ["websiteurl", "http://www.claytonhomes.com/"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.287844"], ["description", "\"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services.\""], ["name", "DeRoyal"], ["twitter", "deroyal"], ["updated_at", "2015-09-06 03:18:25.287844"], ["websitename", "deroyal.com"], ["websiteurl", "http://www.deroyal.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.290077"], ["description", "\"As a full-service branding, advertising and digital agency, we develop marketing campaigns, web platforms and rich content that help brands differentiate and connect with audiences.\""], ["name", "Designsensory"], ["twitter", "designsensory "], ["updated_at", "2015-09-06 03:18:25.290077"], ["websitename", "designsensory.com"], ["websiteurl", "http://designsensory.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.292601"], ["description", "\"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA\""], ["name", "Edfinancial Services"], ["twitter", "edfinancial"], ["updated_at", "2015-09-06 03:18:25.292601"], ["websitename", "edfinancial.com"], ["websiteurl", "https://www.edfinancial.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.294826"], ["description", "\"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service.\""], ["name", "EventBooking"], ["num_devs", "6-10 devs"], ["twitter", "eventbooking"], ["updated_at", "2015-09-06 03:18:25.294826"], ["websitename", "www.eventbooking.com"], ["websiteurl", "http://www.eventbooking.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.297002"], ["description", "\"Evolving the world of #virtualreality, one story at a time. The southeast's premier virtual reality agency.\""], ["name", "Evolvr"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "evolvrmedia"], ["updated_at", "2015-09-06 03:18:25.297002"], ["websitename", "evolvr.media"], ["websiteurl", "http://evolvr.media/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.299466"], ["description", "\"Helping Americans become more energy efficient\""], ["name", "Fiveworx"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "fiveworx"], ["updated_at", "2015-09-06 03:18:25.299466"], ["websitename", "fiveworx.com"], ["websiteurl", "http://fiveworx.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.302323"], ["description", "\"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries\""], ["name", "InVizion"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "invizionllc"], ["updated_at", "2015-09-06 03:18:25.302323"], ["websitename", "invizionllc.com"], ["websiteurl", "http://invizionllc.com"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.304394"], ["description", "\"For more than 75 years, Knoxville Utilities Board (KUB) has delivered energy and water to our customers on a daily basis. Employees take pride in knowing that the company holds strong roots in the past while actively planning for the future\""], ["name", "Knoxville Utilities Board (KUB)"], ["num_devs", "6-10 devs"], ["twitter", "KnoxKUB"], ["updated_at", "2015-09-06 03:18:25.304394"], ["websitename", "kub.org"], ["websiteurl", "http://www.kub.org/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.306589"], ["description", "\"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE.\""], ["name", "Oak Ridge Associated Universities (ORAU)"], ["twitter", "orau"], ["updated_at", "2015-09-06 03:18:25.306589"], ["websitename", "orau.org"], ["websiteurl", "https://www.orau.org/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.308541"], ["description", "\"largest energy research lab in the US\""], ["name", "Oak Ridge National Laboratory (ORNL)"], ["num_devs", "20+ devs"], ["twitter", "ORNL"], ["updated_at", "2015-09-06 03:18:25.308541"], ["websitename", "ornl.gov"], ["websiteurl", "http://www.ornl.gov/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.310694"], ["description", "\"An integrated solution for marketing your real estate business\""], ["name", "Paradym"], ["num_devs", "6-10 devs"], ["twitter", "ParadymEdge"], ["updated_at", "2015-09-06 03:18:25.310694"], ["websitename", "paradym.com"], ["websiteurl", "https://www.paradym.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.313284"], ["description", "\"Healthcare's only comprehensive and secure communications and collaboration platform.\""], ["name", "PerfectServe"], ["twitter", "PerfectServe"], ["updated_at", "2015-09-06 03:18:25.313284"], ["websitename", "perfectserve.com"], ["websiteurl", "http://www.perfectserve.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "companies" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.316286"], ["name", "Pilot Corp"], ["twitter", "pilottravel"], ["updated_at", "2015-09-06 03:18:25.316286"], ["websitename", "pilotflyingj.com"], ["websiteurl", "http://pilotflyingj.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.318517"], ["description", "\"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation's security.\""], ["name", "Pro2Serve"], ["num_devs", "6-10 devs"], ["twitter", "pro2serve"], ["updated_at", "2015-09-06 03:18:25.318517"], ["websitename", "pro2serve.com"], ["websiteurl", "http://www.pro2serve.com"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.320381"], ["description", "\"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™\""], ["name", "Radio Systems Corp"], ["twitter", "RadioSystemsCor"], ["updated_at", "2015-09-06 03:18:25.320381"], ["websitename", "petsafe.net"], ["websiteurl", "http://www.petsafe.net/"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.322209"], ["description", "\"an American movie theater chain headquartered in Knoxville, Tennessee\""], ["name", "Regal Entertainment Group"], ["twitter", "RegalMovies"], ["updated_at", "2015-09-06 03:18:25.322209"], ["websitename", "regmovies.com"], ["websiteurl", "http://www.regmovies.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.324463"], ["description", "\"Smarter Automated Social Media for Real Estate Agents\""], ["name", "RESQUE"], ["num_devs", "startup"], ["twitter", "resqueapp"], ["updated_at", "2015-09-06 03:18:25.324463"], ["websitename", "http://resqueapp.com"], ["websiteurl", "http://www.resqueapp.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.327394"], ["description", "\"Action Bracelet is a state-of-the-art photo system that delivers guests photos instantly to their mobile device or email\""], ["name", "Action Bracelet"], ["num_devs", "startup"], ["twitter", "ActionBracelet"], ["updated_at", "2015-09-06 03:18:25.327394"], ["websitename", "actionbracelet.co"], ["websiteurl", "http://actionbracelet.co"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.330843"], ["description", "\"One of America's most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism.\""], ["name", "Scripps"], ["num_devs", "20+ devs"], ["twitter", "EWScrippsCo"], ["updated_at", "2015-09-06 03:18:25.330843"], ["websitename", "scripps.com"], ["websiteurl", "http://www.scripps.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "companies" ("created_at", "description", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.333916"], ["description", "\"Television network with an estimated reach of more than 80 million U.S. households, through cable and satellite providers, online streaming and limited over-the-air broadcasters.\""], ["name", "Jewelry Television"], ["num_devs", "20+ devs"], ["twitter", "jewelry"], ["updated_at", "2015-09-06 03:18:25.333916"], ["websitename", "jtv.com"], ["websiteurl", "http://jtv.com"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.336490"], ["description", "\"a full service advertising agency with a digital mindset\""], ["name", "Tombras Group"], ["twitter", "thetombrasgroup"], ["updated_at", "2015-09-06 03:18:25.336490"], ["websitename", "tombras.com"], ["websiteurl", "http://tombras.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.338512"], ["name", "University of Tennessee (UT)"], ["num_devs", "20+ devs"], ["twitter", "UTKnoxville"], ["updated_at", "2015-09-06 03:18:25.338512"], ["websitename", "utk.edu"], ["websiteurl", "http://www.utk.edu/"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "num_devs", "startup", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.340474"], ["description", "\"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business\""], ["name", "VortexT"], ["num_devs", "1-5 devs"], ["startup", "t"], ["twitter", "vortextllc"], ["updated_at", "2015-09-06 03:18:25.340474"], ["websitename", "vortextllc.com"], ["websiteurl", "http://vortextllc.com"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "companies" ("created_at", "name", "num_devs", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-06 03:18:25.342546"], ["name", "White Stone Group (TWSG)"], ["num_devs", "6-10 devs"], ["updated_at", "2015-09-06 03:18:25.342546"], ["websitename", "twsg.com"], ["websiteurl", "http://www.twsg.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:18:25.344913"], ["description", "\"We help you build better software faster through our unique combination of collaborative consulting and multi-format training.\""], ["name", "Wintellect"], ["twitter", "Wintellectuals"], ["updated_at", "2015-09-06 03:18:25.344913"], ["websitename", "wintellect.com"], ["websiteurl", "http://www.wintellect.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m

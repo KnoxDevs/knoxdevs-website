@@ -1,0 +1,37 @@
+<h1>Notable Companies<br /><small>Local tech startups and companies that employ local developers</small>
+<%= if user_signed_in? then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_company_path end %>
+</h1>
+<div class="container">
+    <% @companies.each do |company| %>
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+          <li class='list-group-item'>
+            <h4 class='list-group-item-heading'>
+              <%= company.name %>
+              <%= if company.startup? then 
+              raw("<span class='label label-default label-as-badge'>Startup</span>")
+               end %>
+              <%= if DateTime.now.utc - 2.days < company.created_at then 
+              raw("<span class='label label-default label-as-badge'>Newly Added</span>")
+               end %>
+              <div class="pull-right">
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_company_path(resource) end %>
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), company, method: :delete, data: { confirm: 'Are you sure?' } end %>
+              </div>
+            </h4>
+            <p class='list-group-item-text card-description'>
+              <%= company.description %>
+            </p>
+            <p class='list-group-item-text'>
+              <a target='_blank' href='<%= company.websiteurl %>'><%= company.websitename %></a>
+            </p>
+            <% if !company.twitter.blank? then %>
+              <p class='list-group-item-text'>
+                <a target='_blank' href='http://twitter.com/<%= company.twitter %>'>@<%= company.twitter %> <i class='fa fa-twitter'></i></a>
+              </p>
+            <% end %>
+          </li>
+        </div>
+      </div>
+    <% end %>
+</div>

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902013237) do
+ActiveRecord::Schema.define(version: 20150905212625) do
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.string   "twitter"
+    t.string   "websiteurl"
+    t.string   "websitename"
+    t.string   "description"
+    t.boolean  "startup"
+    t.string   "num_devs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "resources", force: true do |t|
     t.string   "name"
