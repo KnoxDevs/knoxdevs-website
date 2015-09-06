@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905212625) do
+ActiveRecord::Schema.define(version: 20150906033219) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
     t.string   "twitter"
     t.string   "websiteurl"
     t.string   "websitename"
-    t.string   "description"
+    t.text     "description", limit: 255
     t.boolean  "startup"
     t.string   "num_devs"
     t.datetime "created_at"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150905212625) do
     t.string   "twitter"
     t.string   "websiteurl"
     t.string   "websitename"
-    t.string   "description"
+    t.text     "description", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
