@@ -15,7 +15,7 @@
               raw("<span class='label label-default label-as-badge'>Newly Added</span>")
                end %>
               <div class="pull-right">
-              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_company_path(resource) end %>
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_company_path(company) end %>
               <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), company, method: :delete, data: { confirm: 'Are you sure?' } end %>
               </div>
             </h4>
