@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :coworkings
+
+  resources :meetups
+
+  resources :conferences
+
   resources :companies
 
   resources :resources

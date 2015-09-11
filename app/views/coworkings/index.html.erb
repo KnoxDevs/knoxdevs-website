@@ -1,0 +1,37 @@
+<h1>Co-working Space<br />  
+<%= if user_signed_in? then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_coworking_path end %>
+</h1>
+<div class="container">
+    <% @coworkings.each do |coworking| %>
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+          <li class='list-group-item'>
+            <h4 class='list-group-item-heading'>
+              <%= coworking.name %>
+              <%= if !coworking.location.blank? then 
+              raw("<span class='label label-default label-as-badge'>"+coworking.location+"</span>")
+               end %>
+              <%= if DateTime.now.utc - 2.days < coworking.created_at then 
+              raw("<span class='label label-default label-as-badge'>Newly Added</span>")
+               end %>
+              <div class="pull-right">
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_coworking_path(coworking) end %>
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), coworking, method: :delete, data: { confirm: 'Are you sure?' } end %>
+              </div>
+            </h4>
+            <p class='list-group-item-text card-description'>
+              <%= coworking.description %>
+            </p>
+            <p class='list-group-item-text'>
+              <a target='_blank' href='<%= coworking.websiteurl %>'><%= coworking.websitename %></a>
+            </p>
+            <% if !coworking.twitter.blank? then %>
+              <p class='list-group-item-text'>
+                <a target='_blank' href='http://twitter.com/<%= coworking.twitter %>'>@<%= coworking.twitter %> <i class='fa fa-twitter'></i></a>
+              </p>
+            <% end %>
+          </li>
+        </div>
+      </div>
+    <% end %>
+</div>

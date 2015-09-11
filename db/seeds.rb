@@ -3,212 +3,305 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' ) { name: 'Copenhagen' )])
+#   cities = City.create([{ name: 'Chicago' ) { name: 'Copenhagen' ))
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Resource.create(:name => 'Entrepreneurs of Knoxville (EOK)', :twitter => 'EoKtown', :websiteurl => 'http://www.eokhq.com/', :websitename => 'eokhq.com', :description => '')
-Resource.create(:name => 'KnoxFounders', :twitter => '', :websiteurl => 'http://KnoxFounders.com', :websitename => 'KnoxFounders.com', :description => '')
-Resource.create(:name => 'Knoxville Entrepreneur Center (KEC)', :twitter => 'Knoxstartshere', :websiteurl => 'https://knoxec.com/', :websitename => 'knoxec.com', :description => 'Knoxville Entrepreneur Center is a business accelerator located in Market Square that serves as the front door for entrepreneurs in our region, and a resource for anyone looking to start or grow a business here.')
+Meetup.create(
+:name => 'Agile Knoxville', 
+:websiteurl => 'http://www.agileknoxville.com/',      
+:websitename => 'agileknoxville.com')
 
+Meetup.create(
+:name => 'Animoid Knoxville', 
+:twitter => 'egomachines',    
+:websiteurl => 'http://egomachines.com/animoid/',      
+:websitename => 'egomachines.com/animoid', 
+:description => 'Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines')
 
-Company.create(:name => 'GRIDSMART',
-	:twitter => 'GRIDSMARTTech', 
-	:websiteurl => 'https://gridsmart.com/', 
-	:websitename => 'gridsmart.com', 
-	:description => '"The world\'s only single-camera, tracking-based vision solution for actuation & data collection at intersections and on highways. See more. Spend less"', 
-	:startup => true)
+Meetup.create(
+:name => 'Data Science KNX', 
+:twitter => 'DSciKNX',    
+:websiteurl => 'http://www.meetup.com/DSci-KNX',      
+:websitename => 'meetup.com/DSci-KNX')
 
-Company.create(:name => 'AMS Corporation',
-	:websiteurl => 'http://www.ams-corp.com/', 
-	:websitename => 'ams-corp.com', 
-	:description => '"Headquartered in Knoxville, Tennessee, with representatives throughout the United States, Europe, and Asia, Analysis and Measurement Services Corporation (AMS) is a market leader in providing the worldwide power industry with equipment, training, and services to verify the performance of process instrumentation systems"')
+Meetup.create(
+:name => 'DevBeers')
 
+Meetup.create(
+:name => 'KnoxPHP User Group', 
+:websiteurl => 'http://www.meetup.com/KnoxPHP-User-Group/',      
+:websitename => 'meetup.com/KnoxPHP-User-Group')
 
-Company.create(:name => 'Cadre5',
-	:twitter => 'Cadre5', 
-	:websiteurl => 'http://cadre5.com', 
-	:websitename => 'cadre5.com', 
-	:description => '"Cadre5 is a full-service technology and design firm with an impressive array of engineering, information architecture and interface design talent"', 
-	:num_devs => '20+ devs')
+Meetup.create(
+:name => 'KnoxvilleJS', 
+:twitter => 'knoxville_js',    
+:websiteurl => 'http://www.meetup.com/Knoxvillejs/',      
+:websitename => 'meetup.com/Knoxvillejs', 
+:description => 'JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome.')
 
-Company.create(:name => 'Cisco Systems',
-	:twitter => 'Cisco', 
-	:websiteurl => 'http://www.cisco.com/', 
-	:websitename => 'cisco.com', 
-	:description => 'Cisco\'s Advanced Security Initiatives Group (ASIG) is headquartered in Knoxville', 
-	:num_devs => '20+ devs')
+Meetup.create(
+:name => 'Knoxville Makerspaces', 
+:twitter => 'knoxmakers',    
+:websiteurl => 'https://knoxmakers.org/',      
+:websitename => 'knoxmakers.org', 
+:description => 'Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize.')
 
-Company.create(:name => 'Clayton Homes',
-	:twitter => 'ClaytonHomes', 
-	:websiteurl => 'http://www.claytonhomes.com/', 
-	:websitename => 'claytonhomes.com')
+Meetup.create(
+:name => 'Knoxville Coding Dojo', 
+:websiteurl => 'http://www.meetup.com/Knoxville-Coding-Dojo/',      
+:websitename => 'meetup.com/Knoxville-Coding-Dojo')
 
-Company.create(:name => 'DeRoyal',
-	:twitter => 'deroyal', 
-	:websiteurl => 'http://www.deroyal.com/', 
-	:websitename => 'deroyal.com', 
-	:description => '"DeRoyal is a global supplier of Wound Care, Orthopaedic, Sports Medicine, Implants & Surgical products and services."')
+Meetup.create(
+:name => 'Knoxville CocoaHeads', 
+:twitter => 'knoxcocoa',    
+:websiteurl => 'http://knoxcocoa.org/',      
+:websitename => 'knoxcocoa.org',
+:description => 'CocoaHeads is a group devoted to discussion of Apple\'s Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). ')
 
-Company.create(:name => 'Designsensory',
-	:twitter => 'designsensory ', 
-	:websiteurl => 'http://designsensory.com/', 
-	:websitename => 'designsensory.com', 
-	:description => '"As a full-service branding, advertising and digital agency, we develop marketing campaigns, web platforms and rich content that help brands differentiate and connect with audiences."')
+Meetup.create(
+:name => 'Knoxville Game Design', 
+:websiteurl => 'http://www.knoxgamedesign.org/', 
+:websitename => 'knoxgamedesign.org')
 
+Meetup.create(
+:name => 'Knoxville Ruby On Rails', 
+:websiteurl => 'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      
+:websitename => 'meetup.com/Knoxville-Ruby-On-Rails-Meetup')
 
-Company.create(:name => 'Edfinancial Services',
-	:twitter => 'edfinancial', 
-	:websiteurl => 'https://www.edfinancial.com/', 
-	:websitename => 'edfinancial.com', 
-	:description => '"EdFinancial Services is a financial company which provides student loans servicing for 15 of the top 100 lenders in the USA"')
+Meetup.create(
+:name => 'Knoxville R Users Group (KRUG)', 
+:websiteurl => 'http://www.meetup.com/Knoxville-R-Users-Group/',      
+:websitename => 'meetup.com/Knoxville-R-Users-Group',
+:description => 'For people interested in learning how to use the free and open-source R software (r-project.org)')
 
-Company.create(:name => 'EventBooking',
-	:twitter => 'eventbooking', 
-	:websiteurl => 'http://www.eventbooking.com/', 
-	:websitename => 'www.eventbooking.com', 
-	:description => '"Online booking, collaboration, and venue management for the events industry.  Rockstar customer service."', 
-	:num_devs => '6-10 devs')
-
-Company.create(:name => 'Evolvr', 
-	:twitter => 'evolvrmedia', 
-	:websiteurl => 'http://evolvr.media/', 
-	:websitename => 'evolvr.media', 
-	:description => '"Evolving the world of #virtualreality, one story at a time. The southeast\'s premier virtual reality agency."', 
-	:startup => true, 
-	:num_devs => '1-5 devs')
-
-Company.create(:name => 'Fiveworx', 
-	:twitter => 'fiveworx', 
-	:websiteurl => 'http://fiveworx.com/', 
-	:websitename => 'fiveworx.com', 
-	:description => '"Helping Americans become more energy efficient"', 
-	:startup => true, 
-	:num_devs => '1-5 devs')
-
-Company.create(:name => 'InVizion', 
-	:twitter => 'invizionllc', 
-	:websiteurl => 'http://invizionllc.com', 
-	:websitename => 'invizionllc.com', 
-	:description => '"InVizion Analyzer provides unique, patented capabilities for modeling alternative scenarios of long term programs in project intensive industries"', 
-	:startup => true,
-	:num_devs => '1-5 devs')
-
-Company.create(:name => 'Knoxville Utilities Board (KUB)', 
-	:twitter => 'KnoxKUB', 
-	:websiteurl => 'http://www.kub.org/', 
-	:websitename => 'kub.org', 
-	:description => '"For more than 75 years, Knoxville Utilities Board (KUB) has delivered energy and water to our customers on a daily basis. Employees take pride in knowing that the company holds strong roots in the past while actively planning for the future"',
-	:num_devs => '6-10 devs')
-
-Company.create(:name => 'Oak Ridge Associated Universities (ORAU)', 
-	:twitter => 'orau', 
-	:websiteurl => 'https://www.orau.org/', 
-	:websitename => 'orau.org', 
-	:description => '"ORAU provides scientific and technical solutions to advance national priorities in science, health, education and security. ORAU manages ORISE for DOE."')
-
-Company.create(:name => 'Oak Ridge National Laboratory (ORNL)', 
-	:twitter => 'ORNL', 
-	:websiteurl => 'http://www.ornl.gov/', 
-	:websitename => 'ornl.gov', 
-	:description => '"largest energy research lab in the US"', 
-	:num_devs => '20+ devs')
-
-Company.create(:name => 'Paradym', 
-	:twitter => 'ParadymEdge', 
-	:websiteurl => 'https://www.paradym.com/', 
-	:websitename => 'paradym.com', 
-	:description => '"An integrated solution for marketing your real estate business"',
-	:num_devs => '6-10 devs')
-
-Company.create(:name => 'PerfectServe', 
-	:twitter => 'PerfectServe', 
-	:websiteurl => 'http://www.perfectserve.com/', 
-	:websitename => 'perfectserve.com', 
-	:description => '"Healthcare\'s only comprehensive and secure communications and collaboration platform."')
-
-Company.create(:name => 'Pilot Corp', 
-	:twitter => 'pilottravel', 
-	:websiteurl => 'http://pilotflyingj.com/', 
-	:websitename => 'pilotflyingj.com')
-
-Company.create(:name => 'Pro2Serve', 
-	:twitter => 'pro2serve', 
-	:websiteurl => 'http://www.pro2serve.com', 
-	:websitename => 'pro2serve.com', 
-	:description => '"Pro2Serve provides technical & engineering services that support the infrastructures of government and private industry — and help ensure our Nation\'s security."', 
-	:num_devs => '6-10 devs')
-
-Company.create(:name => 'Radio Systems Corp', 
-	:twitter => 'RadioSystemsCor', 
-	:websiteurl => 'http://www.petsafe.net/', 
-	:websitename => 'petsafe.net', 
-	:description => '"Radio Systems® Corporation is the leading manufacturer of pet products. Our family of brands includes PetSafe™, Invisible Fence™ and SportDOG™"')
-
-Company.create(:name => 'Regal Entertainment Group', 
-	:twitter => 'RegalMovies', 
-	:websiteurl => 'http://www.regmovies.com/', 
-	:websitename => 'regmovies.com', 
-	:description => '"an American movie theater chain headquartered in Knoxville, Tennessee"')
-
-Company.create(:name => 'RESQUE', 
-	:twitter => 'resqueapp', 
-	:websiteurl => 'http://www.resqueapp.com/', 
-	:websitename => 'http://resqueapp.com', 
-	:description => '"Smarter Automated Social Media for Real Estate Agents"', 
-	:startup => true)
-
-Company.create(:name => 'Action Bracelet', 
-	:twitter => 'ActionBracelet', 
-	:websiteurl => 'http://actionbracelet.co', 
-	:websitename => 'actionbracelet.co', 
-	:description => '"Action Bracelet is a state-of-the-art photo system that delivers guests photos instantly to their mobile device or email"', 
-	:num_devs => '1-5 devs')
-
-
-Company.create(:name => 'Scripps', 
-	:twitter => 'EWScrippsCo', 
-	:websiteurl => 'http://www.scripps.com/', 
-	:websitename => 'scripps.com', 
-	:description => '"One of America\'s most entrepreneurial media enterprises driven to develop and expand its digital strategies, while embracing its rich history in journalism."', 
-	:num_devs => '20+ devs')
-
-Company.create(:name => 'Jewelry Television', 
-	:twitter => 'jewelry', 
-	:websiteurl => 'http://jtv.com', 
-	:websitename => 'jtv.com', 
-	:description => '"Television network with an estimated reach of more than 80 million U.S. households, through cable and satellite providers, online streaming and limited over-the-air broadcasters."', 
-	:num_devs => '20+ devs')
-
-Company.create(:name => 'Tombras Group', 
-	:twitter => 'thetombrasgroup', 
-	:websiteurl => 'http://tombras.com/', 
-	:websitename => 'tombras.com', 
-	:description => '"a full service advertising agency with a digital mindset"')
-
-Company.create(:name => 'University of Tennessee (UT)', 
-	:twitter => 'UTKnoxville', 
-	:websiteurl => 'http://www.utk.edu/', 
-	:websitename => 'utk.edu', 
-	:num_devs => '20+ devs')
-
-Company.create(:name => 'VortexT', 
-	:twitter => 'vortextllc', 
-	:websiteurl => 'http://vortextllc.com', 
-	:websitename => 'vortextllc.com', 
-	:description => '"VortexT Apps are designed to solve the challenge of information overload that professionals are facing today in virtually every field of business"', 
-	:startup => true, 
-	:num_devs => '1-5 devs')
-
-Company.create(:name => 'White Stone Group (TWSG)', 
-	:websiteurl => 'http://www.twsg.com/', 
-	:websitename => 'twsg.com', 
-	:num_devs => '6-10 devs')
-
-Company.create(:name => 'Wintellect', 
-	:twitter => 'Wintellectuals', 
-	:websiteurl => 'http://www.wintellect.com/', 
-	:websitename => 'wintellect.com', 
-	:description => '"We help you build better software faster through our unique combination of collaborative consulting and multi-format training."')
+Meetup.create(
+:name => 'PyKnoxville', 
+:websiteurl => 'http://www.meetup.com/PyKnoxville/',      
+:websitename => 'meetup.com/PyKnoxville')
 
 
 
+Coworking.create(
+:name => 'Regus', 
+:twitter => 'RegusUSA', 
+:websiteurl => 'http://www.regus.com/', 
+:websitename => 'regus.com', 
+:description => 'Downtown and Cedar Bluff',
+:location => 'Knoxville')
+
+Coworking.create(
+:name => 'Society of Work', 
+:twitter => 'SocietyofWork', 
+:websiteurl => 'http://societyofwork.com/', 
+:websitename => 'societyofwork.com',
+:location => 'Chattanooga')
+
+Coworking.create(
+:name => 'Spark Plaza', 
+:websiteurl => 'http://sparkplaza.com', 
+:websitename => 'sparkplaza.com', 
+:description => 'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.',
+:location => 'Tri-Cities')
+
+Coworking.create(
+:name => 'Technology Cooperative', 
+:twitter => 'TechCoop', 
+:websiteurl => 'http://techco.org/co-working-space/', 
+:websitename => 'techco.org/co-working-space',
+:location => 'Knoxville')
+
+Conference.create(
+:name => 'All Things Open', 
+:twitter => 'AllThingsOpen', 
+:websiteurl => 'http://allthingsopen.org/', 
+:websitename => 'allthingsopen.org', 
+:description => 'Exploring Open Source, Open Tech, and the Open Web in the Enterprise',
+:location => 'raleigh', 
+:date => 'oct 19 \'15')
+
+Conference.create(
+:name => 'Blend Conf', 
+:twitter => 'blendconf', 
+:websiteurl => 'http://blendconf.com', 
+:websitename => 'blendconf.com', 
+:description => 'generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development.',
+:location => 'charlotte',
+:date => 'sep 2 \'15')
+
+Conference.create(
+:name => 'Business Analytics Forum: UT’s Haslam College of Business', 
+:websiteurl => 'http://baforum.utk.edu/', 
+:websitename => 'baforum.utk.edu', 
+:description => 'meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members')
+
+Conference.create(
+:name => 'Code PaLOUsa', 
+:twitter => 'CodePaLOUsa', 
+:websiteurl => 'http://www.codepalousa.com/', 
+:websitename => 'codepalousa.com', 
+:description => 'It\'s software development madness',
+:location => 'louisville', 
+:date => 'apr 27 \'15')
+
+Conference.create(
+:name => 'Code on the Beach', 
+:twitter => 'CodeOnTheBeach', 
+:websiteurl => 'https://www.codeonthebeach.com/', 
+:websitename => 'codeonthebeach.com', 
+:description => 'HTML5, JavaScript, .NET, Data, Mobile, Design and much more',
+:location => 'atlantic beach, fl', 
+:date => 'apr 7 \'15')
+
+Conference.create(
+:name => 'CodeConf', 
+:twitter => 'codeconf', 
+:websiteurl => 'http://www.codeconf.com/', 
+:websitename => 'codeconf.com', 
+:description => 'CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration.',
+:location => 'Nashville')
+
+Conference.create(
+:name => 'CodeMash', 
+:twitter => 'codemash', 
+:websiteurl => 'http://www.codemash.org/', 
+:websitename => 'codemash.org', 
+:description => 'CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP',
+:location => 'ohio', 
+:date => 'jan 5 \'16')
+
+Conference.create(
+:name => 'Codestock', 
+:twitter => 'codestock',    
+:websiteurl => 'http://www.codestock.org/',      
+:websitename => 'codestock.org', 
+:description => 'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.',
+:location => 'knoxville')
+
+Conference.create(
+:name => 'Connect.js', 
+:twitter => 'connect_js', 
+:websiteurl => 'http://connect-js.com/', 
+:websitename => 'connect-js.com', 
+:description => 'Over 100 sessions in 9 concurrent tracks!',
+:location => 'atlanta', 
+:date => 'oct 16 \'15')
+
+Conference.create(
+:name => 'DEVSPACE', 
+:twitter => 'devspaceconf', 
+:websiteurl => 'https://www.devspaceconf.com/', 
+:websitename => 'devspaceconf.com', 
+:description => 'North Alabama\'s Premier Polyglot Technology Conference',
+:location => 'huntsville', 
+:date => 'oct \'15')
+
+Conference.create(
+:name => 'DevNexus', 
+:twitter => 'devnexus', 
+:websiteurl => 'https://devnexus.com', 
+:websitename => 'devnexus.com', 
+:description => 'Professional Developers Conference',
+:location => 'atlanta', 
+:date => 'feb 15 \'16')
+
+Conference.create(
+:name => 'FrontEnd Design Conference', 
+:twitter => 'frontendconf', 
+:websiteurl => 'http://frontenddesignconference.com/', 
+:websitename => 'frontenddesignconference.com', 
+:description => 'a Conference for Web Professionals who love their community, the Web, and learning',
+:location => 'st. petersburg')
+
+Conference.create(
+:name => 'Kansas City Developer Conference', 
+:twitter => 'kc_dc', 
+:websiteurl => 'http://www.kcdc.info', 
+:websitename => 'kcdc.info', 
+:description => ' a two-day, multi-track event that covers all aspects of software development, design and project management',
+:location => 'kansas city')
+
+Conference.create(
+:name => 'LoneStarRuby', 
+:twitter => 'LoneStarRuby', 
+:websiteurl => 'http://www.lonestarruby.org/', 
+:websitename => 'lonestarruby.org', 
+:description => 'LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you.',
+:location => 'Austin', 
+:date => 'aug 15 \'15')
+
+Conference.create(
+:name => 'Music City Code', 
+:twitter => 'MusicCityCode', 
+:websiteurl => 'http://www.musiccitycode.com', 
+:websitename => 'musiccitycode.com', 
+:description => 'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.',
+:location => 'nashville')
+
+Conference.create(
+:name => 'Nodevember', 
+:twitter => 'nodevember', 
+:websiteurl => 'http://nodevember.org/', 
+:websitename => 'nodevember.org', 
+:description => 'two-day conference touching on all aspects of Node and JavaScript', 
+:location => 'nashville', 
+:date => 'nov 14 \'15')
+
+Conference.create(
+:name => 'PyTennessee', 
+:twitter => 'PyTennessee', 
+:websiteurl => 'https://www.pytennessee.org', 
+:websitename => 'pytennessee.org', 
+:description => 'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.',
+:location => 'nashville')
+
+Conference.create(
+:name => 'Release Notes', 
+:twitter => 'release_notes', 
+:websiteurl => 'http://releasenotes.tv', 
+:websitename => 'releasenotes.tv', 
+:description => 'Talk about the business of iOS and Mac development in Indianapolis, IN.',
+:location => 'indianapolis')
+
+Conference.create(
+:name => 'Spark Conference', 
+:twitter => 'SparkConfOrg', 
+:websiteurl => 'http://sparkconf.org/', 
+:websitename => 'sparkconf.org', 
+:description => 'Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had',
+:location => 'charlotte')
+
+Conference.create(
+:name => 'St. Louis Days of .NET ', 
+:twitter => 'stldodn', 
+:websiteurl => 'http://stldodn.com', 
+:websitename => 'http://stldodn.com', 
+:description => '3-day event filled with knowledge and networking opportunities',
+:location => 'st. louis', 
+:date => 'nov 12 \'15')
+
+Conference.create(
+:name => 'Strangeloop', 
+:twitter => 'strangeloop_stl', 
+:websiteurl => 'https://thestrangeloop.com/', 
+:websitename => 'thestrangeloop.com', 
+:description => 'to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry',
+:location => 'st. louis', 
+:date => 'sep 24 \'15')
+
+Conference.create(
+:name => 'ThatConference', 
+:twitter => 'ThatConference', 
+:websiteurl => 'https://www.thatconference.com/', 
+:websitename => 'thatconference.com', 
+:description => 'Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family.',
+:location => 'Wisconsin Dells, WI', 
+:date => 'aug 10 \'15')
+
+Conference.create(
+:name => 'Thunder Plains', 
+:twitter => 'ThunderPlains', 
+:websiteurl => 'http://thunderplainsconf.com', 
+:websitename => 'thunderplainsconf.com', 
+:description => 'web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting.',
+:location => 'oklahoma city',
+:date => 'nov 3 \'15')

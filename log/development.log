@@ -14167,3 +14167,514 @@ Migrating to ChangeColumn (20150906033219)
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "companies" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-06 03:41:09.719155"], ["description", "\"We help you build better software faster through our unique combination of collaborative consulting and multi-format training.\""], ["name", "Wintellect"], ["twitter", "Wintellectuals"], ["updated_at", "2015-09-06 03:41:09.719155"], ["websitename", "wintellect.com"], ["websiteurl", "http://www.wintellect.com/"]]
   [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateConferences (20150910003743)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "conferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150910003743"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMeetups (20150910003821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "meetups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150910003821"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCoworkings (20150910004339)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "coworkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150910004339"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (3.3ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "conferences"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "conferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "coworkings"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "coworkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "meetups"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "meetups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.8ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (2.2ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "conferences"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "conferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "coworkings"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "coworkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "meetups"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "meetups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.2ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.490888"], ["name", "Agile Knoxville"], ["updated_at", "2015-09-11 01:28:19.490888"], ["websitename", "agileknoxville.com"], ["websiteurl", "http://www.agileknoxville.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.494907"], ["description", "Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines"], ["name", "Animoid Knoxville"], ["twitter", "egomachines"], ["updated_at", "2015-09-11 01:28:19.494907"], ["websitename", "egomachines.com/animoid"], ["websiteurl", "http://egomachines.com/animoid/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "meetups" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.497996"], ["name", "Data Science KNX"], ["twitter", "DSciKNX"], ["updated_at", "2015-09-11 01:28:19.497996"], ["websitename", "meetup.com/DSci-KNX"], ["websiteurl", "http://www.meetup.com/DSci-KNX"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.500764"], ["name", "DevBeers"], ["updated_at", "2015-09-11 01:28:19.500764"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.503203"], ["name", "KnoxPHP User Group"], ["updated_at", "2015-09-11 01:28:19.503203"], ["websitename", "meetup.com/KnoxPHP-User-Group"], ["websiteurl", "http://www.meetup.com/KnoxPHP-User-Group/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.505626"], ["description", "JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome."], ["name", "KnoxvilleJS"], ["twitter", "knoxville_js"], ["updated_at", "2015-09-11 01:28:19.505626"], ["websitename", "meetup.com/Knoxvillejs"], ["websiteurl", "http://www.meetup.com/Knoxvillejs/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.507967"], ["description", "Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize."], ["name", "Knoxville Makerspaces"], ["twitter", "knoxmakers"], ["updated_at", "2015-09-11 01:28:19.507967"], ["websitename", "knoxmakers.org"], ["websiteurl", "https://knoxmakers.org/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.510088"], ["name", "Knoxville Coding Dojo"], ["updated_at", "2015-09-11 01:28:19.510088"], ["websitename", "meetup.com/Knoxville-Coding-Dojo"], ["websiteurl", "http://www.meetup.com/Knoxville-Coding-Dojo/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.512771"], ["description", "CocoaHeads is a group devoted to discussion of Apple's Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). "], ["name", "Knoxville CocoaHeads"], ["twitter", "knoxcocoa"], ["updated_at", "2015-09-11 01:28:19.512771"], ["websitename", "knoxcocoa.org"], ["websiteurl", "http://knoxcocoa.org/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.515753"], ["name", "Knoxville Game Design"], ["updated_at", "2015-09-11 01:28:19.515753"], ["websitename", "knoxgamedesign.org"], ["websiteurl", "http://www.knoxgamedesign.org/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.518314"], ["name", "Knoxville Ruby On Rails"], ["updated_at", "2015-09-11 01:28:19.518314"], ["websitename", "meetup.com/Knoxville-Ruby-On-Rails-Meetup"], ["websiteurl", "http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.520727"], ["description", "For people interested in learning how to use the free and open-source R software (r-project.org)"], ["name", "Knoxville R Users Group (KRUG)"], ["updated_at", "2015-09-11 01:28:19.520727"], ["websitename", "meetup.com/Knoxville-R-Users-Group"], ["websiteurl", "http://www.meetup.com/Knoxville-R-Users-Group/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.523347"], ["name", "PyKnoxville"], ["updated_at", "2015-09-11 01:28:19.523347"], ["websitename", "meetup.com/PyKnoxville"], ["websiteurl", "http://www.meetup.com/PyKnoxville/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.534192"], ["description", "Downtown and Cedar Bluff"], ["location", "Knoxville"], ["name", "Regus"], ["twitter", "RegusUSA"], ["updated_at", "2015-09-11 01:28:19.534192"], ["websitename", "regus.com"], ["websiteurl", "http://www.regus.com/"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.538744"], ["location", "Chattanooga"], ["name", "Society of Work"], ["twitter", "SocietyofWork"], ["updated_at", "2015-09-11 01:28:19.538744"], ["websitename", "societyofwork.com"], ["websiteurl", "http://societyofwork.com/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.542303"], ["description", "The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN."], ["location", "Tri-Cities"], ["name", "Spark Plaza"], ["updated_at", "2015-09-11 01:28:19.542303"], ["websitename", "sparkplaza.com"], ["websiteurl", "http://sparkplaza.com"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.545166"], ["location", "Knoxville"], ["name", "Technology Cooperative"], ["twitter", "TechCoop"], ["updated_at", "2015-09-11 01:28:19.545166"], ["websitename", "techco.org/co-working-space"], ["websiteurl", "http://techco.org/co-working-space/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.553969"], ["date", "oct 19 '15"], ["description", "Exploring Open Source, Open Tech, and the Open Web in the Enterprise"], ["location", "raleigh"], ["name", "All Things Open"], ["twitter", "AllThingsOpen"], ["updated_at", "2015-09-11 01:28:19.553969"], ["websitename", "allthingsopen.org"], ["websiteurl", "http://allthingsopen.org/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.557034"], ["date", "sep 2 '15"], ["description", "generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development."], ["location", "charlotte"], ["name", "Blend Conf"], ["twitter", "blendconf"], ["updated_at", "2015-09-11 01:28:19.557034"], ["websitename", "blendconf.com"], ["websiteurl", "http://blendconf.com"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.560499"], ["description", "meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members"], ["name", "Business Analytics Forum: UT’s Haslam College of Business"], ["updated_at", "2015-09-11 01:28:19.560499"], ["websitename", "baforum.utk.edu"], ["websiteurl", "http://baforum.utk.edu/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.563547"], ["date", "apr 27 '15"], ["description", "It's software development madness"], ["location", "louisville"], ["name", "Code PaLOUsa"], ["twitter", "CodePaLOUsa"], ["updated_at", "2015-09-11 01:28:19.563547"], ["websitename", "codepalousa.com"], ["websiteurl", "http://www.codepalousa.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.566692"], ["date", "apr 7 '15"], ["description", "HTML5, JavaScript, .NET, Data, Mobile, Design and much more"], ["location", "atlantic beach, fl"], ["name", "Code on the Beach"], ["twitter", "CodeOnTheBeach"], ["updated_at", "2015-09-11 01:28:19.566692"], ["websitename", "codeonthebeach.com"], ["websiteurl", "https://www.codeonthebeach.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.569447"], ["description", "CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration."], ["location", "Nashville"], ["name", "CodeConf"], ["twitter", "codeconf"], ["updated_at", "2015-09-11 01:28:19.569447"], ["websitename", "codeconf.com"], ["websiteurl", "http://www.codeconf.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.572260"], ["date", "jan 5 '16"], ["description", "CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP"], ["location", "ohio"], ["name", "CodeMash"], ["twitter", "codemash"], ["updated_at", "2015-09-11 01:28:19.572260"], ["websitename", "codemash.org"], ["websiteurl", "http://www.codemash.org/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.575279"], ["description", "CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN."], ["location", "knoxville"], ["name", "Codestock"], ["twitter", "codestock"], ["updated_at", "2015-09-11 01:28:19.575279"], ["websitename", "codestock.org"], ["websiteurl", "http://www.codestock.org/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.578061"], ["date", "oct 16 '15"], ["description", "Over 100 sessions in 9 concurrent tracks!"], ["location", "atlanta"], ["name", "Connect.js"], ["twitter", "connect_js"], ["updated_at", "2015-09-11 01:28:19.578061"], ["websitename", "connect-js.com"], ["websiteurl", "http://connect-js.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.581201"], ["date", "oct '15"], ["description", "North Alabama's Premier Polyglot Technology Conference"], ["location", "huntsville"], ["name", "DEVSPACE"], ["twitter", "devspaceconf"], ["updated_at", "2015-09-11 01:28:19.581201"], ["websitename", "devspaceconf.com"], ["websiteurl", "https://www.devspaceconf.com/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.583992"], ["date", "feb 15 '16"], ["description", "Professional Developers Conference"], ["location", "atlanta"], ["name", "DevNexus"], ["twitter", "devnexus"], ["updated_at", "2015-09-11 01:28:19.583992"], ["websitename", "devnexus.com"], ["websiteurl", "https://devnexus.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.586635"], ["description", "a Conference for Web Professionals who love their community, the Web, and learning"], ["location", "st. petersburg"], ["name", "FrontEnd Design Conference"], ["twitter", "frontendconf"], ["updated_at", "2015-09-11 01:28:19.586635"], ["websitename", "frontenddesignconference.com"], ["websiteurl", "http://frontenddesignconference.com/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.589688"], ["description", " a two-day, multi-track event that covers all aspects of software development, design and project management"], ["location", "kansas city"], ["name", "Kansas City Developer Conference"], ["twitter", "kc_dc"], ["updated_at", "2015-09-11 01:28:19.589688"], ["websitename", "kcdc.info"], ["websiteurl", "http://www.kcdc.info"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.592848"], ["date", "aug 15 '15"], ["description", "LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you."], ["location", "Austin"], ["name", "LoneStarRuby"], ["twitter", "LoneStarRuby"], ["updated_at", "2015-09-11 01:28:19.592848"], ["websitename", "lonestarruby.org"], ["websiteurl", "http://www.lonestarruby.org/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.595583"], ["description", "Technical conference in Nashville, TN focused on connecting technologists with the industry leaders."], ["location", "nashville"], ["name", "Music City Code"], ["twitter", "MusicCityCode"], ["updated_at", "2015-09-11 01:28:19.595583"], ["websitename", "musiccitycode.com"], ["websiteurl", "http://www.musiccitycode.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.597943"], ["date", "nov 14 '15"], ["description", "two-day conference touching on all aspects of Node and JavaScript"], ["location", "nashville"], ["name", "Nodevember"], ["twitter", "nodevember"], ["updated_at", "2015-09-11 01:28:19.597943"], ["websitename", "nodevember.org"], ["websiteurl", "http://nodevember.org/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.600246"], ["description", "Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users."], ["location", "nashville"], ["name", "PyTennessee"], ["twitter", "PyTennessee"], ["updated_at", "2015-09-11 01:28:19.600246"], ["websitename", "pytennessee.org"], ["websiteurl", "https://www.pytennessee.org"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.603024"], ["description", "Talk about the business of iOS and Mac development in Indianapolis, IN."], ["location", "indianapolis"], ["name", "Release Notes"], ["twitter", "release_notes"], ["updated_at", "2015-09-11 01:28:19.603024"], ["websitename", "releasenotes.tv"], ["websiteurl", "http://releasenotes.tv"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.605486"], ["description", "Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had"], ["location", "charlotte"], ["name", "Spark Conference"], ["twitter", "SparkConfOrg"], ["updated_at", "2015-09-11 01:28:19.605486"], ["websitename", "sparkconf.org"], ["websiteurl", "http://sparkconf.org/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.607896"], ["date", "nov 12 '15"], ["description", "3-day event filled with knowledge and networking opportunities"], ["location", "st. louis"], ["name", "St. Louis Days of .NET "], ["twitter", "stldodn"], ["updated_at", "2015-09-11 01:28:19.607896"], ["websitename", "http://stldodn.com"], ["websiteurl", "http://stldodn.com"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.610109"], ["date", "sep 24 '15"], ["description", "to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry"], ["location", "st. louis"], ["name", "Strangeloop"], ["twitter", "strangeloop_stl"], ["updated_at", "2015-09-11 01:28:19.610109"], ["websitename", "thestrangeloop.com"], ["websiteurl", "https://thestrangeloop.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:28:19.612237"], ["date", "aug 10 '15"], ["description", "Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family."], ["location", "Wisconsin Dells, WI"], ["name", "ThatConference"], ["twitter", "ThatConference"], ["updated_at", "2015-09-11 01:28:19.612237"], ["websitename", "thatconference.com"], ["websiteurl", "https://www.thatconference.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:28:19.614297"], ["date", "nov 3 '15"], ["description", "web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting."], ["location", "oklahoma city"], ["name", "Thunder Plains"], ["twitter", "ThunderPlains"], ["updated_at", "2015-09-11 01:28:19.614297"], ["websitename", "thunderplainsconf.com"], ["websiteurl", "http://thunderplainsconf.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "conferences"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "conferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "coworkings"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "coworkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "meetups"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "meetups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.106945"], ["name", "Agile Knoxville"], ["updated_at", "2015-09-11 01:30:26.106945"], ["websitename", "agileknoxville.com"], ["websiteurl", "http://www.agileknoxville.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.110320"], ["description", "Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines"], ["name", "Animoid Knoxville"], ["twitter", "egomachines"], ["updated_at", "2015-09-11 01:30:26.110320"], ["websitename", "egomachines.com/animoid"], ["websiteurl", "http://egomachines.com/animoid/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.112736"], ["name", "Data Science KNX"], ["twitter", "DSciKNX"], ["updated_at", "2015-09-11 01:30:26.112736"], ["websitename", "meetup.com/DSci-KNX"], ["websiteurl", "http://www.meetup.com/DSci-KNX"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.115183"], ["name", "DevBeers"], ["updated_at", "2015-09-11 01:30:26.115183"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.117222"], ["name", "KnoxPHP User Group"], ["updated_at", "2015-09-11 01:30:26.117222"], ["websitename", "meetup.com/KnoxPHP-User-Group"], ["websiteurl", "http://www.meetup.com/KnoxPHP-User-Group/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.119460"], ["description", "JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome."], ["name", "KnoxvilleJS"], ["twitter", "knoxville_js"], ["updated_at", "2015-09-11 01:30:26.119460"], ["websitename", "meetup.com/Knoxvillejs"], ["websiteurl", "http://www.meetup.com/Knoxvillejs/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.121563"], ["description", "Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize."], ["name", "Knoxville Makerspaces"], ["twitter", "knoxmakers"], ["updated_at", "2015-09-11 01:30:26.121563"], ["websitename", "knoxmakers.org"], ["websiteurl", "https://knoxmakers.org/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.123923"], ["name", "Knoxville Coding Dojo"], ["updated_at", "2015-09-11 01:30:26.123923"], ["websitename", "meetup.com/Knoxville-Coding-Dojo"], ["websiteurl", "http://www.meetup.com/Knoxville-Coding-Dojo/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.126671"], ["description", "CocoaHeads is a group devoted to discussion of Apple's Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). "], ["name", "Knoxville CocoaHeads"], ["twitter", "knoxcocoa"], ["updated_at", "2015-09-11 01:30:26.126671"], ["websitename", "knoxcocoa.org"], ["websiteurl", "http://knoxcocoa.org/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.129896"], ["name", "Knoxville Game Design"], ["updated_at", "2015-09-11 01:30:26.129896"], ["websitename", "knoxgamedesign.org"], ["websiteurl", "http://www.knoxgamedesign.org/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.133561"], ["name", "Knoxville Ruby On Rails"], ["updated_at", "2015-09-11 01:30:26.133561"], ["websitename", "meetup.com/Knoxville-Ruby-On-Rails-Meetup"], ["websiteurl", "http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.136128"], ["description", "For people interested in learning how to use the free and open-source R software (r-project.org)"], ["name", "Knoxville R Users Group (KRUG)"], ["updated_at", "2015-09-11 01:30:26.136128"], ["websitename", "meetup.com/Knoxville-R-Users-Group"], ["websiteurl", "http://www.meetup.com/Knoxville-R-Users-Group/"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.138281"], ["name", "PyKnoxville"], ["updated_at", "2015-09-11 01:30:26.138281"], ["websitename", "meetup.com/PyKnoxville"], ["websiteurl", "http://www.meetup.com/PyKnoxville/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.149607"], ["description", "Downtown and Cedar Bluff"], ["location", "Knoxville"], ["name", "Regus"], ["twitter", "RegusUSA"], ["updated_at", "2015-09-11 01:30:26.149607"], ["websitename", "regus.com"], ["websiteurl", "http://www.regus.com/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.152079"], ["location", "Chattanooga"], ["name", "Society of Work"], ["twitter", "SocietyofWork"], ["updated_at", "2015-09-11 01:30:26.152079"], ["websitename", "societyofwork.com"], ["websiteurl", "http://societyofwork.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.154176"], ["description", "The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN."], ["location", "Tri-Cities"], ["name", "Spark Plaza"], ["updated_at", "2015-09-11 01:30:26.154176"], ["websitename", "sparkplaza.com"], ["websiteurl", "http://sparkplaza.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.156504"], ["location", "Knoxville"], ["name", "Technology Cooperative"], ["twitter", "TechCoop"], ["updated_at", "2015-09-11 01:30:26.156504"], ["websitename", "techco.org/co-working-space"], ["websiteurl", "http://techco.org/co-working-space/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.168902"], ["date", "oct 19 '15"], ["description", "Exploring Open Source, Open Tech, and the Open Web in the Enterprise"], ["location", "raleigh"], ["name", "All Things Open"], ["twitter", "AllThingsOpen"], ["updated_at", "2015-09-11 01:30:26.168902"], ["websitename", "allthingsopen.org"], ["websiteurl", "http://allthingsopen.org/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.173015"], ["date", "sep 2 '15"], ["description", "generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development."], ["location", "charlotte"], ["name", "Blend Conf"], ["twitter", "blendconf"], ["updated_at", "2015-09-11 01:30:26.173015"], ["websitename", "blendconf.com"], ["websiteurl", "http://blendconf.com"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.175955"], ["description", "meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members"], ["name", "Business Analytics Forum: UT’s Haslam College of Business"], ["updated_at", "2015-09-11 01:30:26.175955"], ["websitename", "baforum.utk.edu"], ["websiteurl", "http://baforum.utk.edu/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.178609"], ["date", "apr 27 '15"], ["description", "It's software development madness"], ["location", "louisville"], ["name", "Code PaLOUsa"], ["twitter", "CodePaLOUsa"], ["updated_at", "2015-09-11 01:30:26.178609"], ["websitename", "codepalousa.com"], ["websiteurl", "http://www.codepalousa.com/"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.181739"], ["date", "apr 7 '15"], ["description", "HTML5, JavaScript, .NET, Data, Mobile, Design and much more"], ["location", "atlantic beach, fl"], ["name", "Code on the Beach"], ["twitter", "CodeOnTheBeach"], ["updated_at", "2015-09-11 01:30:26.181739"], ["websitename", "codeonthebeach.com"], ["websiteurl", "https://www.codeonthebeach.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.184926"], ["description", "CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration."], ["location", "Nashville"], ["name", "CodeConf"], ["twitter", "codeconf"], ["updated_at", "2015-09-11 01:30:26.184926"], ["websitename", "codeconf.com"], ["websiteurl", "http://www.codeconf.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.187889"], ["date", "jan 5 '16"], ["description", "CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP"], ["location", "ohio"], ["name", "CodeMash"], ["twitter", "codemash"], ["updated_at", "2015-09-11 01:30:26.187889"], ["websitename", "codemash.org"], ["websiteurl", "http://www.codemash.org/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.190809"], ["description", "CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN."], ["location", "knoxville"], ["name", "Codestock"], ["twitter", "codestock"], ["updated_at", "2015-09-11 01:30:26.190809"], ["websitename", "codestock.org"], ["websiteurl", "http://www.codestock.org/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.193499"], ["date", "oct 16 '15"], ["description", "Over 100 sessions in 9 concurrent tracks!"], ["location", "atlanta"], ["name", "Connect.js"], ["twitter", "connect_js"], ["updated_at", "2015-09-11 01:30:26.193499"], ["websitename", "connect-js.com"], ["websiteurl", "http://connect-js.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.196836"], ["date", "oct '15"], ["description", "North Alabama's Premier Polyglot Technology Conference"], ["location", "huntsville"], ["name", "DEVSPACE"], ["twitter", "devspaceconf"], ["updated_at", "2015-09-11 01:30:26.196836"], ["websitename", "devspaceconf.com"], ["websiteurl", "https://www.devspaceconf.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.199858"], ["date", "feb 15 '16"], ["description", "Professional Developers Conference"], ["location", "atlanta"], ["name", "DevNexus"], ["twitter", "devnexus"], ["updated_at", "2015-09-11 01:30:26.199858"], ["websitename", "devnexus.com"], ["websiteurl", "https://devnexus.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.202432"], ["description", "a Conference for Web Professionals who love their community, the Web, and learning"], ["location", "st. petersburg"], ["name", "FrontEnd Design Conference"], ["twitter", "frontendconf"], ["updated_at", "2015-09-11 01:30:26.202432"], ["websitename", "frontenddesignconference.com"], ["websiteurl", "http://frontenddesignconference.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.204897"], ["description", " a two-day, multi-track event that covers all aspects of software development, design and project management"], ["location", "kansas city"], ["name", "Kansas City Developer Conference"], ["twitter", "kc_dc"], ["updated_at", "2015-09-11 01:30:26.204897"], ["websitename", "kcdc.info"], ["websiteurl", "http://www.kcdc.info"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.207601"], ["date", "aug 15 '15"], ["description", "LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you."], ["location", "Austin"], ["name", "LoneStarRuby"], ["twitter", "LoneStarRuby"], ["updated_at", "2015-09-11 01:30:26.207601"], ["websitename", "lonestarruby.org"], ["websiteurl", "http://www.lonestarruby.org/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.210053"], ["description", "Technical conference in Nashville, TN focused on connecting technologists with the industry leaders."], ["location", "nashville"], ["name", "Music City Code"], ["twitter", "MusicCityCode"], ["updated_at", "2015-09-11 01:30:26.210053"], ["websitename", "musiccitycode.com"], ["websiteurl", "http://www.musiccitycode.com"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.212120"], ["date", "nov 14 '15"], ["description", "two-day conference touching on all aspects of Node and JavaScript"], ["location", "nashville"], ["name", "Nodevember"], ["twitter", "nodevember"], ["updated_at", "2015-09-11 01:30:26.212120"], ["websitename", "nodevember.org"], ["websiteurl", "http://nodevember.org/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.214571"], ["description", "Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users."], ["location", "nashville"], ["name", "PyTennessee"], ["twitter", "PyTennessee"], ["updated_at", "2015-09-11 01:30:26.214571"], ["websitename", "pytennessee.org"], ["websiteurl", "https://www.pytennessee.org"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.217957"], ["description", "Talk about the business of iOS and Mac development in Indianapolis, IN."], ["location", "indianapolis"], ["name", "Release Notes"], ["twitter", "release_notes"], ["updated_at", "2015-09-11 01:30:26.217957"], ["websitename", "releasenotes.tv"], ["websiteurl", "http://releasenotes.tv"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.220390"], ["description", "Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had"], ["location", "charlotte"], ["name", "Spark Conference"], ["twitter", "SparkConfOrg"], ["updated_at", "2015-09-11 01:30:26.220390"], ["websitename", "sparkconf.org"], ["websiteurl", "http://sparkconf.org/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.222990"], ["date", "nov 12 '15"], ["description", "3-day event filled with knowledge and networking opportunities"], ["location", "st. louis"], ["name", "St. Louis Days of .NET "], ["twitter", "stldodn"], ["updated_at", "2015-09-11 01:30:26.222990"], ["websitename", "http://stldodn.com"], ["websiteurl", "http://stldodn.com"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.225909"], ["date", "sep 24 '15"], ["description", "to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry"], ["location", "st. louis"], ["name", "Strangeloop"], ["twitter", "strangeloop_stl"], ["updated_at", "2015-09-11 01:30:26.225909"], ["websitename", "thestrangeloop.com"], ["websiteurl", "https://thestrangeloop.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:26.228999"], ["date", "aug 10 '15"], ["description", "Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family."], ["location", "Wisconsin Dells, WI"], ["name", "ThatConference"], ["twitter", "ThatConference"], ["updated_at", "2015-09-11 01:30:26.228999"], ["websitename", "thatconference.com"], ["websiteurl", "https://www.thatconference.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:26.231312"], ["date", "nov 3 '15"], ["description", "web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting."], ["location", "oklahoma city"], ["name", "Thunder Plains"], ["twitter", "ThunderPlains"], ["updated_at", "2015-09-11 01:30:26.231312"], ["websitename", "thunderplainsconf.com"], ["websiteurl", "http://thunderplainsconf.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "companies"[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "startup" boolean, "num_devs" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "conferences"[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "conferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "date" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "coworkings"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "coworkings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "meetups"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "meetups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.3ms)[0m  [1mDROP TABLE "resources"[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "twitter" varchar(255), "websiteurl" varchar(255), "websitename" varchar(255), "description" text(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.161880"], ["name", "Agile Knoxville"], ["updated_at", "2015-09-11 01:30:40.161880"], ["websitename", "agileknoxville.com"], ["websiteurl", "http://www.agileknoxville.com/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.165573"], ["description", "Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines"], ["name", "Animoid Knoxville"], ["twitter", "egomachines"], ["updated_at", "2015-09-11 01:30:40.165573"], ["websitename", "egomachines.com/animoid"], ["websiteurl", "http://egomachines.com/animoid/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "meetups" ("created_at", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.168588"], ["name", "Data Science KNX"], ["twitter", "DSciKNX"], ["updated_at", "2015-09-11 01:30:40.168588"], ["websitename", "meetup.com/DSci-KNX"], ["websiteurl", "http://www.meetup.com/DSci-KNX"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.171429"], ["name", "DevBeers"], ["updated_at", "2015-09-11 01:30:40.171429"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.174405"], ["name", "KnoxPHP User Group"], ["updated_at", "2015-09-11 01:30:40.174405"], ["websitename", "meetup.com/KnoxPHP-User-Group"], ["websiteurl", "http://www.meetup.com/KnoxPHP-User-Group/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.177206"], ["description", "JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome."], ["name", "KnoxvilleJS"], ["twitter", "knoxville_js"], ["updated_at", "2015-09-11 01:30:40.177206"], ["websitename", "meetup.com/Knoxvillejs"], ["websiteurl", "http://www.meetup.com/Knoxvillejs/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.180438"], ["description", "Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize."], ["name", "Knoxville Makerspaces"], ["twitter", "knoxmakers"], ["updated_at", "2015-09-11 01:30:40.180438"], ["websitename", "knoxmakers.org"], ["websiteurl", "https://knoxmakers.org/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.184377"], ["name", "Knoxville Coding Dojo"], ["updated_at", "2015-09-11 01:30:40.184377"], ["websitename", "meetup.com/Knoxville-Coding-Dojo"], ["websiteurl", "http://www.meetup.com/Knoxville-Coding-Dojo/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "description", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.187477"], ["description", "CocoaHeads is a group devoted to discussion of Apple's Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). "], ["name", "Knoxville CocoaHeads"], ["twitter", "knoxcocoa"], ["updated_at", "2015-09-11 01:30:40.187477"], ["websitename", "knoxcocoa.org"], ["websiteurl", "http://knoxcocoa.org/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.190388"], ["name", "Knoxville Game Design"], ["updated_at", "2015-09-11 01:30:40.190388"], ["websitename", "knoxgamedesign.org"], ["websiteurl", "http://www.knoxgamedesign.org/"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.193392"], ["name", "Knoxville Ruby On Rails"], ["updated_at", "2015-09-11 01:30:40.193392"], ["websitename", "meetup.com/Knoxville-Ruby-On-Rails-Meetup"], ["websiteurl", "http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "meetups" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.196745"], ["description", "For people interested in learning how to use the free and open-source R software (r-project.org)"], ["name", "Knoxville R Users Group (KRUG)"], ["updated_at", "2015-09-11 01:30:40.196745"], ["websitename", "meetup.com/Knoxville-R-Users-Group"], ["websiteurl", "http://www.meetup.com/Knoxville-R-Users-Group/"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "meetups" ("created_at", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.200159"], ["name", "PyKnoxville"], ["updated_at", "2015-09-11 01:30:40.200159"], ["websitename", "meetup.com/PyKnoxville"], ["websiteurl", "http://www.meetup.com/PyKnoxville/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.209084"], ["description", "Downtown and Cedar Bluff"], ["location", "Knoxville"], ["name", "Regus"], ["twitter", "RegusUSA"], ["updated_at", "2015-09-11 01:30:40.209084"], ["websitename", "regus.com"], ["websiteurl", "http://www.regus.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.212178"], ["location", "Chattanooga"], ["name", "Society of Work"], ["twitter", "SocietyofWork"], ["updated_at", "2015-09-11 01:30:40.212178"], ["websitename", "societyofwork.com"], ["websiteurl", "http://societyofwork.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coworkings" ("created_at", "description", "location", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.215186"], ["description", "The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN."], ["location", "Tri-Cities"], ["name", "Spark Plaza"], ["updated_at", "2015-09-11 01:30:40.215186"], ["websitename", "sparkplaza.com"], ["websiteurl", "http://sparkplaza.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coworkings" ("created_at", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.217597"], ["location", "Knoxville"], ["name", "Technology Cooperative"], ["twitter", "TechCoop"], ["updated_at", "2015-09-11 01:30:40.217597"], ["websitename", "techco.org/co-working-space"], ["websiteurl", "http://techco.org/co-working-space/"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.227613"], ["date", "oct 19 '15"], ["description", "Exploring Open Source, Open Tech, and the Open Web in the Enterprise"], ["location", "raleigh"], ["name", "All Things Open"], ["twitter", "AllThingsOpen"], ["updated_at", "2015-09-11 01:30:40.227613"], ["websitename", "allthingsopen.org"], ["websiteurl", "http://allthingsopen.org/"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.230816"], ["date", "sep 2 '15"], ["description", "generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development."], ["location", "charlotte"], ["name", "Blend Conf"], ["twitter", "blendconf"], ["updated_at", "2015-09-11 01:30:40.230816"], ["websitename", "blendconf.com"], ["websiteurl", "http://blendconf.com"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "name", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.234107"], ["description", "meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members"], ["name", "Business Analytics Forum: UT’s Haslam College of Business"], ["updated_at", "2015-09-11 01:30:40.234107"], ["websitename", "baforum.utk.edu"], ["websiteurl", "http://baforum.utk.edu/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.237151"], ["date", "apr 27 '15"], ["description", "It's software development madness"], ["location", "louisville"], ["name", "Code PaLOUsa"], ["twitter", "CodePaLOUsa"], ["updated_at", "2015-09-11 01:30:40.237151"], ["websitename", "codepalousa.com"], ["websiteurl", "http://www.codepalousa.com/"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.240536"], ["date", "apr 7 '15"], ["description", "HTML5, JavaScript, .NET, Data, Mobile, Design and much more"], ["location", "atlantic beach, fl"], ["name", "Code on the Beach"], ["twitter", "CodeOnTheBeach"], ["updated_at", "2015-09-11 01:30:40.240536"], ["websitename", "codeonthebeach.com"], ["websiteurl", "https://www.codeonthebeach.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.243738"], ["description", "CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration."], ["location", "Nashville"], ["name", "CodeConf"], ["twitter", "codeconf"], ["updated_at", "2015-09-11 01:30:40.243738"], ["websitename", "codeconf.com"], ["websiteurl", "http://www.codeconf.com/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.246780"], ["date", "jan 5 '16"], ["description", "CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP"], ["location", "ohio"], ["name", "CodeMash"], ["twitter", "codemash"], ["updated_at", "2015-09-11 01:30:40.246780"], ["websitename", "codemash.org"], ["websiteurl", "http://www.codemash.org/"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.249245"], ["description", "CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN."], ["location", "knoxville"], ["name", "Codestock"], ["twitter", "codestock"], ["updated_at", "2015-09-11 01:30:40.249245"], ["websitename", "codestock.org"], ["websiteurl", "http://www.codestock.org/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.251839"], ["date", "oct 16 '15"], ["description", "Over 100 sessions in 9 concurrent tracks!"], ["location", "atlanta"], ["name", "Connect.js"], ["twitter", "connect_js"], ["updated_at", "2015-09-11 01:30:40.251839"], ["websitename", "connect-js.com"], ["websiteurl", "http://connect-js.com/"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.254487"], ["date", "oct '15"], ["description", "North Alabama's Premier Polyglot Technology Conference"], ["location", "huntsville"], ["name", "DEVSPACE"], ["twitter", "devspaceconf"], ["updated_at", "2015-09-11 01:30:40.254487"], ["websitename", "devspaceconf.com"], ["websiteurl", "https://www.devspaceconf.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.256963"], ["date", "feb 15 '16"], ["description", "Professional Developers Conference"], ["location", "atlanta"], ["name", "DevNexus"], ["twitter", "devnexus"], ["updated_at", "2015-09-11 01:30:40.256963"], ["websitename", "devnexus.com"], ["websiteurl", "https://devnexus.com"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.260047"], ["description", "a Conference for Web Professionals who love their community, the Web, and learning"], ["location", "st. petersburg"], ["name", "FrontEnd Design Conference"], ["twitter", "frontendconf"], ["updated_at", "2015-09-11 01:30:40.260047"], ["websitename", "frontenddesignconference.com"], ["websiteurl", "http://frontenddesignconference.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.262346"], ["description", " a two-day, multi-track event that covers all aspects of software development, design and project management"], ["location", "kansas city"], ["name", "Kansas City Developer Conference"], ["twitter", "kc_dc"], ["updated_at", "2015-09-11 01:30:40.262346"], ["websitename", "kcdc.info"], ["websiteurl", "http://www.kcdc.info"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.264556"], ["date", "aug 15 '15"], ["description", "LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you."], ["location", "Austin"], ["name", "LoneStarRuby"], ["twitter", "LoneStarRuby"], ["updated_at", "2015-09-11 01:30:40.264556"], ["websitename", "lonestarruby.org"], ["websiteurl", "http://www.lonestarruby.org/"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.267190"], ["description", "Technical conference in Nashville, TN focused on connecting technologists with the industry leaders."], ["location", "nashville"], ["name", "Music City Code"], ["twitter", "MusicCityCode"], ["updated_at", "2015-09-11 01:30:40.267190"], ["websitename", "musiccitycode.com"], ["websiteurl", "http://www.musiccitycode.com"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.270020"], ["date", "nov 14 '15"], ["description", "two-day conference touching on all aspects of Node and JavaScript"], ["location", "nashville"], ["name", "Nodevember"], ["twitter", "nodevember"], ["updated_at", "2015-09-11 01:30:40.270020"], ["websitename", "nodevember.org"], ["websiteurl", "http://nodevember.org/"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.274304"], ["description", "Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users."], ["location", "nashville"], ["name", "PyTennessee"], ["twitter", "PyTennessee"], ["updated_at", "2015-09-11 01:30:40.274304"], ["websitename", "pytennessee.org"], ["websiteurl", "https://www.pytennessee.org"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.277243"], ["description", "Talk about the business of iOS and Mac development in Indianapolis, IN."], ["location", "indianapolis"], ["name", "Release Notes"], ["twitter", "release_notes"], ["updated_at", "2015-09-11 01:30:40.277243"], ["websitename", "releasenotes.tv"], ["websiteurl", "http://releasenotes.tv"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.279977"], ["description", "Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had"], ["location", "charlotte"], ["name", "Spark Conference"], ["twitter", "SparkConfOrg"], ["updated_at", "2015-09-11 01:30:40.279977"], ["websitename", "sparkconf.org"], ["websiteurl", "http://sparkconf.org/"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.282724"], ["date", "nov 12 '15"], ["description", "3-day event filled with knowledge and networking opportunities"], ["location", "st. louis"], ["name", "St. Louis Days of .NET "], ["twitter", "stldodn"], ["updated_at", "2015-09-11 01:30:40.282724"], ["websitename", "http://stldodn.com"], ["websiteurl", "http://stldodn.com"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.285329"], ["date", "sep 24 '15"], ["description", "to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry"], ["location", "st. louis"], ["name", "Strangeloop"], ["twitter", "strangeloop_stl"], ["updated_at", "2015-09-11 01:30:40.285329"], ["websitename", "thestrangeloop.com"], ["websiteurl", "https://thestrangeloop.com/"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2015-09-11 01:30:40.287546"], ["date", "aug 10 '15"], ["description", "Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family."], ["location", "Wisconsin Dells, WI"], ["name", "ThatConference"], ["twitter", "ThatConference"], ["updated_at", "2015-09-11 01:30:40.287546"], ["websitename", "thatconference.com"], ["websiteurl", "https://www.thatconference.com/"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "conferences" ("created_at", "date", "description", "location", "name", "twitter", "updated_at", "websitename", "websiteurl") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-09-11 01:30:40.289744"], ["date", "nov 3 '15"], ["description", "web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting."], ["location", "oklahoma city"], ["name", "Thunder Plains"], ["twitter", "ThunderPlains"], ["updated_at", "2015-09-11 01:30:40.289744"], ["websitename", "thunderplainsconf.com"], ["websiteurl", "http://thunderplainsconf.com"]]
+  [1m[35m (0.8ms)[0m  commit transaction

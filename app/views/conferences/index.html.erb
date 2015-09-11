@@ -1,0 +1,40 @@
+<h1>Conferences<br />  
+<%= if user_signed_in? then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_conference_path end %>
+</h1>
+<div class="container">
+    <% @conferences.each do |conference| %>
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+          <li class='list-group-item'>
+            <h4 class='list-group-item-heading'>
+              <%= conference.name %>
+              <%= if !conference.location.blank? then 
+              raw("<span class='label label-default label-as-badge'>"+conference.location+"</span>")
+               end %>
+                <%= if !conference.date.blank? then 
+              raw("<span class='label label-default label-as-badge'>"+conference.date+"</span>")
+               end %>
+               <%= if DateTime.now.utc - 2.days < conference.created_at then 
+              raw("<span class='label label-default label-as-badge'>Newly Added</span>")
+               end %>
+              <div class="pull-right">
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_conference_path(conference) end %>
+              <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), conference, method: :delete, data: { confirm: 'Are you sure?' } end %>
+              </div>
+            </h4>
+            <p class='list-group-item-text card-description'>
+              <%= conference.description %>
+            </p>
+            <p class='list-group-item-text'>
+              <a target='_blank' href='<%= conference.websiteurl %>'><%= conference.websitename %></a>
+            </p>
+            <% if !conference.twitter.blank? then %>
+              <p class='list-group-item-text'>
+                <a target='_blank' href='http://twitter.com/<%= conference.twitter %>'>@<%= conference.twitter %> <i class='fa fa-twitter'></i></a>
+              </p>
+            <% end %>
+          </li>
+        </div>
+      </div>
+    <% end %>
+</div>

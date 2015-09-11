@@ -95,58 +95,6 @@
         };
 
 
-
-    var meetups = {
-        'Agile Knoxville': {   'twitter':'',    'websiteurl':'http://www.agileknoxville.com/',      'websitename':'agileknoxville.com'},
-        'Animoid Knoxville': {   'twitter':'egomachines',    'websiteurl':'http://egomachines.com/animoid/',      'websitename':'egomachines.com/animoid', 'description':'Passionate hobbyists with an interest in, professional experience with, or mastery of, Robotics, Machine Learning, Neuroscience, Computer Science, Engineering or related disciplines'},
-        'Data Science KNX': {   'twitter':'DSciKNX',    'websiteurl':'http://www.meetup.com/DSci-KNX',      'websitename':'meetup.com/DSci-KNX'},
-        'DevBeers': {   'twitter':'',    'websiteurl':'',      'websitename':''},
-        'KnoxPHP User Group': {   'twitter':'',    'websiteurl':'http://www.meetup.com/KnoxPHP-User-Group/',      'websitename':'meetup.com/KnoxPHP-User-Group'},
-        'KnoxvilleJS': {   'twitter':'knoxville_js',    'websiteurl':'http://www.meetup.com/Knoxvillejs/',      'websitename':'meetup.com/Knoxvillejs', 'description':'JavaScript user group in Knoxville, TN. All skill levels and interest levels are welcome.'},
-        'Knoxville Makerspaces': {   'twitter':'knoxmakers',    'websiteurl':'https://knoxmakers.org/',      'websitename':'knoxmakers.org', 'description':'Knox Makers is a place for hackers, makers, crafters, artists, and mad engineers to play, work, teach, learn, and socialize.'},
-        'Knoxville Coding Dojo': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Coding-Dojo/',      'websitename':'meetup.com/Knoxville-Coding-Dojo'},
-        'Knoxville CocoaHeads': {   'twitter':'knoxcocoa',    'websiteurl':'http://knoxcocoa.org/',      'websitename':'knoxcocoa.org','description':'CocoaHeads is a group devoted to discussion of Apple\'s Cocoa and Cocoa Touch Frameworks for programming on OS X (Mac) and iOS (iPhone, iPad). '},
-        'Knoxville Game Design': {   'twitter':'',    'websiteurl':'http://www.knoxgamedesign.org/', 'websitename':'knoxgamedesign.org', 'dateadded':'2015-08-01'},
-        'Knoxville Ruby On Rails': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-Ruby-On-Rails-Meetup/',      'websitename':'meetup.com/Knoxville-Ruby-On-Rails-Meetup'},
-        'Knoxville R Users Group (KRUG)': {   'twitter':'',    'websiteurl':'http://www.meetup.com/Knoxville-R-Users-Group/',      'websitename':'meetup.com/Knoxville-R-Users-Group','description':'For people interested in learning how to use the free and open-source R software (r-project.org)'},
-        'PyKnoxville': {   'twitter':'',    'websiteurl':'http://www.meetup.com/PyKnoxville/',      'websitename':'meetup.com/PyKnoxville', 'dateadded':'2015-07-01'}
-      };
-
-    var coworking = {
-        'Regus': {'twitter':'RegusUSA', 'websiteurl':'http://www.regus.com/', 'websitename':'regus.com', 'description':'Downtown and Cedar Bluff', 'tags':['Knoxville']},
-        'Society of Work': {'twitter':'SocietyofWork', 'websiteurl':'http://societyofwork.com/', 'websitename':'societyofwork.com', 'tags':['Chattanooga']},
-        'Spark Plaza': {'twitter':'', 'websiteurl':'http://sparkplaza.com', 'websitename':'sparkplaza.com', 'description':'The first and only all inclusive, shared office space in the Tri-Cities area of Johnson City, TN.', 'tags':['Tri-Cities']},
-        'Technology Cooperative': {'twitter':'TechCoop', 'websiteurl':'http://techco.org/co-working-space/', 'websitename':'techco.org/co-working-space', 'tags':['Knoxville']},
-    }
-    
-
-    var conferences = {
-        'All Things Open': {'twitter':'AllThingsOpen', 'websiteurl':'http://allthingsopen.org/', 'websitename':'allthingsopen.org', 'description':'Exploring Open Source, Open Tech, and the Open Web in the Enterprise', 'tags':['raleigh', 'oct 19 \'15']},
-        'Blend Conf': {'twitter':'blendconf', 'websiteurl':'http://blendconf.com', 'websitename':'blendconf.com', 'description':'generalist conference featuring 60+ diverse speakers sharing ideas and conversations about user experience, design, front-end and back-end development.', 'tags':['charlotte','sep 2 \'15']},
-        'Business Analytics Forum: UT’s Haslam College of Business': {'twitter':'', 'websiteurl':'http://baforum.utk.edu/', 'websitename':'baforum.utk.edu', 'description':'meet twice a year to help each other develop competitive strategies and to share best practices on a topic chosen by the members'},
-        'Code PaLOUsa': {'twitter':'CodePaLOUsa', 'websiteurl':'http://www.codepalousa.com/', 'websitename':'codepalousa.com', 'description':'It\'s software development madness', 'tags':['louisville', 'apr 27 \'15']},
-        'Code on the Beach': {'twitter':'CodeOnTheBeach', 'websiteurl':'https://www.codeonthebeach.com/', 'websitename':'codeonthebeach.com', 'description':'HTML5, JavaScript, .NET, Data, Mobile, Design and much more', 'tags':['atlantic beach, fl', 'apr 7 \'15']},
-        'CodeConf': {'twitter':'codeconf', 'websiteurl':'http://www.codeconf.com/', 'websitename':'codeconf.com', 'description':'CodeConf is about improving the software community by featuring thought-provoking talks and building social connections. Join us for the third installment of the CodeConf series where we will come together to discuss open source, best practices, documentation, community, and maybe even hacking space exploration.', 'tags':['Nashville']},
-        'CodeMash': {'twitter':'codemash', 'websiteurl':'http://www.codemash.org/', 'websitename':'codemash.org', 'description':'CodeMash is a unique event that will educate developers on current practices, methodologies, and technology trends in a variety of platforms and development languages such as Java, .NET, Ruby, Python and PHP', 'tags':['ohio', 'jan 5 \'16']},
-        'Codestock': {   'twitter':'codestock',    'websiteurl':'http://www.codestock.org/',      'websitename':'codestock.org', 'description':'CodeStock is an annual technology conference for developers, IT professionals, and entrepreneurs held in Knoxville, TN.', 'tags':['knoxville']},
-        'Connect.js': {'twitter':'connect_js', 'websiteurl':'http://connect-js.com/', 'websitename':'connect-js.com', 'description':'Over 100 sessions in 9 concurrent tracks!', 'tags':['atlanta', 'oct 16 \'15']},
-        'DEVSPACE': {'twitter':'devspaceconf', 'websiteurl':'https://www.devspaceconf.com/', 'websitename':'devspaceconf.com', 'description':'North Alabama\'s Premier Polyglot Technology Conference', 'tags':['huntsville', 'oct \'15']},
-        'DevNexus': {'twitter':'devnexus', 'websiteurl':'https://devnexus.com', 'websitename':'devnexus.com', 'description':'Professional Developers Conference', 'tags':['atlanta', 'feb 15 \'16']},
-        'FrontEnd Design Conference': {'twitter':'frontendconf', 'websiteurl':'http://frontenddesignconference.com/', 'websitename':'frontenddesignconference.com', 'description':'a Conference for Web Professionals who love their community, the Web, and learning', 'tags':['st. petersburg']},
-        'Kansas City Developer Conference': {'twitter':'kc_dc', 'websiteurl':'http://www.kcdc.info', 'websitename':'kcdc.info', 'description':' a two-day, multi-track event that covers all aspects of software development, design and project management', 'tags':['kansas city']},
-        'LoneStarRuby': {'twitter':'LoneStarRuby', 'websiteurl':'http://www.lonestarruby.org/', 'websitename':'lonestarruby.org', 'description':'LoneStarRuby is a one-day Ruby & Rails conference that will truly inspire you.', 'tags':['Austin', 'aug 15 \'15']},
-        'Music City Code': {'twitter':'MusicCityCode', 'websiteurl':'http://www.musiccitycode.com', 'websitename':'musiccitycode.com', 'description':'Technical conference in Nashville, TN focused on connecting technologists with the industry leaders.', 'tags':['nashville']},
-        'Nodevember': {'twitter':'nodevember', 'websiteurl':'http://nodevember.org/', 'websitename':'nodevember.org', 'description':'two-day conference touching on all aspects of Node and JavaScript', 'dateadded':'2015-08-06', 'tags':['nashville', 'nov 14 \'15']},
-        'PyTennessee': {'twitter':'PyTennessee', 'websiteurl':'https://www.pytennessee.org', 'websitename':'pytennessee.org', 'description':'Conference in Nashville, TN dedicated to the advancement and promotion of the Python language and its users.', 'tags':['nashville']},
-        'Release Notes': {'twitter':'release_notes', 'websiteurl':'http://releasenotes.tv', 'websitename':'releasenotes.tv', 'description':'Talk about the business of iOS and Mac development in Indianapolis, IN.', 'tags':['iOS', 'Mac', 'indianapolis']},
-        'Spark Conference': {'twitter':'SparkConfOrg', 'websiteurl':'http://sparkconf.org/', 'websitename':'sparkconf.org', 'description':'Connect with up to 600 members of the regional developer community. Thoughts will be sparked. Questions will be answered. And fun will be had', 'tags':['charlotte']},
-        'St. Louis Days of .NET ': {'twitter':'stldodn', 'websiteurl':'http://stldodn.com', 'websitename':'http://stldodn.com', 'description':'3-day event filled with knowledge and networking opportunities', 'tags':['st. louis', 'nov 12 \'15']},
-        'Strangeloop': {'twitter':'strangeloop_stl', 'websiteurl':'https://thestrangeloop.com/', 'websitename':'thestrangeloop.com', 'description':'to make connections with the creators and users of the languages, libraries, tools, and techniques at the forefront of the industry', 'tags':['st. louis', 'sep 24 \'15']},
-        'ThatConference': {'twitter':'ThatConference', 'websiteurl':'https://www.thatconference.com/', 'websitename':'thatconference.com', 'description':'Geek out on everything Mobile, Web & Cloud in over 150 sessions. All at a giant waterpark, so bring the family.', 'tags':['Wisconsin Dells, WI', 'aug 10 \'15']},
-        'Thunder Plains': {'twitter':'ThunderPlains', 'websiteurl':'http://thunderplainsconf.com', 'websitename':'thunderplainsconf.com', 'description':'web and mobile developer conference organized by theOklahoma City Javascript User Group. The conference focuses on JavaScript and related technologies in a wide variety of different use cases and platforms that make the web all the more interesting.', 'tags':['oklahoma city', 'nov 3 \'15']},
-      };
-
-
       function recently_aded(string_date_added)
       {
         var dateAdded = new Date(string_date_added);
@@ -217,9 +165,6 @@
     $(document).on('page:change', function()
     {
       create_cards(bloggers, 'col-sm-4', "#bloglist");
-      create_list(meetups, "#meetupslist");
-      create_list(conferences, "#conferenceslist");
-      create_list(coworking, "#coworkinglist");
     });
   </script>
 </head>

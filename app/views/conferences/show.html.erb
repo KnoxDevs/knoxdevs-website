@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @conference.name %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @conference.twitter %>
+</p>
+
+<p>
+  <strong>Websiteurl:</strong>
+  <%= @conference.websiteurl %>
+</p>
+
+<p>
+  <strong>Websitename:</strong>
+  <%= @conference.websitename %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @conference.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @conference.location %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @conference.date %>
+</p>
+
+<%= link_to 'Edit', edit_conference_path(@conference) %> |
+<%= link_to 'Back', conferences_path %>

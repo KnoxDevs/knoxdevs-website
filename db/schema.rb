@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906033219) do
+ActiveRecord::Schema.define(version: 20150910004339) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -21,6 +21,39 @@ ActiveRecord::Schema.define(version: 20150906033219) do
     t.text     "description", limit: 255
     t.boolean  "startup"
     t.string   "num_devs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "conferences", force: true do |t|
+    t.string   "name"
+    t.string   "twitter"
+    t.string   "websiteurl"
+    t.string   "websitename"
+    t.string   "description"
+    t.string   "location"
+    t.string   "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "coworkings", force: true do |t|
+    t.string   "name"
+    t.string   "twitter"
+    t.string   "websiteurl"
+    t.string   "websitename"
+    t.string   "description"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "meetups", force: true do |t|
+    t.string   "name"
+    t.string   "twitter"
+    t.string   "websiteurl"
+    t.string   "websitename"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
