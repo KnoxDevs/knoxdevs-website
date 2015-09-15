@@ -1,5 +1,5 @@
 <h1>Local Developer Meetups<br />  
-<%= if user_signed_in? then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_meetup_path end %>
+<%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_meetup_path end %>
 </h1>
 <div class="container">
     <% @meetups.each do |meetup| %>
@@ -12,8 +12,8 @@
               raw("<span class='label label-default label-as-badge'>Newly Added</span>")
                end %>
               <div class="pull-right">
-              <%= if user_signed_in? then link_to raw("<i class='fa fa-edit'></i>"), edit_meetup_path(meetup) end %>
-              <%= if user_signed_in? then link_to raw("<i class='fa fa-remove'></i>"), meetup, method: :delete, data: { confirm: 'Are you sure?' } end %>
+              <%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-edit'></i>"), edit_meetup_path(meetup) end %>
+              <%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-remove'></i>"), meetup, method: :delete, data: { confirm: 'Are you sure?' } end %>
               </div>
             </h4>
             <p class='list-group-item-text card-description'>
