@@ -1,5 +1,6 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_user_is_admin!, only: [:new, :edit, :create, :update, :destroy]
 
   respond_to :html
 
