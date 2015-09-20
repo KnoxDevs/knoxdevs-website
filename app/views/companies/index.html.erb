@@ -8,6 +8,9 @@
           <li class='list-group-item'>
             <h4 class='list-group-item-heading'>
               <%= company.name %>
+              <%= if company.num_devs? then 
+              raw("<span class='label label-default label-as-badge'>"+company.num_devs+"</span>")
+               end %>
               <%= if company.startup? then 
               raw("<span class='label label-default label-as-badge'>Startup</span>")
                end %>
