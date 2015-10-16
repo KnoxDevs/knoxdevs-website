@@ -1,0 +1,91 @@
+﻿
+<!-- Full Width Image Header -->
+<header class="header-image">
+    <div class="container">
+       <div class="featurette" id="about">
+      <img class="featurette-image img-responsive center-block" alt="KnoxDevs Log" src="kd_logo.png" />
+      <h1 id="knoxdevs-tagline">KnoxDevs: supporting the Knoxville area software development community</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+     <hr class="featurette-divider">
+    <div class="featurette" id="slack">
+      <h3><a href="http://knoxdevs-slackin.herokuapp.com">Join us on Slack!</a></h3>
+      <p class="lead"><script async defer src="http://knoxdevs-slackin.herokuapp.com/slackin.js?large"></script></p>
+    </div>
+
+      <hr class="featurette-divider">
+    <div class="featurette" id="twitter">
+        <div class="row">
+          <div class='col-sm-6 col-md-offset-3'>
+            <a class="twitter-timeline" href="https://twitter.com/knoxdevs" data-widget-id="622549003763187712">Tweets by @knoxdevs</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+         </div>
+        </div>
+    </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette" id="blog">
+        <div class="row">
+        <h3>Latest Feed from Local Developer Blogs</h3>
+        <div id="feeddiv"></div>
+
+        <script type="text/javascript">
+
+          var feedcontainer=document.getElementById("feeddiv")
+          var feedurl="http://www.rssmix.com/u/8148526/rss.xml"
+          var feedlimit=20
+          var rssoutput="<ul>"
+
+          function rssfeedsetup()
+          {
+            var feedpointer=new google.feeds.Feed(feedurl) //Google Feed API method
+            feedpointer.setNumEntries(feedlimit) //Google Feed API method
+            feedpointer.load(displayfeed) //Google Feed API method
+          }
+
+          function displayfeed(result)
+          {
+            if (!result.error)
+            {
+              var thefeeds=result.feed.entries
+              for (var i=0; i<thefeeds.length; i++)
+              {
+                var publishedDate = new Date(thefeeds[i].publishedDate);
+                var publishedDateString = (publishedDate.getMonth()+1) +"/"+ publishedDate.getDate();
+                rssoutput+="<li class='list-group-item rss-entry'><p class='list-group-item-text'><a href='" + thefeeds[i].link + "'>";
+                rssoutput+= "<h4 class='rss-title list-group-item-heading'><span class='label label-default label-as-badge'>" + publishedDateString + "</span> " + thefeeds[i].title + "</h4>";
+                rssoutput+= "<p class='rss-content'><i>" + thefeeds[i].contentSnippet + "</i></p>"; 
+                rssoutput+= "<p class='rss-link'>" + thefeeds[i].link + "</p>"; 
+                rssoutput+= "</a></p></li>";
+              }
+              rssoutput+="</ul>"
+              feedcontainer.innerHTML=rssoutput
+            }
+            else
+            {
+              rssoutput+="<li>Uh oh.  Having trouble reading the RSS feed.</li></ul>";
+              feedcontainer.innerHTML=rssoutput
+            }
+          }
+
+          $(document).on('page:change',function()
+          {
+            rssfeedsetup()
+          });
+
+        </script>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <div class="featurette" id="blogs">
+        <div class="row" id="bloglist">
+        <h3>Local Developer Blogs</h3>
+        </div>
+      </div>
+
+    </div>

@@ -1,0 +1,176 @@
+html {
+	font-size: 20px;
+}
+body {
+	text-align: center;
+	background-color: #f5f7fa;
+}
+
+#knoxdevs-tagline { 
+	font-size: 50px;
+}
+
+@media(max-width:60em){ #knoxdevs-tagline{ font-size: 30px;}}
+
+#github-call-to-action {
+	padding-top: 30px;
+}
+
+.menu
+{
+	color: #00CCFF;
+}
+
+.navbar-inverse .navbar-brand 
+{
+	color: #00CCFF;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar 
+{
+	background-color: #00CCFF;
+}
+
+
+.card
+{
+  height: 100px;
+  padding: 18px;
+  margin-bottom: 10px;
+  border: solid 1px #dde6e9;
+  background-color: white;
+}
+
+.card-description
+{
+  margin: 0px 30px 0px 30px;
+font-style: italic;
+}
+
+.rss-entry
+{
+  	padding-left: 50px;
+	text-align: left;
+}
+
+.rss-title
+{
+  	color: black;
+}
+
+.rss-link
+{
+ 	text-decoration: underline;
+}
+
+.rss-content
+{
+}
+
+.label-as-badge {
+    border-radius: 1em;
+}
+
+/* Wrapper */
+.fa-button {
+	background-color: #ccc;
+	border-radius: 3.0rem;
+	height: 3.0rem;
+	line-height: 3.0rem;
+	width: 3.0rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1.8rem;
+	margin: 0 2px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+/* Circle */
+.fa-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.fa-button:hover span {
+	width: 3.0rem;
+	height: 3.0rem;
+	border-radius: 3.0rem;
+	margin: -1.5rem;
+}
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+
+/* Icons */
+.fa-button i {
+	background: none;
+	color: white;
+	height: 3.0rem;
+	left: 0;
+	line-height: 3.0rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 3.0rem;
+	z-index: 10;
+}
+
+@media(max-width:60em){
+	.fa-button i {
+		height: 2.0rem;
+		width: 2.0rem;
+		line-height: 2.0rem;
+	}
+	.fa-button{
+		border-radius: 2.0rem;
+		height: 2.0rem;
+		width: 2.0rem;
+		font-size: 1.1rem;
+	}
+}
+
+.fa-button .fa-twitter {
+	color: #4099ff;
+}
+.fa-button .fa-facebook {
+	color: #3B5998;
+}
+.fa-button .fa-google-plus {
+	color: #db5a3c;
+}
+.fa-button .fa-linkedin {
+	color: #007bb6;
+}
+.fa-button .fa-youtube-play {
+	color: #e52d27;
+}
+.fa-button:hover .fa-twitter,
+.fa-button:hover .fa-youtube-play,
+.fa-button:hover .fa-facebook,
+.fa-button:hover .fa-linkedin,
+.fa-button:hover .fa-google-plus {
+	color: white;
+}

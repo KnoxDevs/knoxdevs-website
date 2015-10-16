@@ -1,0 +1,9 @@
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: knoxdevs-staging
+  production:
+    branch: production
+    heroku:
+      appname: knoxdevs-production

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Knoxdevs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Supporting Knoxville area software development and developers">
+  <meta name="keywords" content="Knoxville,Software,TN,Developer,Development,Programming">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-65254753-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <script type="text/javascript" src="http://www.google.com/jsapi">
+  </script>
+
+  <script type="text/javascript">
+    google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+  </script>
+
+  <script>
+    var bloggers = {
+        'Aaron Hayman': {   'klout': 0,   'twitter':'aaronhayman',    'websiteurl':'http://www.functionalgibberish.com/ ',      'websitename':'functionalgibberish.com', 'rss':'http://www.functionalgibberish.com/blog?format=rss', 'dateadded':'2015-08-01'},
+        'Adam Byram': {   'klout': 0,   'twitter':'adambyram',    'websiteurl':'http://www.adambyram.com/',      'websitename':'adambyram.com', 'rss':'http://www.adambyram.com/feed/'},
+        'Adam Caudill': {   'klout': 0,   'twitter':'adamcaudill',    'websiteurl':'https://adamcaudill.com/',      'websitename':'adamcaudill.com', 'rss':'https://adamcaudill.com/atom.xml'},
+        'Adrian Carr':  {   'klout': 0,   'twitter':'',           'websiteurl':'http://adriancarr.com/',        'websitename':'adriancarr.com', 'rss':'http://adriancarr.com/feed/'},
+        'Al Zaudtke': {   'klout': 0,  'twitter':'AlZaudtke',    'websiteurl':'http://zaudtke.com/',      'websitename':'zaudtke.com'},
+        'Alan Stevens': {   'klout': 50,  'twitter':'alanstevens',    'websiteurl':'http://halanstevens.com/',      'websitename':'halanstevens.com', 'rss':'http://halanstevens.com/blog/feed/'},
+        'Alex Klibisz': {   'klout': 0,   'twitter':'alexklibisz',    'websiteurl':'http://alexklibisz.github.io/',     'websitename':'alexklibisz.github.io', 'rss':'http://alexklibisz.github.io/feed.xml'},
+        'Avdi Grimm':   {   'klout': 0,   'twitter':'avdi',         'websiteurl':'http://about.avdi.org/',        'websitename':'avdi.org', 'rss':'http://devblog.avdi.org/feed/'},
+        'Bill Morefield':   {   'klout': 0,   'twitter':'bmorefield ',         'websiteurl':'http://www.billmorefield.com/',        'websitename':'billmorefield.com', 'rss':'http://feedpress.me/bmorefield'},
+        'Bob Muenchen':   {   'klout': 0,   'twitter':'BobMuenchen',         'websiteurl':'http://r4stats.com/',        'websitename':'r4stats.com', 'rss':'http://r4stats.com/feed/'},
+        'Bob Yexley':   {   'klout': 0,   'twitter':'ryexley',         'websiteurl':'http://bob.yexley.net/',        'websitename':'bob.yexley.net', 'rss':'http://bob.yexley.net/rss/'},
+        'Brandon Ballentine': {   'klout': 0, 'twitter':'', 'websiteurl':'http://www.brandonballentine.com/', 'websitename':'brandonballentine.com', 'rss':'', 'dateadded':'2015-08-02'},
+        'Brice Wilson':   {   'klout': 0,   'twitter':'brice_wilson',         'websiteurl':'https://www.bricewilson.net/',        'websitename':'www.bricewilson.net', 'rss':'https://www.bricewilson.net/rss/'},
+        'Bryan Headrick': {   'klout': 0,   'twitter':'BryanHeadrick',    'websiteurl':'http://bryanheadrick.com/',      'websitename':'bryanheadrick.com', 'rss':'', 'dateadded':'2015-08-01'},
+        'Cameron Presley': {  'klout': 40,  'twitter':'PhilipCPresley',   'websiteurl':'http://thesoftwarementor.com/',     'websitename':'thesoftwarementor.com', 'rss':'http://blog.thesoftwarementor.com/feed/'},
+        'Chris Brakebill': { 'klout': 0,   'twitter':'braker1nine',   'websiteurl':'http://chrisbrakebill.com/',      'websitename':'chrisbrakebill.com', 'rss':'http://chrisbrakebill.com/atom.xml'},
+        'ChristinaHarlow': {   'klout': 0,   'twitter':'cm_harlow',    'websiteurl':'http://christinaharlow.com/',      'websitename':'christinaharlow.com', 'rss':'http://christinaharlow.com/atom.xml', 'dateadded':'2015-08-01'},
+        'Christopher Lamm': { 'klout': 0,   'twitter':'the_anti_chris',   'websiteurl':'http://theantichris.com/',      'websitename':'theantichris.com', 'rss':'http://theantichris.com/feed/'},
+        'Chris Keathley': {   'klout': 0,   'twitter':'ChrisKeathley',    'websiteurl':'http://keathley.io/',         'websitename':'keathley.io', 'rss':'http://keathley.io/feed.xml'},
+        'Colin Mollenhour': { 'klout': 0,   'twitter':'colinmollenhour',  'websiteurl':'http://colin.mollenhour.com/',    'websitename':'colin.mollenhour.com', 'rss':'http://colin.mollenhour.com/feed/'},
+        'Dave Moore': { 'klout': 0,   'twitter':'davemoore_io',  'websiteurl':'http://davemoore.io',    'websitename':'davemoore.io/category', 'rss':'http://davemoore.io/feed/'},
+        'David Angel': { 'klout': 0,   'twitter':'Davidius',  'websiteurl':'http://davidangel.net/',    'websitename':'davidangel.net', 'rss':'http://davidangel.net/blog/feed/'},
+        'Devon Campbell': {   'klout': 0,   'twitter':'raddevon',       'websiteurl':'http://raddevon.com',         'websitename':'raddevon.com', 'rss':'http://raddevon.com/articles/feed'},
+        'Doc Isaac': { 'klout': 0, 'twitter':'johannhat','websiteurl':'http://superdocisaac.tumblr.com/','websitename':'superdocisaac.tumblr.com', 'rss':'http://superdocisaac.tumblr.com/rss', 'dateadded':'2015-08-13'},
+        'Dylan Wolf': {'klout': 0,'twitter':'dylanwolf', 'websiteurl':'http://www.dylanwolf.com/', 'websitename':'dylanwolf.com', 'rss':'http://www.dylanwolf.com/feed/', 'dateadded':'2015-08-04'},
+        'Emily Schleiner': {   'klout': 0,   'twitter':'cordial_emily',    'websiteurl':'https://knownhabits.wordpress.com/ ',      'websitename':'knownhabits.wordpress.com', 'rss':'https://knownhabits.wordpress.com/feed/', 'dateadded':'2015-08-01'},
+        'Geoff Mazeroff': {   'klout': 41,  'twitter':'geoffmazeroff',    'websiteurl':'http://geoffmazeroff.com/',       'websitename':'geoffmazeroff.com','rss':'http://www.geoffmazeroff.com/feed/'},
+        'Jakob Myers': {    'klout': 0,   'twitter':'iamjakob23',     'websiteurl':'http://iamjakob.com/',        'websitename':'iamjakob.com'},
+        'James Kolpack': {   'klout': 0,   'twitter':'poprhythm',       'websiteurl':'http://popcyclical.com/',    'websitename':'popcyclical.com', 'rss':'http://feeds.feedburner.com/popcyclical'},
+        'James Nakamura': {   'klout': 0,   'twitter':'nakadude',       'websiteurl':'http://nakadude.blogspot.com',    'websitename':'nakadude.blogspot.com', 'rss':'http://nakadude.blogspot.com/feeds/posts/default'},
+        'Jamie Phillips': {   'klout': 0,   'twitter':'phillipsj73',       'websiteurl':'http://www.phillipsj.net/blog/html/index.html',    'websitename':'phillipsj.net', 'rss':'http://www.phillipsj.net/blog/html/rss.html'},
+        'Jared Smith': {   'klout': 0, 'twitter':'jaredthecoder', 'websiteurl':'https://jaredmichaelsmith.com', 'websitename':'jaredmichaelsmith.com', 'rss':'https://jaredmichaelsmith.com/rss/', 'dateadded':'2015-08-05'},
+        'Jeff Thurston': {   'klout': 0,   'twitter':'jeffyt',    'websiteurl':'http://www.jeffthurston.com/',      'websitename':'jeffthurston.com', 'rss':'http://www.jeffthurston.com/feed/', 'dateadded':'2015-08-01'},
+        'Jeremy Fairbank': {  'klout': 0,   'twitter':'elpapapollo',    'websiteurl':'http://blog.jeremyfairbank.com',    'websitename':'blog.jeremyfairbank.com', 'rss':'http://blog.jeremyfairbank.com/feed'},
+        'Jonathan Kemp': {   'klout': 0,   'twitter':'jonkemp',      'websiteurl':'http://jonkemp.com/',       'websitename':'jonkemp.com', 'rss':'http://jonkemp.com/feed'},
+        'Joseph Agreda': {   'klout': 0, 'twitter':'jagreda', 'websiteurl':'http://probabilitytree.com/', 'websitename':'probabilitytree.com', 'rss':'', 'dateadded':'2015-08-02'},    
+        'Josh Carroll': {   'klout': 0,   'twitter':'jwcarroll',      'websiteurl':'http://technofattie.com',       'websitename':'technofattie.com', 'rss':'http://www.technofattie.com/rss.xml'},
+        'Joshua Miller': {'klout': 0,'twitter':'_jshmllr', 'websiteurl':'https://medium.com/@_jshmllr/', 'websitename':'medium.com/@jshmllr', 'rss':'http://medium.com/feed/@jshmllr', 'dateadded':'2015-08-04'},
+        'Levi Smith': {   'klout': 0,   'twitter':'GaTechGrad',      'websiteurl':'http://levidsmith.com/',       'websitename':'levidsmith.com', 'rss':'http://levidsmith.com/feed'},
+        'Michael C. Neel': {   'klout': 0,   'twitter':'ViNull',      'websiteurl':'http://www.vinull.com/',       'websitename':'vinull.com', 'rss':'http://www.vinull.com/feed/'},
+        'Michael Wender': {   'klout': 0,   'twitter':'mwender',    'websiteurl':'http://mwender.com/',      'websitename':'mwender.com', 'rss':'http://feed.mwender.com/', 'dateadded':'2015-08-01'},
+        'Neville Scheevel': { 'klout': 0, 'twitter':'_Neville','websiteurl':'http://scheevel.blogspot.com/','websitename':'scheevel.blogspot.com', 'rss':'http://scheevel.blogspot.com/feeds/posts/default', 'dateadded':'2015-08-13'},
+        'Nick Bradbury': {   'klout': 0, 'twitter':'nbradbury', 'websiteurl':'http://nickbradbury.com/', 'websitename':'nickbradbury.com', 'rss':'http://nickbradbury.com/feed/', 'dateadded':'2015-08-02'},
+        'Phillip Andreason': {  'klout': 0,   'twitter':'InfraredBaboon',   'websiteurl':'https://codeukemi.wordpress.com/',  'websitename':'codeukemi.wordpress.com', 'rss':'https://codeukemi.wordpress.com/feed/'},
+        'Preston Garland': { 'klout': 0, 'twitter':'wpgarland','websiteurl':'http://prestongarland.com/','websitename':'prestongarland.com', 'rss':'', 'dateadded':'2015-08-13'},
+        'Reid Evans': {     'klout': 45,  'twitter':'ReidNEvans',     'websiteurl':'http://reidev275.azurewebsites.net/', 'websitename':'reidev275.azurewebsites.net', 'rss':'http://reidev275.azurewebsites.net/rss/'},
+        'Rob Gillen': {     'klout': 0,  'twitter':'argodev',     'websiteurl':'http://www.gillenfamily.net/', 'websitename':'gillenfamily.net', 'rss':'http://www.gillenfamily.net/blog?format=rss'},
+        'Ronnie Goodrich': {   'klout': 0,   'twitter':'kahootbird',    'websiteurl':'http://www.kahootbird.com/',      'websitename':'kahootbird.com', 'rss':'http://www.kahootbird.com/?feed=rss2', 'dateadded':'2015-08-01'},
+        'SDE Science Lover': {   'klout': 0, 'twitter':'sdesciencelover', 'websiteurl':'http://sdesciencelover.typepad.com/', 'websitename':'sdesciencelover.typepad.com', 'rss':'http://sdesciencelover.typepad.com/blog/atom.xml', 'dateadded':'2015-08-02'},    
+        'Stephen Long': {'klout': 0,'twitter':'long2know', 'websiteurl':'https://long2know.com/', 'websitename':'long2know.com', 'rss':'', 'dateadded':'2015-08-04'},
+        'Steve Barbour': {    'klout': 0,   'twitter':'steverb',       'websiteurl':'http://www.steverb.com/',       'websitename':'steverb.com', 'rss':'http://www.steverb.com/syndication.axd'},
+        'Thilina Gunarathne': {    'klout': 0,   'twitter':'thilina',       'websiteurl':'http://thilina.gunarathne.org/',       'websitename':'thilina.gunarathne.org', 'dateadded':'2015-07-31'},
+        'Thomas Daugherty': {   'klout': 0,   'twitter':'Z33Studios',    'websiteurl':'http://thomasdaugherty.com',      'websitename':'thomasdaugherty.com', 'rss':'http://thomasdaugherty.com/blog/feed/', 'dateadded':'2015-08-01'},
+        'Travis Graham': {    'klout': 0,   'twitter':'grahamt1',       'websiteurl':'http://blog.tgraham.us/',       'websitename':'blog.tgraham.us', 'rss':'http://blog.tgraham.us/rss'},
+        'Tyler Jennings': {   'klout': 0,   'twitter':'JenningsTCJ',    'websiteurl':'http://tylerscode.com/',        'websitename':'tylerscode.com', 'rss':'http://tylerscode.com/feed/', 'dateadded':'2015-07-15'},
+        'Wade Chandler': {   'klout': 0,   'twitter':'wadechandler',    'websiteurl':'http://wadechandler.blogspot.com/',      'websitename':'wadechandler.blogspot.com', 'rss':'http://wadechandler.blogspot.com/feeds/posts/default', 'dateadded':'2015-08-01'},
+        'Wally McClure': {'klout': 0,'twitter':'wbm', 'websiteurl':'http://scalabledevelopment.com/', 'websitename':'scalabledevelopment.com', 'rss':'', 'dateadded':'2015-08-04'},
+        'William McKeehan': {   'klout': 0,   'twitter':'mckeehan',    'websiteurl':'http://www.mckeehan.info/',        'websitename':'mckeehan.info'},
+        'W. Anthony Ellison': {   'klout': 0, 'twitter':'tnwae', 'websiteurl':'http://rt38.net/', 'websitename':'rt38.net', 'rss':'', 'dateadded':'2015-08-02'},
+        };
+
+
+      function recently_aded(string_date_added)
+      {
+        var dateAdded = new Date(string_date_added);
+        var dateNow = new Date();
+        var timeDiff = Math.abs(dateNow.getTime() - dateAdded.getTime());
+        var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+        if(diffDays <= 3)
+         return true;
+        return false;
+
+      }
+      function create_cards(list_json, column_css, dest_div)
+      {
+
+      jQuery.each(list_json, function(index, itemData) {
+      
+      var html = "<div class='"+column_css+"'>";
+      html += "<div class='card'>";
+      html += "<h4 class='list-group-item-heading'>";
+      html += index;
+      if (itemData.klout > 99)
+        html += " <i class='fa fa-star'></i>";
+      if (itemData.rss)
+        html += " <a target='_blank' href='"+itemData.rss+"'><i style='color: #FA9B39' class='fa fa-rss'></i></a>";
+      if(itemData.dateadded && recently_aded(itemData.dateadded))
+          html += " <span class='label label-default label-as-badge'>Newly Added</span>";
+      html += "</h4>";
+      if(itemData.description)
+        html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
+      if(itemData.twitter.length>0)
+        html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa fa-twitter'></i></a></p>";
+      if(itemData.websiteurl.length>0)
+        html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+      html += "</div>";
+      html += "</div>";
+      $(dest_div).append(html);
+      }); 
+
+    }
+
+      function create_list(list_json, dest_div)
+      {
+        jQuery.each(list_json, function(index, itemData) {
+          var html = "<li class='list-group-item'><h4 class='list-group-item-heading'>"+index;
+          if(itemData.tags)
+          {
+            $.each(itemData.tags, function( index, value ) {
+           html += " <span class='label label-default label-as-badge'>"+value+"</span>";
+            });
+          }
+          if(itemData.dateadded && recently_aded(itemData.dateadded))
+              html += " <span class='label label-default label-as-badge'>Newly Added</span>";
+          html += "</h4>";
+          if(itemData.description)
+           html += "<p class='list-group-item-text card-description'>"+itemData.description+"</p>";
+          if(itemData.websiteurl && itemData.websiteurl.length>0)
+            html += "<p class='list-group-item-text'><a target='_blank' href='"+itemData.websiteurl+"'> "+itemData.websitename+"</a></p>";
+          if(itemData.twitter && itemData.twitter.length>0)
+           html += "<p class='list-group-item-text'><a target='_blank' href='http://twitter.com/"+itemData.twitter+"'>@"+itemData.twitter+" <i class='fa fa-twitter'></i></a></p>";
+          html += "</li>";
+      
+          $(dest_div).append(html);
+      });
+
+    }
+
+
+    $(document).on('page:change', function()
+    {
+      create_cards(bloggers, 'col-sm-4', "#bloglist");
+    });
+  </script>
+</head>
+<body>
+    <div class="container">
+    <%= render 'layouts/header' %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    </div>
+</body>
+</html>
