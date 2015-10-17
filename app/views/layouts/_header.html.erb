@@ -34,6 +34,10 @@
                 <li class="menu">
                     <%= link_to "Resources", resources_path %>
                 </li>
+                <li class="menu">
+                 <%= if current_user.try(:admin?) then link_to "Users", users_path 
+                  end %>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li>
