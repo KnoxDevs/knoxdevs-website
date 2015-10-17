@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   resources :coworkings
 
   resources :meetups
@@ -10,7 +12,8 @@ Rails.application.routes.draw do
 
   resources :resources
 
-  devise_for :users
+  resources :users
+
 root 'home#index'
 
 get 'home', to: 'home#index'
