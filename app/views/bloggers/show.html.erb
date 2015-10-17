@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @blogger.name %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @blogger.twitter %>
+</p>
+
+<p>
+  <strong>Websiteurl:</strong>
+  <%= @blogger.websiteurl %>
+</p>
+
+<p>
+  <strong>Websitename:</strong>
+  <%= @blogger.websitename %>
+</p>
+
+<p>
+  <strong>Rss:</strong>
+  <%= @blogger.rss %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @blogger.company %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @blogger.description %>
+</p>
+
+<%= link_to 'Edit', edit_blogger_path(@blogger) %> |
+<%= link_to 'Back', bloggers_path %>

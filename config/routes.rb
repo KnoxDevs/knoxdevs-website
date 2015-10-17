@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :bloggers
+
   devise_for :users
 
   resources :coworkings
