@@ -1,0 +1,45 @@
+<%= form_for(@blogger) do |f| %>
+  <% if @blogger.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blogger.errors.count, "error") %> prohibited this blogger from being saved:</h2>
+
+      <ul>
+      <% @blogger.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="field">
+    <%= f.label :websiteurl %><br>
+    <%= f.text_field :websiteurl %>
+  </div>
+  <div class="field">
+    <%= f.label :websitename %><br>
+    <%= f.text_field :websitename %>
+  </div>
+  <div class="field">
+    <%= f.label :rss %><br>
+    <%= f.text_field :rss %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

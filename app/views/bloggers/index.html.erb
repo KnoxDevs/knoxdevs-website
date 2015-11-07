@@ -1,0 +1,35 @@
+<h1>Local Developer Blogs
+<%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-plus-square-o'></i>"), new_blogger_path end %>
+</h1>
+<div class="container">
+    <% @bloggers.each do |blogger| %>
+      <div class="col-sm-4">
+        <div class="card">
+            <h4 class='list-group-item-heading'>
+              <%= blogger.name %>
+              <% if !blogger.rss.blank? then %>
+                <a target='_blank' href='<%= blogger.rss %>'><i style='color: #FA9B39' class='fa fa-rss'></i></a>
+            <% end %>
+              <%= if DateTime.now.utc - 2.days < blogger.created_at then 
+              #raw("<span class='label label-default label-as-badge'>Newly Added</span>")
+               end %>
+              <div class="pull-right">
+              <%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-edit'></i>"), edit_blogger_path(blogger) end %>
+              <%= if current_user.try(:admin?) then link_to raw("<i class='fa fa-remove'></i>"), blogger, method: :delete, data: { confirm: 'Are you sure?' } end %>
+              </div>
+            </h4>
+            <p class='list-group-item-text card-description'>
+              <%= blogger.description %>
+            </p>
+            <p class='list-group-item-text'>
+              <a target='_blank' href='<%= blogger.websiteurl %>'><%= blogger.websitename %></a>
+            </p>
+            <% if !blogger.twitter.blank? then %>
+              <p class='list-group-item-text'>
+                <a target='_blank' href='http://twitter.com/<%= blogger.twitter %>'>@<%= blogger.twitter %> <i class='fa fa-twitter'></i></a>
+              </p>
+            <% end %>
+        </div>
+      </div>
+    <% end %>
+</div>
