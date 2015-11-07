@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class BloggersControllerTest < ActionController::TestCase
+include Devise::TestHelpers
+
+
   setup do
+    @request.env["devise.mapping"] = Devise.mappings[:user]
     @blogger = bloggers(:one)
+    #Rails::logger.debug User.count.to_s
+    @testAdmin = User.create!({:email => "guy@gmail.com", :admin => true, :password => "12345678", :password_confirmation => "12345678" })
+    sign_in @testAdmin
   end
 
   test "should get index" do
@@ -40,10 +47,11 @@ class BloggersControllerTest < ActionController::TestCase
   end
 
   test "should destroy blogger" do
+    
     assert_difference('Blogger.count', -1) do
       delete :destroy, id: @blogger
     end
 
-    assert_redirected_to bloggers_path
-  end
+   assert_redirected_to bloggers_path
+ end
 end
