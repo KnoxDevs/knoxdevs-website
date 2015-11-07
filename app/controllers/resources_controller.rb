@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  before_filter :verify_is_admin, only: [:new, :edit, :update, :destroy]
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -37,6 +38,10 @@ class ResourcesController < ApplicationController
   end
 
   private
+    def verify_is_admin
+    (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+    end
+
     def set_resource
       @resource = Resource.find(params[:id])
     end

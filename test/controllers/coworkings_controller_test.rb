@@ -3,7 +3,9 @@ require 'test_helper'
 class CoworkingsControllerTest < ActionController::TestCase
   setup do
     @coworking = coworkings(:one)
-  end
+     @testAdmin = User.create!({:email => "guy@gmail.com", :admin => true, :password => "12345678", :password_confirmation => "12345678" })
+    sign_in @testAdmin
+ end
 
   test "should get index" do
     get :index
