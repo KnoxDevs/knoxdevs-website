@@ -38,7 +38,7 @@
           var feedcontainer=document.getElementById("feeddiv")
           var feedurl="http://www.rssmix.com/u/8148526/rss.xml"
           var feedlimit=20
-          var rssoutput="<ul>"
+          var rssoutput=""
 
           function rssfeedsetup()
           {
@@ -51,6 +51,8 @@
           {
             if (!result.error)
             {
+              rssoutput="<ul>"
+
               var thefeeds=result.feed.entries
               for (var i=0; i<thefeeds.length; i++)
               {
@@ -78,13 +80,6 @@
           });
 
         </script>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-      <div class="featurette" id="blogs">
-        <div class="row" id="bloglist">
-        <h3>Local Developer Blogs</h3>
         </div>
       </div>
 
