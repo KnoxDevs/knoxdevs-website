@@ -10,7 +10,7 @@
 }
 
 body {
-    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    margin-top: 20px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     /*font-family: 'Whitney';*/
 }
 
@@ -75,7 +75,7 @@ footer {
 }
 
 #knoxdevs-tagline {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 @media(max-width:1200px) {

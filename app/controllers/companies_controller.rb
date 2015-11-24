@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  before_filter :verify_is_admin, only: [:new, :edit, :update, :destroy]
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -37,6 +38,10 @@ class CompaniesController < ApplicationController
   end
 
   private
+    def verify_is_admin
+    (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+    end
+
     def set_company
       @company = Company.find(params[:id])
     end

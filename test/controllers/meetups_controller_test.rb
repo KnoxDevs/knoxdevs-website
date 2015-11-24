@@ -3,6 +3,8 @@ require 'test_helper'
 class MeetupsControllerTest < ActionController::TestCase
   setup do
     @meetup = meetups(:one)
+    @testAdmin = User.create!({:email => "guy@gmail.com", :admin => true, :password => "12345678", :password_confirmation => "12345678" })
+    sign_in @testAdmin
   end
 
   test "should get index" do
